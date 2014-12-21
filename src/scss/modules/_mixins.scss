@@ -1,0 +1,35 @@
+// Font smoothing
+@mixin font-smoothing($value) {
+    @if $value == yes{
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    @elseif $value == inherit {
+        -webkit-font-smoothing: inherit;
+        -moz-osx-font-smoothing: inherit;
+    }
+    @else {
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+    }
+}
+
+// Fonts
+@mixin font($font:kepler){
+  @if($font == kepler){
+    font-family: "kepler-std", serif;
+  } @else if($font == kepler-dis){
+    font-family: "kepler-std-display", serif;
+  } @else if($font == futura){
+    font-family: "futura-pt", sans-serif;
+  }
+}
+  
+// Random Breakpoints
+@mixin breakpoint($size){
+  @each $point in $breakpoints{
+    @if $size == map-get($point, name){
+      @media(min-width: rem(map-get($point, size)*1px)){@content;}
+    }
+  }
+}

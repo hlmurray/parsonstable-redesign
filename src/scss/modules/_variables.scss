@@ -1,0 +1,18 @@
+// Colors
+$darkgrey: #2a2826;
+$white: #fff;
+$lightgrey: #63615f;
+
+// Sizes
+/*
+Ok, so we're doing this mobile first! To use a breakpoint, please use the following code:
+	@include breakpoint(name){
+	 code here
+	}
+This can either be nested inside elements(beware!), or on it's own. 'state' is either desktop, laptop, tablet, or any custom ones you need below
+*/
+$breakpoints: (
+	(name: desktop, size:1300),
+	(name: laptop, size:1025),
+	(name: tablet, size:768)
+);

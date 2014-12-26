@@ -1,5 +1,14 @@
-html, body {
+html,
+body {
 	background-color: $beige;
+}
+
+body {
+	padding: 0 rem(100px);
+
+	@include breakpoint(laptop) {
+		padding: 0 rem(60px);
+	}
 }
 
 .masthead {
@@ -10,40 +19,49 @@ html, body {
 	}
 }
 
-.header-nav a {
-	position: relative;
-	display: inline-block;
-	margin-left: rem(80px);
-	padding-bottom: rem(5px);
-	font-family: 'engravers-gothic';
-	font-size: 14px;
-	letter-spacing: 0.2em;
-	color: $darkgrey;
-	text-decoration: none;
-	text-transform: uppercase;
-	&:first-child {
-		margin-left: 0;
-	}
-	&:after {
-		position: absolute;
-		top: 100%;
-		left: 0;
-		width: 100%;
-		height: 2px;
-		background: $darkgrey;
-		content: '';
-		opacity: 0;
-		-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-		-moz-transition: opacity 0.3s, -moz-transform 0.3s;
-		transition: opacity 0.3s, transform 0.3s;
-		-webkit-transform: translateY(10px);
-		-moz-transform: translateY(10px);
-		transform: translateY(10px);
-	}
-	&:hover:after {
-		opacity: 1;
-		-webkit-transform: translateY(0px);
-		-moz-transform: translateY(0px);
-		transform: translateY(0px);
+.nav-border {
+	background: url(../assets/images/divider-top.png) no-repeat;
+	max-width: 100%;
+	height: 30px;
+	background-size: contain;
+}
+
+.header-nav {
+	& a {
+		position: relative;
+		display: inline-block;
+		margin-left: rem(80px);
+		padding-bottom: rem(5px);
+		font-family: 'engravers-gothic';
+		font-size: 14px;
+		letter-spacing: 0.2em;
+		color: $darkgrey;
+		text-decoration: none;
+		text-transform: uppercase;
+		&:first-child {
+			margin-left: 0;
+		}
+		&:after {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			height: rem(2px);
+			background: $darkgrey;
+			content: '';
+			opacity: 0;
+			-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+			-moz-transition: opacity 0.3s, -moz-transform 0.3s;
+			transition: opacity 0.3s, transform 0.3s;
+			-webkit-transform: translateY(10px);
+			-moz-transform: translateY(10px);
+			transform: translateY(10px);
+		}
+		&:hover:after {
+			opacity: 1;
+			-webkit-transform: translateY(0px);
+			-moz-transform: translateY(0px);
+			transform: translateY(0px);
+		}
 	}
 }

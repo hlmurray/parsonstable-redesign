@@ -29,7 +29,7 @@
 @mixin breakpoint($size){
   @each $point in $breakpoints{
     @if $size == map-get($point, name){
-      @media(min-width: rem(map-get($point, size)*1px)){@content;}
+      @media(max-width: rem(map-get($point, size)*1px)){@content;}
     }
   }
 }

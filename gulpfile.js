@@ -42,15 +42,22 @@ var paths = {
 		.pipe(gulp.dest(paths.build.html))
 	});
 
+	// Assets Compiler
+	gulp.task("compile-assets", function(){
+		return gulp.src(paths.src.assets+"/**/*.*")
+		.pipe(gulp.dest(paths.build.assets))
+	});
+
 
 gulp.task('watch', function(){
 	// What to watch
 	gulp.watch(paths.src.scss+"/**/*.scss", ["compile-scss"]);
 	gulp.watch(paths.src.js+"/**/*.js", ["compile-js"]);
 	gulp.watch(paths.src.html+"/**/*.html", ["compile-html"]);
+	gulp.watch(paths.src.assets+"/**/*.*", ["compile-assets"]);
 });
 
-gulp.task("compile", ["compile-html","compile-js","compile-scss",], function(){
+gulp.task("compile", ["compile-assets","compile-html","compile-js","compile-scss",], function(){
 	return gulp.src("src/fake")
 	.pipe(gulp.dest("src/fake"))
 });

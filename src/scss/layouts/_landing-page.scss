@@ -72,11 +72,14 @@ a {
 
 main {
 	text-align: center;
+	padding: rem(100px) 0;
 	& h1 {
 		@include font(engravers-gothic);
 		text-transform: uppercase;
 		font-size: 14px;
-		margin-top: rem(20px);
+		margin: 0;
+		line-height: 2em;
+		letter-spacing: 0.1em;
 		color: $darkgrey;
 	}
 	& a {
@@ -151,18 +154,25 @@ main {
 			text-align: center;
 		}
 		& input {
+			font-size: 16px;
+			text-align: center;
+			letter-spacing: 0.2em;
+		}
+		& input[type="email"] {
+			@include font(engravers-gothic);
+			outline: none;
 			padding: rem(1px);
 			border: 1px solid $darkgrey;
 			width: rem(260px);
 			padding: rem(9px);
 			background-color: $beige;
-			outline: none;
-			font-size: 16px;
-			text-align: center;
-			letter-spacing: 0.2em;
-			@include font(engravers-gothic);
+			&::-webkit-input-placeholder {
+			   transition: opacity 0.25s ease;
+			   color: $darkgrey;
+			   @include font(engravers-gothic);
+			}
 			&:focus::-webkit-input-placeholder {
-	    		color: transparent;
+	    		opacity: 0;
 			}
 		}
 		& input[type="submit"] {
@@ -172,7 +182,6 @@ main {
 			background-color: $darkgrey;
 			color: $beige;
 			@include font(trade-gothic);
-			font-size: 16px;
 			line-height: 0;
 			padding: rem(18px) 0;
 			-webkit-font-smoothing: antialiased;
@@ -180,20 +189,6 @@ main {
 			&:hover {
 				opacity: 0.5;
 			}
-		}
-		::-webkit-input-placeholder {
-		   color: $darkgrey;
-		   @include font(engravers-gothic);
-		}
-
-		::-moz-placeholder { /* Firefox 18- */
-		   color: $darkgrey; 
-		   @include font(engravers-gothic); 
-		}
-
-		:-ms-input-placeholder {  
-		   color: $darkgrey; 
-		   @include font(engravers-gothic); 
 		}
 	}
 }

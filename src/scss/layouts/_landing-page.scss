@@ -11,11 +11,15 @@ body {
 	}
 }
 
+a {
+	text-decoration: none;
+}
+
 .masthead {
 	width: 100%;
 	text-align: center;
 	& img {
-		margin: rem(60px) 0;
+		margin: rem(30px) 0 rem(60px) 0;
 	}
 }
 
@@ -28,11 +32,11 @@ body {
 
 .header-nav {
 	& a {
+		@include font(engravers-gothic);
 		position: relative;
 		display: inline-block;
 		margin-left: rem(80px);
 		padding-bottom: rem(5px);
-		font-family: 'engravers-gothic';
 		font-size: 14px;
 		letter-spacing: 0.2em;
 		color: $darkgrey;
@@ -62,6 +66,116 @@ body {
 			-webkit-transform: translateY(0px);
 			-moz-transform: translateY(0px);
 			transform: translateY(0px);
+		}
+	}
+}
+
+.footer-contact {
+	padding: rem(40px) 0 rem(20px) 0;
+	& .contact-top {
+		text-align: center;
+		color: $black;
+		& p {
+			@include font(engravers-gothic);
+			margin: 0;
+			display: inline-block;
+			text-transform: uppercase;
+			font-size: 14px;
+			line-height: 2em;
+			letter-spacing: 0.2em;
+			& span {
+				@include font(garamond);
+				font-size: 14px;
+				line-height: 1.2em;
+				letter-spacing: 0.2em;
+			}
+			& a {
+				@include font(garamond);
+				text-decoration: none;
+				color: $black;
+				text-transform: uppercase;
+				font-size: 14px;
+				line-height: 1.2em;
+				letter-spacing: 0.2em;
+				transition: opacity 0.3s ease;
+				&:hover {
+					opacity: 0.5;
+				}
+			}
+			&.break {
+				display:  block;
+			}
+		}
+	}
+	& .contact-bottom {
+		text-align: center;
+		& .contact-social {
+			display: inline-block;
+			padding-right: rem(10px);
+			& a {
+				color: $darkgrey;
+				font-size: 20px;
+				transition: opacity 0.3s ease;
+				padding-left: rem(5px);
+				&:first-child {
+					padding-left: 0;
+				}
+				&:hover {
+					opacity: 0.5;
+				}
+			}
+		}
+		& .contact-form {
+			display: inline-block;
+		}
+		& form {
+			padding-top: rem(10px);
+			text-align: center;
+		}
+		& input {
+			padding: rem(1px);
+			border: 1px solid $darkgrey;
+			width: rem(260px);
+			padding: rem(9px);
+			background-color: $beige;
+			outline: none;
+			font-size: 16px;
+			text-align: center;
+			letter-spacing: 0.2em;
+			@include font(engravers-gothic);
+			&:focus::-webkit-input-placeholder {
+	    		color: transparent;
+			}
+		}
+		& input[type="submit"] {
+			width: rem(130px);
+			height: rem(37px);
+			border: none;
+			background-color: $darkgrey;
+			color: $beige;
+			@include font(trade-gothic);
+			font-size: 16px;
+			line-height: 0;
+			padding: rem(18px) 0;
+			-webkit-font-smoothing: antialiased;
+			transition: opacity 0.3s ease;
+			&:hover {
+				opacity: 0.5;
+			}
+		}
+		::-webkit-input-placeholder {
+		   color: $darkgrey;
+		   @include font(engravers-gothic);
+		}
+
+		::-moz-placeholder { /* Firefox 18- */
+		   color: $darkgrey; 
+		   @include font(engravers-gothic); 
+		}
+
+		:-ms-input-placeholder {  
+		   color: $darkgrey; 
+		   @include font(engravers-gothic); 
 		}
 	}
 }

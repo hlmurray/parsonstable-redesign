@@ -15,13 +15,15 @@
 }
 
 // Fonts
-@mixin font($font:kepler){
-  @if($font == kepler){
-    font-family: "kepler-std", serif;
-  } @else if($font == kepler-dis){
-    font-family: "kepler-std-display", serif;
-  } @else if($font == futura){
-    font-family: "futura-pt", sans-serif;
+@mixin font($font:adamina){
+  @if($font == adamina){
+    font-family: "adamina", serif;
+  } @else if($font == engravers-gothic){
+    font-family: "engravers-gothic", sans-serif;
+  } @else if($font == garamond){
+    font-family: Garamond, serif;
+  } @else if($font == trade-gothic) {
+    font-family: "trade-gothic", serif;
   }
 }
   

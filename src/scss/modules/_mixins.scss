@@ -24,6 +24,8 @@
     font-family: Garamond, serif;
   } @else if($font == trade-gothic) {
     font-family: "trade-gothic", serif;
+  } @else if($font == premier-pro) {
+    font-family: "premier-pro", sans-serif;
   }
 }
   

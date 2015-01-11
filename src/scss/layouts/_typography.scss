@@ -9,3 +9,88 @@
 	src:url('../assets/fonts/Trade-Gothic.ttf') format('truetype');
 	font-style: normal;
 }
+
+h1 {
+	@include font(garamond-premier);
+	font-size: 18px;
+	letter-spacing: 0.05em;
+	font-weight: 400;
+	text-align: center;
+	color: $darkgrey;
+	margin: 0;
+}
+
+
+hr {
+	width: rem(65px);
+	background-color: $darkgrey;
+	height: rem(1px);
+	margin: rem(15px) auto;
+	border: none;
+}
+
+p {
+	@include font(garamond-premier);
+	margin: 0;
+	text-align: center;
+	font-size: 16px;
+	letter-spacing: 0.05em;
+	line-height: 1.5em;
+	color: $darkgrey;
+}
+a.alt {
+	display: inline-block;
+	@include font(garamond-premier);
+	font-size: 18px;
+	font-style: italic;
+	letter-spacing: 0.05em;
+	font-weight: 400;
+	color: $darkgrey;
+	position: relative;
+	&:after {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background: #88d3b3;
+		content: '';
+		opacity: 0;
+		-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+		-moz-transition: opacity 0.3s, -moz-transform 0.3s;
+		transition: opacity 0.3s, transform 0.3s;
+		-webkit-transform: translateY(10px);
+		-moz-transform: translateY(10px);
+		transform: translateY(10px);
+	}
+	&:hover:after {
+		opacity: 1;
+		-webkit-transform: translateY(0px);
+		-moz-transform: translateY(0px);
+		transform: translateY(0px);
+	}
+}
+
+h4 {
+	@extend p;
+	font-style: italic;
+}
+
+.btn-dark {
+	display: inline-block;
+	padding: rem(20px) rem(15px);
+	border: none;
+	background-color: $darkgrey;
+	color: $beige;
+	font-size: 16px;
+	text-align: center;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	@include font(trade-gothic);
+	line-height: 0;
+	-webkit-font-smoothing: antialiased;
+	transition: opacity 0.3s ease;
+	&:hover {
+		opacity: 0.5;
+	}
+}

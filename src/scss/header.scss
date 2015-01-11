@@ -145,20 +145,6 @@ footer {
 		    		opacity: 0;
 				}
 			}
-			& input[type="submit"] {
-				width: rem(130px);
-				height: rem(37px);
-				border: none;
-				background-color: $darkgrey;
-				color: $beige;
-				@include font(trade-gothic);
-				line-height: 0;
-				-webkit-font-smoothing: antialiased;
-				transition: opacity 0.3s ease;
-				&:hover {
-					opacity: 0.5;
-				}
-			}
 		}
 	}
 }

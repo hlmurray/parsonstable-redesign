@@ -76,6 +76,27 @@ h4 {
 	font-style: italic;
 }
 
+.input1 {
+	box-sizing: border-box;
+	@include font(garamond-premier);
+	font-style: italic;
+	font-size: 16px;
+	text-align: center;
+	letter-spacing: 0.1em;
+	outline: none;
+	border: 1px solid $darkgrey;
+	padding: rem(9px);
+	background-color: $beige;
+	&::-webkit-input-placeholder {
+	   transition: opacity 0.25s ease;
+	   color: $darkgrey;
+	   @include font(garamond-premier);
+	}
+	&:focus::-webkit-input-placeholder {
+		opacity: 0;
+	}
+}
+
 .btn-dark {
 	display: inline-block;
 	padding: rem(20px) rem(15px);

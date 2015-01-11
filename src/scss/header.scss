@@ -122,29 +122,6 @@ footer {
 				padding-top: rem(10px);
 				text-align: center;
 			}
-			& input {
-				font-size: 16px;
-				text-align: center;
-				letter-spacing: 0.2em;
-			}
-			& input[type="email"] {
-				@include font(garamond-premier);
-				font-style: italic;
-				letter-spacing: 0.1em;
-				outline: none;
-				border: 1px solid $darkgrey;
-				width: rem(260px);
-				padding: rem(9px);
-				background-color: $beige;
-				&::-webkit-input-placeholder {
-				   transition: opacity 0.25s ease;
-				   color: $darkgrey;
-				   @include font(garamond-premier);
-				}
-				&:focus::-webkit-input-placeholder {
-		    		opacity: 0;
-				}
-			}
 		}
 	}
 }

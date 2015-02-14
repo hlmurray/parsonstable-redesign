@@ -1,0 +1,130 @@
+@import "./modules/_variables.scss";
+@import "./modules/_functions.scss";
+@import "./modules/_mixins.scss";
+@import "./modules/_placeholders.scss";
+
+html,
+body {
+	background-color: $beige;
+}
+
+body {
+	padding: 0 rem(100px);
+
+	@include breakpoint(laptop) {
+		padding: 0 rem(60px);
+	}
+}
+
+a {
+	text-decoration: none;
+}
+
+.masthead {
+	width: 100%;
+	padding-bottom: rem(20px);
+	border-bottom: 2px solid $brown;
+	text-align: center;
+	& img {
+		margin: rem(30px);
+		vertical-align: middle;
+	}
+}
+
+.header-nav {
+	& a {
+		@include font(trade-gothic);
+		position: relative;
+		display: inline-block;
+		margin: 0 rem(30px);
+		padding: rem(5px) rem(5px) rem(5px) rem(8px);
+		font-size: 14px;
+		letter-spacing: 0.2em;
+		font-weight: 500;
+		color: $darkgrey;
+		text-decoration: none;
+		text-transform: uppercase;
+		transition: all 0.3s ease;
+		&:first-child {
+			margin-left: 0;
+		}
+		&:hover {
+			background: $brown;
+			color: #fff;
+			-webkit-font-smoothing: antialiased;
+		}
+	}
+	@include breakpoint(tablet) {
+		& a {
+			display: block;
+			margin-left: 0;
+		}
+	}
+}
+
+footer {
+	border-top: 2px solid $brown;
+	.footer-contact {
+		padding: rem(40px) 0 rem(20px) 0;
+		& .contact-top {
+			text-align: center;
+			color: $black;
+			& p {
+				@include font(garamond-premier);
+				margin: 0;
+				padding: 0 rem(10px);
+				display: inline-block;
+				text-transform: uppercase;
+				font-size: 14px;
+				letter-spacing: 0.2em;
+				border-right: 1px solid $black;
+				&:first-child {
+					padding-left: 0;
+				}
+				&:last-child {
+					border-right: none;
+					padding: 0 0 0 rem(2px);
+				}
+				& a {
+					padding: rem(5px) rem(8px);
+					@include font(garamond-premier);
+					text-decoration: none;
+					color: $black;
+					text-transform: uppercase;
+					font-size: 14px;
+					letter-spacing: 0.2em;
+					transition: background 0.3s ease;
+					&:hover {
+						background: #88d3b3;
+					}
+				}
+			}
+		}
+		& .contact-bottom {
+			text-align: center;
+			& .contact-social {
+				display: inline-block;
+				padding-right: rem(10px);
+				& a {
+					color: $brown;
+					font-size: 20px;
+					transition: opacity 0.3s ease;
+					padding-left: rem(5px);
+					&:first-child {
+						padding-left: 0;
+					}
+					&:hover {
+						opacity: 0.5;
+					}
+				}
+			}
+			& .contact-form {
+				display: inline-block;
+			}
+			& form {
+				padding-top: rem(10px);
+				text-align: center;
+			}
+		}
+	}
+}

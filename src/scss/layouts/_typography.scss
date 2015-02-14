@@ -1,12 +1,18 @@
 @font-face{
 	font-family:'engravers-gothic';
-	src:url('../assets/fonts/engravers-gothic-bt.ttf') format('truetype');
+	src:url('/assets/fonts/engravers-gothic-bt.ttf') format('truetype');
+	font-style: normal;
+}
+
+@font-face {
+	font-family:'lucia-bt';
+	src:url('/assets/fonts/lucia-bt.ttf') format('truetype');
 	font-style: normal;
 }
 
 @font-face {
 	font-family:'trade-gothic';
-	src:url('../assets/fonts/Trade-Gothic.ttf') format('truetype');
+	src:url('/assets/fonts/Trade-Gothic.ttf') format('truetype');
 	font-style: normal;
 }
 
@@ -17,6 +23,14 @@ h1 {
 	font-weight: 400;
 	text-align: center;
 	color: $darkgrey;
+	margin: 0;
+}
+
+h1.script {
+	@include font(lucia-bt);
+	font-size: 48px;
+	text-align: center;
+	color: $brown;
 	margin: 0;
 }
 

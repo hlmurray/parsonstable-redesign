@@ -77,6 +77,7 @@ h4 {
 }
 
 .input1 {
+	width: rem(270px);
 	box-sizing: border-box;
 	@include font(garamond-premier);
 	font-style: italic;
@@ -85,7 +86,8 @@ h4 {
 	letter-spacing: 0.1em;
 	outline: none;
 	border: 1px solid $darkgrey;
-	padding: rem(9px);
+	padding: rem(10px);
+	vertical-align: top;
 	background-color: $beige;
 	&::-webkit-input-placeholder {
 	   transition: opacity 0.25s ease;
@@ -99,16 +101,15 @@ h4 {
 
 .btn-dark {
 	display: inline-block;
-	padding: rem(20px) rem(15px);
+	padding: rem(10px) rem(15px);
 	border: none;
-	background-color: $darkgrey;
+	background-color: $brown;
 	color: $beige;
 	font-size: 16px;
 	text-align: center;
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
 	@include font(trade-gothic);
-	line-height: 0;
 	-webkit-font-smoothing: antialiased;
 	transition: opacity 0.3s ease;
 	&:hover {

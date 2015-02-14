@@ -43,7 +43,12 @@
 					margin: rem(25px) 0;
 				}
 				input {
-					margin-bottom: rem(20px);
+					text-align: left;
+					margin: 0 auto rem(20px) auto;
+					display: block;
+					&:not([type="submit"]) {
+						padding-left: rem(20px);
+					}
 				}
 			}
 		}

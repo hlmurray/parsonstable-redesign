@@ -114,9 +114,10 @@ h4 {
 }
 
 .btn-dark {
+	box-sizing: border-box;
 	display: inline-block;
-	padding: rem(10px) rem(15px);
-	border: none;
+	padding: rem(9.2px) rem(15px);
+	border: 2px solid transparent;
 	background-color: $brown;
 	color: $beige;
 	font-size: 16px;
@@ -125,8 +126,10 @@ h4 {
 	text-transform: uppercase;
 	@include font(trade-gothic);
 	-webkit-font-smoothing: antialiased;
-	transition: opacity 0.3s ease;
+	transition: all 0.3s ease;
 	&:hover {
-		opacity: 0.5;
+		border: 2px solid $brown;
+		background-color: $beige;
+		color: $brown;
 	}
 }

@@ -26,7 +26,7 @@ a {
 	border-bottom: 2px solid $brown;
 	text-align: center;
 	& img {
-		margin: rem(30px);
+		margin: rem(30px) 0;
 		vertical-align: middle;
 	}
 }
@@ -52,6 +52,12 @@ a {
 			background: $brown;
 			color: #fff;
 			-webkit-font-smoothing: antialiased;
+		}
+		&:nth-of-type(4) {
+			transition: none;
+			&:hover {
+				background: none;
+			}
 		}
 	}
 	@include breakpoint(tablet) {
@@ -93,9 +99,10 @@ footer {
 					text-transform: uppercase;
 					font-size: 14px;
 					letter-spacing: 0.2em;
-					transition: background 0.3s ease;
+					transition: all 0.3s ease;
 					&:hover {
-						background: #88d3b3;
+						background: $brown;
+						color: #fff;
 					}
 				}
 			}

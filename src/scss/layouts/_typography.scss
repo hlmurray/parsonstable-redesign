@@ -114,10 +114,16 @@ h4 {
 }
 
 .btn-dark {
+<<<<<<< HEAD
 	box-sizing: border-box;
 	display: inline-block;
 	padding: rem(9.2px) rem(15px);
 	border: 2px solid transparent;
+=======
+	display: inline-block;
+	padding: rem(10px) rem(15px);
+	border: none;
+>>>>>>> Home-Page
 	background-color: $brown;
 	color: $beige;
 	font-size: 16px;
@@ -126,10 +132,16 @@ h4 {
 	text-transform: uppercase;
 	@include font(trade-gothic);
 	-webkit-font-smoothing: antialiased;
+<<<<<<< HEAD
 	transition: all 0.3s ease;
 	&:hover {
 		border: 2px solid $brown;
 		background-color: $beige;
 		color: $brown;
+=======
+	transition: opacity 0.3s ease;
+	&:hover {
+		opacity: 0.5;
+>>>>>>> Home-Page
 	}
 }

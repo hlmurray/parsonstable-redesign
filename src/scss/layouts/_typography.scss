@@ -1,11 +1,135 @@
 @font-face{
-	font-family:'adamina';
-	src:url('/assets/fonts/Adamina-Regular.ttf') format('truetype');
+	font-family:'engravers-gothic';
+	src:url('/assets/fonts/engravers-gothic-bt.ttf') format('truetype');
 	font-style: normal;
 }
 
-@font-face{
-	font-family:'engravers-gothic';
-	src:url('/assets/fonts/EngraGotBTReg');
+@font-face {
+	font-family:'lucia-bt';
+	src:url('/assets/fonts/lucia-bt.ttf') format('truetype');
 	font-style: normal;
+}
+
+@font-face {
+	font-family:'trade-gothic';
+	src:url('/assets/fonts/Trade-Gothic.ttf') format('truetype');
+	font-style: normal;
+}
+
+h1 {
+	@include font(garamond-premier);
+	font-size: 18px;
+	letter-spacing: 0.05em;
+	font-weight: 400;
+	text-align: center;
+	color: $darkgrey;
+	margin: 0;
+}
+
+h1.script {
+	@include font(lucia-bt);
+	font-size: 48px;
+	text-align: center;
+	color: $brown;
+	margin: 0;
+}
+
+
+hr {
+	width: rem(65px);
+	background-color: $darkgrey;
+	height: rem(1px);
+	margin: rem(15px) auto;
+	border: none;
+}
+
+p {
+	@include font(garamond-premier);
+	margin: 0;
+	text-align: center;
+	font-size: 16px;
+	letter-spacing: 0.05em;
+	line-height: 1.5em;
+	color: $darkgrey;
+}
+a.alt {
+	display: inline-block;
+	@include font(garamond-premier);
+	font-size: 18px;
+	font-style: italic;
+	letter-spacing: 0.05em;
+	font-weight: 400;
+	color: $darkgrey;
+	position: relative;
+	&:after {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background: #88d3b3;
+		content: '';
+		opacity: 0;
+		-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+		-moz-transition: opacity 0.3s, -moz-transform 0.3s;
+		transition: opacity 0.3s, transform 0.3s;
+		-webkit-transform: translateY(10px);
+		-moz-transform: translateY(10px);
+		transform: translateY(10px);
+	}
+	&:hover:after {
+		opacity: 1;
+		-webkit-transform: translateY(0px);
+		-moz-transform: translateY(0px);
+		transform: translateY(0px);
+	}
+}
+
+h4 {
+	@extend p;
+	font-style: italic;
+}
+
+.input1 {
+	width: rem(270px);
+	box-sizing: border-box;
+	@include font(garamond-premier);
+	font-style: italic;
+	font-size: 16px;
+	text-align: center;
+	letter-spacing: 0.1em;
+	outline: none;
+	border: 1px solid $darkgrey;
+	padding: rem(10px);
+	vertical-align: top;
+	background-color: $beige;
+	&::-webkit-input-placeholder {
+	   transition: opacity 0.25s ease;
+	   color: $darkgrey;
+	   @include font(garamond-premier);
+	}
+	&:focus::-webkit-input-placeholder {
+		opacity: 0;
+	}
+}
+
+.btn-dark {
+	box-sizing: border-box;
+	display: inline-block;
+	padding: rem(9.2px) rem(15px);
+	border: 2px solid transparent;
+	background-color: $brown;
+	color: $beige;
+	font-size: 16px;
+	text-align: center;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	@include font(trade-gothic);
+	-webkit-font-smoothing: antialiased;
+	transition: all 0.3s ease;
+	&:hover {
+		border: 2px solid $brown;
+		background-color: $beige;
+		color: $brown;
+	}
 }

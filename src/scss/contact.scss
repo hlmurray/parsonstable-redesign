@@ -3,7 +3,7 @@
 @import "./modules/_mixins.scss";
 @import "./modules/_placeholders.scss";
 
-.contact-top {
+.contact-map {
 	margin: rem(30px) 0;
 	img {
 		width: 100%;
@@ -13,4 +13,11 @@
 .home-info {
 	margin: rem(40px) 0;
 	@extend %cf;
+	div.philosophy {
+		a {
+			margin: 0;
+			font-style: normal;
+			font-size: 16px;
+		}
+	}
 }

@@ -1,0 +1,100 @@
+@import "./modules/_variables.scss";
+@import "./modules/_functions.scss";
+@import "./modules/_mixins.scss";
+@import "./modules/_placeholders.scss";
+
+h1.script {
+	margin: rem(30px) 0;
+}
+
+.history-ctn {
+	@extend %cf;
+	.history-txt {
+		box-sizing: border-box;
+		width: 48%;
+		float: left;
+		padding-right: rem(45px);
+		p {
+			text-align: left;
+			text-indent: rem(30px);
+			line-height: 1.7em;
+			&.history-letter {
+				float: left;
+				width: 6%;
+				color: $brown;
+				font-size: 50px;
+				text-indent: 0;
+				line-height: 1em;
+			}
+			&.history-header {
+				float: left;
+				width: 94%;
+				color: $brown;
+				text-transform: uppercase;
+				letter-spacing: 0.075em;
+				text-indent: 0;
+				line-height: 1.5em;
+			}
+			&.history-content {
+				text-indent: rem(-30px);
+			}
+		}
+	}
+}
+
+.history-images {
+	position: relative;
+	width: rem(960px);
+	height: rem(515px);
+	margin: rem(20px) auto;
+	.history-img {
+		background-size: cover;
+		background-repeat: no-repeat;
+		position: absolute;
+		&:nth-of-type(1) {
+			width: rem(362px);
+			height: rem(264px);
+			top: 0;
+			left: 0;
+			z-index: 2;
+		}
+		&:nth-of-type(2) {
+			width: rem(316px);
+			height: rem(215px);
+			top: rem(200px);
+			left: rem(190px);
+			z-index: 1;
+		}
+		&:nth-of-type(3) {
+			width: rem(516px);
+			height: rem(502px);
+			left: rem(485px);
+		}
+	}
+}
+
+.history-chef {
+	width: rem(700px);
+	height: 100%;
+	margin: rem(40px) auto;
+	.chef-intro {
+		display: inline-block;
+		width: rem(305px);
+		margin-right: rem(30px);
+		margin-top: rem(30px);
+		vertical-align: top;
+		p {
+			text-align: left;
+			&:last-child {
+				text-indent: rem(30px);
+			}
+		}
+	}
+	.chef-img {
+		display: inline-block;
+		width: rem(300px);
+		height: rem(410px);
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+}

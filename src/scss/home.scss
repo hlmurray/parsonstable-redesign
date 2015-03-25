@@ -1,12 +1,11 @@
 @import "./modules/_variables.scss";
-@import "./modules/_functions.scss";
 @import "./modules/_mixins.scss";
 @import "./modules/_placeholders.scss";
 
 .wrapper {
 	.home-hero {
 		position: relative;
-		margin: rem(30px) 0;
+		margin: 30px 0;
 		.home-slideshow {
 			.home-slides {
 				width: 100%;
@@ -18,8 +17,8 @@
 		}
 		.pager-prev,
 		.pager-next {
-			width: rem(35px);
-			height: rem(35px);
+			width: 35px;
+			height: 35px;
 			position: absolute;
 			z-index: 100;
 			top: 50%;
@@ -33,10 +32,10 @@
 			cursor: pointer;
 		}
 		.pager-prev {
-			left: rem(-20px);
+			left: -20px;
 		}
 		.pager-next {
-			right: rem(-20px);
+			right: -20px;
 		}
 	}
 }

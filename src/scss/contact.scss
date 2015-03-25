@@ -1,18 +1,17 @@
 @import "./modules/_variables.scss";
-@import "./modules/_functions.scss";
 @import "./modules/_mixins.scss";
 @import "./modules/_placeholders.scss";
 
 .contact-map {
-	margin: rem(30px) 0;
+	margin: 30px 0;
 	img {
 		width: 100%;
 	}
 }
 
 .home-info {
-	margin: rem(40px) 0;
 	@extend %cf;
+	margin: 0px 0;
 	div.philosophy {
 		a {
 			margin: 0;

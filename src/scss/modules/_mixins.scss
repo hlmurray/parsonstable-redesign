@@ -1,18 +1,3 @@
-@mixin font-smoothing($value) {
-    @if $value == yes{
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-    @elseif $value == inherit {
-        -webkit-font-smoothing: inherit;
-        -moz-osx-font-smoothing: inherit;
-    }
-    @else {
-        -webkit-font-smoothing: subpixel-antialiased;
-        -moz-osx-font-smoothing: auto;
-    }
-}
-
 // Fonts
 @mixin font($font){
   @if($font == engravers-gothic){
@@ -23,14 +8,5 @@
     font-family: "garamond-premier-pro-display", serif;
   } @else if($font == lucia-bt) {
     font-family: "lucia-bt";
-  }
-}
-  
-// Random Breakpoints
-@mixin breakpoint($size){
-  @each $point in $breakpoints{
-    @if $size == map-get($point, name){
-      @media(min-width: rem(map-get($point, size)*1px)){@content;}
-    }
   }
 }

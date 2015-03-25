@@ -36,10 +36,10 @@ h1.script {
 
 
 hr {
-	width: rem(65px);
+	width: 65px;
 	background-color: $darkgrey;
-	height: rem(1px);
-	margin: rem(15px) auto;
+	height: 1px;
+	margin: 15px auto;
 	border: none;
 }
 
@@ -70,17 +70,11 @@ a.alt {
 		background: $brown;
 		content: '';
 		opacity: 0;
-		-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-		-moz-transition: opacity 0.3s, -moz-transform 0.3s;
 		transition: opacity 0.3s, transform 0.3s;
-		-webkit-transform: translateY(10px);
-		-moz-transform: translateY(10px);
 		transform: translateY(10px);
 	}
 	&:hover:after {
 		opacity: 1;
-		-webkit-transform: translateY(0px);
-		-moz-transform: translateY(0px);
 		transform: translateY(0px);
 	}
 }
@@ -91,7 +85,7 @@ h4 {
 }
 
 .input1 {
-	width: rem(270px);
+	width: 270px;
 	box-sizing: border-box;
 	@include font(garamond-premier);
 	font-size: 16px;
@@ -99,7 +93,7 @@ h4 {
 	letter-spacing: 0.1em;
 	outline: none;
 	border: 1px solid $darkgrey;
-	padding: rem(10px);
+	padding: 10px;
 	vertical-align: top;
 	background-color: $beige;
 	&::-webkit-input-placeholder {
@@ -115,7 +109,7 @@ h4 {
 .btn-dark {
 	box-sizing: border-box;
 	display: inline-block;
-	padding: rem(9.2px) rem(15px);
+	padding: 9.2px 15px;
 	border: 2px solid transparent;
 	background-color: $brown;
 	color: $beige;
@@ -135,54 +129,54 @@ h4 {
 
 .home-info {
 	@extend %cf;
-	padding: 0 0 rem(50px) 0;
+	padding: 0 0 50px 0;
 	h1.script {
-		margin: 0 0 rem(30px) 0;
+		margin: 0 0 30px 0;
 	}
 	div {
 		box-sizing: border-box;
 		width: 33%;
-		height: rem(360px);
+		height: 360px;
 		float: left;
 		border-right: 1px solid $darkgrey;
-		padding: rem(20px) rem(45px) 0 rem(45px);
+		padding: 20px 45px 0 45px;
 		text-align: center;
 		&:last-child {
 			border-right: none;
 		}
 		&.philosophy {
 			p {
-				width: rem(250px);
-				margin: rem(25px) auto rem(15px) auto;
+				width: 250px;
+				margin: 25px auto 15px auto;
 			}
 			a {
-				margin: rem(10px) 0;
+				margin: 10px 0;
 			}
 		}
 		&.hours {
 			h4 {
-				margin-top: rem(20px);
+				margin-top: 20px;
 				&.alpha {
-					margin-top: rem(25px);
+					margin-top: 25px;
 				}
 			}
 			a {
-				margin-top: rem(21px);
+				margin-top: 21px;
 			}
 		}
 		&.subscribe {
 			p {
-				margin: rem(25px) 0;
+				margin: 25px 0;
 			}
 			input {
 				text-align: left;
-				margin: 0 auto rem(20px) auto;
+				margin: 0 auto 20px auto;
 				display: block;
 				&[type="submit"] {
 					cursor: pointer;
 				}
 				&:not([type="submit"]) {
-					padding-left: rem(20px);
+					padding-left: 20px;
 				}
 			}
 		}

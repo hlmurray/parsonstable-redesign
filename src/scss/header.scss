@@ -1,5 +1,4 @@
 @import "./modules/_variables.scss";
-@import "./modules/_functions.scss";
 @import "./modules/_mixins.scss";
 @import "./modules/_placeholders.scss";
 
@@ -20,11 +19,11 @@ a {
 
 .masthead {
 	width: 100%;
-	padding-bottom: rem(20px);
+	padding-bottom: 20px;
 	border-bottom: 2px solid $brown;
 	text-align: center;
 	img {
-		margin: rem(30px) 0;
+		margin: 30px 0;
 		vertical-align: middle;
 	}
 }
@@ -33,14 +32,21 @@ a {
 	a {
 		@include font(trade-gothic);
 		position: relative;
-		display: block;
-		padding: rem(5px) rem(5px) rem(5px) rem(8px);
+		display: inline-block;
+		padding: 5px 5px 5px 8px;
+ 		margin: 0 20px;
 		font-size: 14px;
 		letter-spacing: 0.2em;
 		font-weight: 500;
 		color: $darkgrey;
 		text-decoration: none;
 		text-transform: uppercase;
+		transition: all 0.3s ease;
+		&:hover {
+			background: $brown;
+			color: $white;
+			-webkit-font-smoothing: antialiased;
+		}
 		&:first-child {
 			margin-left: 0;
 		}
@@ -51,31 +57,19 @@ a {
 			}
 		}
 	}
-	@include breakpoint(tablet) {
-		a {
-			display: inline-block;
-			margin: 0 rem(20px);
-			transition: all 0.3s ease;
-			&:hover {
-				background: $brown;
-				color: #fff;
-				-webkit-font-smoothing: antialiased;
-			}
-		}
-	}
 }
 
 footer {
 	border-top: 2px solid $brown;
 	.footer-contact {
-		padding: rem(40px) 0 rem(20px) 0;
+		padding: 40px 0 20px 0;
 		.contact-top {
 			text-align: center;
 			color: $black;
 			p {
 				@include font(garamond-premier);
 				margin: 0;
-				padding: 0 rem(10px);
+				padding: 0 10px;
 				display: inline-block;
 				text-transform: uppercase;
 				font-size: 14px;
@@ -86,10 +80,10 @@ footer {
 				}
 				&:last-child {
 					border-right: none;
-					padding: 0 0 0 rem(2px);
+					padding: 0 0 0 2px;
 				}
 				a {
-					padding: rem(5px) rem(8px);
+					padding: 5px 8px;
 					@include font(garamond-premier);
 					text-decoration: none;
 					color: $black;
@@ -108,12 +102,12 @@ footer {
 			text-align: center;
 			.contact-social {
 				display: inline-block;
-				padding-right: rem(10px);
+				padding-right: 10px;
 				a {
 					color: $brown;
 					font-size: 20px;
 					transition: opacity 0.3s ease;
-					padding-left: rem(5px);
+					padding-left: 5px;
 					&:first-child {
 						padding-left: 0;
 					}
@@ -126,7 +120,7 @@ footer {
 				display: inline-block;
 			}
 			form {
-				padding-top: rem(10px);
+				padding-top: 10px;
 				text-align: center;
 			}
 		}

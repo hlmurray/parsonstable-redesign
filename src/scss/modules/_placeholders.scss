@@ -1,27 +1,3 @@
-// Covers parent
-	%cover-all {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
-
-// Center Block
-	%h-center{
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-// Vertically Center things
-	%v-center{
-		top: 50%;
-		transform: translateY(-50%);
-	}
-	
-
-
-
 %cf{
 	*zoom: 1;
 	

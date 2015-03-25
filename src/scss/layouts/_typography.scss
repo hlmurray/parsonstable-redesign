@@ -94,9 +94,8 @@ h4 {
 	width: rem(270px);
 	box-sizing: border-box;
 	@include font(garamond-premier);
-	font-style: italic;
 	font-size: 16px;
-	text-align: center;
+	text-align: left;
 	letter-spacing: 0.1em;
 	outline: none;
 	border: 1px solid $darkgrey;

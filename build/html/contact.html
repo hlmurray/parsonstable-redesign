@@ -27,18 +27,18 @@
 	<body>
 		<header class="masthead js-subtract-fill">
 			<nav class="header-nav">
-				<a href="#">menu</a>
-				<a href="#">history</a>
-				<a href="#">gallery</a>
-				<a href="#"><img src="/assets/images/logo-new.png" alt="The Parson's Table" /></a>
-				<a href="#">press</a>
-				<a href="#">contact</a>
+				<a href="menu.html">menu</a>
+				<a href="history.html">history</a>
+				<a href="gallery.html">gallery</a>
+				<a href="index.html"><img src="/assets/images/logo-new.png" alt="The Parson's Table" /></a>
+				<a href="press.html">press</a>
+				<a href="contact.html">contact</a>
 				<a href="http://www.opentable.com/the-parsons-table#reservation" target="_blank">reserve</a>
 			</nav>
 		</header>
 		<main class="wrapper">
 			<section class="contact-map">
-				<img src="/assets/images/contact/contact-map.jpg">
+				<div id="map-canvas"></div>
 			</section>
 			<section class="home-info">
 				<div class="philosophy">
@@ -104,4 +104,44 @@
 		</footer>
 		<script type="text/javascript" src="/js/vendor/jquery.1.11.1.min.js"></script>
 		<script type="text/javascript" src="/js/plugins/jquery.cycle2.min.js"></script>
+		<script>
+		function initialize() {
+		  var mapStyles = [
+			{
+			    "stylers": [
+			      { "saturation": -100 },
+			      { "lightness": 7 }
+			    ]
+			}
+		  ];
+		  var mapOptions = {
+		    zoom: 16,
+		    center: new google.maps.LatLng(33.875283, -78.616226),
+		    scrollwheel: false,
+		    draggable: true,
+		    panControl: true,
+		    scaleControl: false,
+		    zoomControl: true,
+		    streetViewControl: false,
+		    disableDoubleClickZoom: true,
+		    mapTypeId: 'Styled'
+		  };
+
+		  var map = new google.maps.Map(document.getElementById('map-canvas'),
+		      mapOptions);
+
+		  var styledMapType = new google.maps.StyledMapType(mapStyles, { name: 'Styled' });
+		  map.mapTypes.set('Styled', styledMapType);
+		}
+
+		function loadScript() {
+		  var script = document.createElement('script');
+		  script.type = 'text/javascript';
+		  script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' +
+		      '&callback=initialize';
+		  document.body.appendChild(script);
+		}
+
+		window.onload = loadScript;
+		</script>
 </html>

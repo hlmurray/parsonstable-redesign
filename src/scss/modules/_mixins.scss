@@ -1,12 +1,12 @@
 // Fonts
 @mixin font($font){
   @if($font == engravers-gothic){
-    font-family: "engravers-gothic", sans-serif;
+    font-family: "engravers-gothic", sans-serif !important;
   } @else if($font == trade-gothic) {
-    font-family: "trade-gothic", serif;
+    font-family: "trade-gothic", serif !important;
   } @else if($font == garamond-premier) {
-    font-family: "garamond-premier-pro-display", serif;
+    font-family: "garamond-premier-pro-display", serif !important;
   } @else if($font == lucia-bt) {
-    font-family: "lucia-bt";
+    font-family: "lucia-bt" !important;
   }
 }

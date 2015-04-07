@@ -9,14 +9,14 @@ var paths = {
 		scss: "./src/scss",
 		js: "./src/js",
 		html: "./src/html",
-		template: "./src/default_site",
+		template: "./src/templates",
 		assets: "./src/assets"
 	},
 	build:{
 		css: "./build/css",
 		js: "./build/js",
 		html: "./build/html",
-		template: "./build/default_site",
+		template: "./build/templates",
 		assets: "./build/assets"
 	}
 }
@@ -48,6 +48,12 @@ var paths = {
 		.pipe(gulp.dest(paths.build.assets))
 	});
 
+	// Assets Compiler
+	gulp.task("compile-templates", function(){
+		return gulp.src(paths.src.template+"/**/*.html")
+		.pipe(gulp.dest(paths.build.template))
+	});
+
 
 gulp.task('watch', function(){
 	// What to watch
@@ -55,9 +61,10 @@ gulp.task('watch', function(){
 	gulp.watch(paths.src.js+"/**/*.js", ["compile-js"]);
 	gulp.watch(paths.src.html+"/**/*.html", ["compile-html"]);
 	gulp.watch(paths.src.assets+"/**/*.*", ["compile-assets"]);
+	gulp.watch(paths.src.template+"/**/*.html", ["compile-templates"]);
 });
 
-gulp.task("compile", ["compile-assets","compile-html","compile-js","compile-scss",], function(){
+gulp.task("compile", ["compile-assets","compile-html","compile-js","compile-scss","compile-templates"], function(){
 	return gulp.src("src/fake")
 	.pipe(gulp.dest("src/fake"))
 });

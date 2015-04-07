@@ -1,0 +1,68 @@
+{% extends "global/_layout" %}
+{% set title = "" %}
+
+
+{% block content %}
+	<section class="home-hero">
+		<div class="home-slideshow">
+			{% for asset in entry.topSlideshow %}
+				<div class="home-slides" style="background-image:url({{ asset.url }});"></div>
+			{% endfor %}
+		</div>
+		<div class="home-pager">
+			<span class="pager-prev" style="background-image:url(/assets/images/home/pager-left.png);"></span>
+			<span class="pager-next" style="background-image:url(/assets/images/home/pager-right.png);"></span>
+		</div>
+	</section>
+	<section class="home-info">
+		<h1 class="script">Award Winning Dining in Our Historic Setting</h1>
+		<div class="philosophy">
+			<header>
+				<h1>Our Philosophy</h1>
+			</header>
+			<hr>
+			<p>Throughout the development of the menus of The Parson's Table we strive to provide you, our guests, with the finest and freshest ingredients nature offers. We also want to do our part to protect the environment by working with sustainable, organic suppliers both locally and throughout the country.</p>
+			<a href="#" class="alt">Read more</a>
+		</div>
+		<div class="hours">
+			<header>
+				<h1>Hours</h1>
+			</header>
+			<hr>
+			<!-- &ndash; -->
+			{% for hoursBlock in entry.middleHoursBlock %}
+			<h4 class="alpha">Dinner</h4>
+			<p>{{ hoursBlock.dinnerHoursDate }}</p>
+			<p>{{ hoursBlock.dinnerHoursTime }}</p>
+			<h4>Early Bird</h4>
+			<p>4:30 &ndash; 5:45pm</p>
+			<h4>Happy Hour</h4>
+			<p>4:30 &ndash; 7pm</p>
+			{% if hoursBlock.specialHoursTitle != '' %}
+			<h4>{{ hoursBlock.specialHoursTitle }}</h4>
+			<p>{{ hoursBlock.specialHoursTime }}</p>
+			{% endif %}
+			{% endfor %}
+		</div>
+		<div class="subscribe">
+			<header>
+				<h1>Make a Reservation</h1>
+			</header>
+			<hr>
+			<!--
+			<header>
+				<h1>News &amp; Events</h1>
+			</header>
+			<hr>
+			<p>Sign up for our newsletter</p>
+			<form action="//parsonstable.us9.list-manage.com/subscribe/post?u=d6d72b6b0eeb4035466eb1763&amp;id=c410ab85bd" method="post" class="email-form" target="_blank">
+				<input type="text" class="input1" name="FNAME" placeholder="First Name" required/>
+				<input type="text" class="input1" name="LNAME" placeholder="Last Name" required/>
+				<input type="email" class="input1" name="EMAIL" placeholder="Email Address" required/>
+				<input type="submit" class="btn-dark" value="SUBSCRIBE">
+			</form>
+			-->
+			<script type="text/javascript" src="https://secure.opentable.com/frontdoor/default.aspx?rid=44554&restref=44554&bgcolor=F6F6F3&titlecolor=0F0F0F&subtitlecolor=0F0F0F&btnbgimage=https://secure.opentable.com/frontdoor/img/ot_btn_red.png&otlink=FFFFFF&icon=dark&mode=short&hover=1"></script>
+		</div>
+	</section>
+{% endblock %}

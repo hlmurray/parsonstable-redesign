@@ -30,7 +30,7 @@ a {
 
 .header-nav {
 	a {
-		@include font(trade-gothic);
+		font-family: 'Trade Gothic';
 		position: relative;
 		display: inline-block;
 		padding: 5px 5px 5px 8px;
@@ -44,7 +44,7 @@ a {
 		transition: all 0.3s ease;
 		&:hover {
 			background: $brown;
-			color: $white;
+			color: $beige;
 			-webkit-font-smoothing: antialiased;
 		}
 		&:first-child {
@@ -92,8 +92,7 @@ footer {
 					letter-spacing: 0.2em;
 					transition: all 0.3s ease;
 					&:hover {
-						background: $brown;
-						color: #fff;
+						color: $brown;
 					}
 				}
 			}

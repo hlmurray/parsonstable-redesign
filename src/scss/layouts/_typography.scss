@@ -32,6 +32,7 @@ h1.script {
 	text-align: center;
 	color: $brown;
 	margin: 0;
+	letter-spacing: 0;
 }
 
 
@@ -85,7 +86,7 @@ h4 {
 }
 
 .input1 {
-	width: 270px;
+	width: 225px;
 	box-sizing: border-box;
 	@include font(garamond-premier);
 	font-size: 16px;

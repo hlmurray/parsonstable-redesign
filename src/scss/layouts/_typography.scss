@@ -137,9 +137,7 @@ h4 {
 	> div {
 		box-sizing: border-box;
 		width: 33%;
-		height: 360px;
 		float: left;
-		border-right: 1px solid $darkgrey;
 		padding: 20px 45px 0 45px;
 		text-align: center;
 		&:last-child {
@@ -155,6 +153,8 @@ h4 {
 			}
 		}
 		&.hours {
+			border-left: 1px solid $darkgrey;
+			border-right: 1px solid $darkgrey;
 			h4 {
 				margin-top: 20px;
 				&.alpha {

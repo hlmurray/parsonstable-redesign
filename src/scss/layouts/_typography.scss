@@ -1,3 +1,8 @@
+@import url('//hello.myfonts.net/count/2de0a2');
+
+@font-face {font-family: 'trade-gothic';src: url('/assets/fonts/2DE0A2_0_0.eot');src: url('/assets/fonts/2DE0A2_0_0.eot?#iefix') format('embedded-opentype'),url('/assets/fonts/2DE0A2_0_0.woff2') format('woff2'),url('/assets/fonts/2DE0A2_0_0.woff') format('woff'),url('/assets/fonts/2DE0A2_0_0.ttf') format('truetype');}
+ 
+
 @font-face{
 	font-family:'engravers-gothic';
 	src:url('/assets/fonts/engravers-gothic-bt.ttf') format('truetype');
@@ -7,12 +12,6 @@
 @font-face {
 	font-family:'lucia-bt';
 	src:url('/assets/fonts/lucia-bt.ttf') format('truetype');
-	font-style: normal;
-}
-
-@font-face {
-	font-family:'trade-gothic';
-	src:url('/assets/fonts/Trade-Gothic.ttf') format('truetype');
 	font-style: normal;
 }
 

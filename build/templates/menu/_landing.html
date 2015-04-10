@@ -7,7 +7,7 @@
 	<nav class="menu-nav">
 		<a class="starters active">starters</a>
 		<a class="entrees">entrees</a>
-		<a class="dessert">dessert</a>
+		<a class="dessert">desserts</a>
 		<a class="drinks">beer &amp; cocktails</a>
 		<a class="wine">wine list</a>
 	</nav>
@@ -28,74 +28,6 @@
 			<p class="menu-price">{{ startersItems.startersPrice }}</p>
 		</div>
 		{% endfor %}
-		<!--<div class="menu-item-ctn">
-			<p class="menu-item">Savory Wild Mushrooms</p>
-			<p class="menu-desc">Sauteed with leeks, garlic and maitre d' butter</p>
-			<p class="menu-price">7</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Baked Brie en Brioche</p>
-			<p class="menu-desc">Melba sauce and toasted almonds</p>
-			<p class="menu-price">10</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Oysters on the Half Shell</p>
-			<p class="menu-desc">Served chilled, cocktail sauce, shallot vinaigrette and lemon (gf)</p>
-			<p class="menu-price">1/2 dozen...6 &nbsp;&nbsp; dozen...10</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Hickory Smoked North Atlantic Salmon</p>
-			<p class="menu-desc">Red onion relish, capers and horseradish cream (gf)</p>
-			<p class="menu-price">8</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Chilled Shrimp Cocktail</p>
-			<p class="menu-desc">Four jumbo shrimp and cocktail sauce</p>
-			<p class="menu-price">12</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Sesame Seared Tuna</p>
-			<p class="menu-desc">Soy, ginger, wasabi, apricot glaze, toasted sesame seeds and pickled ginger</p>
-			<p class="menu-price">9</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Chilled Shrimp Cocktail</p>
-			<p class="menu-desc">Four jumbo shrimp and cocktail sauce</p>
-			<p class="menu-price">12</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Price Edward Island Mussels</p>
-			<p class="menu-desc">Simmered with leeks, garlic, Pernod and white wine</p>
-			<p class="menu-price">9</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Oysters Rockefeller</p>
-			<p class="menu-desc">Spinach, bacon, heavy cream and Tabasco</p>
-			<p class="menu-price">10</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Sautéed Jumbo Lump Crab Cake</p>
-			<p class="menu-desc">Spicy Dill Mustard</p>
-			<p class="menu-price">10</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Wedge Salad</p>
-			<p class="menu-desc">Tomato, Red Onion, Bacon and buttermilk bleu cheese dressing (gf)</p>
-			<p class="menu-price">6</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Baby Spinach Salad</p>
-			<p class="menu-desc">Red onion, bleu cheese, honey roasted pecans and raspberry vinaigrette (gf)</p>
-			<p class="menu-price">6</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Charleston She Crab Soup</p>
-			<p class="menu-desc">Fresh crabmeat, crab roe and sherry</p>
-			<p class="menu-price">6</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Soup du Jour</p>
-		</div> -->
 	</div>
 	<div class="menu-ctn entrees">
 		<header>
@@ -103,78 +35,87 @@
 		</header>
 		<hr>
 		<p>Entrees are accompanied with mixed green salad in our house vinaigrette, cornbread, fresh vegetables, and a choice of garlic and leek mashed Yukon gold potato, carrot and sweet potato puree, roasted rosemary fingerling potatoes, or basmati rice.</p>
+		<h2 class="menu-type">Steaks</h2>
+		<p>Steaks may be prepared char-grilled, blackened, peppercorn encrusted, or espresso encrusted.</p>
+		{% for entreesItems in entry.entreesSteaks %}
 		<div class="menu-item-ctn">
-			<p class="menu-item">Local Fried Green Tomatoes</p>
-			<p class="menu-desc">Goat cheese, sweet red pepper coulis</p>
-			<p class="menu-price">6</p>
+			<p class="menu-item">{{ entreesItems.entreeName }}</p>
+			{% if entreesItems.entreeDescription != '' %}
+			<p class="menu-desc">{{ entreesItems.entreeDescription }}</p>
+			{% endif %}
+			<p class="menu-price">{{ entreesItems.entreePrice }}</p>
+			{% if entreesItems.entreeWineSuggestion != '' %}
+			<p class="menu-wine">{{ entreesItems.entreeWineSuggestion }}</p>
+			{% endif %}
 		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Savory Wild Mushrooms</p>
-			<p class="menu-desc">Sauteed with leeks, garlic and maitre d' butter</p>
-			<p class="menu-price">7</p>
+		{% endfor %}
+		<div class="menu-sauce">
+			<p>with choice of sauce:</p>
+			<p class="menu-item">béarnaise <span>(gf)</span></p>
+			<p class="menu-item">port wine demi glaze</p>
+			<p class="menu-item">green peppercorn-brandy <span>(gf)</span></p>
+			<p class="menu-item">red wine bordelaise</p>
+			<p class="menu-item">maître d'butter <span>(gf)</span></p>
 		</div>
+		<h2 class="menu-type">Specialties</h2>
+		{% for entreesItems in entry.entreesSpecialties %}
 		<div class="menu-item-ctn">
-			<p class="menu-item">Baked Brie en Brioche</p>
-			<p class="menu-desc">Melba sauce and toasted almonds</p>
-			<p class="menu-price">10</p>
+			<p class="menu-item">{{ entreesItems.entreeName }}</p>
+			{% if entreesItems.entreeDescription != '' %}
+			<p class="menu-desc">{{ entreesItems.entreeDescription }}</p>
+			{% endif %}
+			<p class="menu-price">{{ entreesItems.entreePrice }}</p>
+			{% if entreesItems.entreeWineSuggestion != '' %}
+			<p class="menu-wine">{{ entreesItems.entreeWineSuggestion }}</p>
+			{% endif %}
 		</div>
+		{% endfor %}
+		<h2 class="menu-type">Seafood</h2>
+		{% for entreesItems in entry.entreesSeafood %}
 		<div class="menu-item-ctn">
-			<p class="menu-item">Oysters on the Half Shell</p>
-			<p class="menu-desc">Served chilled, cocktail sauce, shallot vinaigrette and lemon (gf)</p>
-			<p class="menu-price">1/2 dozen...6 &nbsp;&nbsp; dozen...10</p>
+			<p class="menu-item">{{ entreesItems.entreeName }}</p>
+			{% if entreesItems.entreeDescription != '' %}
+			<p class="menu-desc">{{ entreesItems.entreeDescription }}</p>
+			{% endif %}
+			<p class="menu-price">{{ entreesItems.entreePrice }}</p>
+			{% if entreesItems.entreeWineSuggestion != '' %}
+			<p class="menu-wine">{{ entreesItems.entreeWineSuggestion }}</p>
+			{% endif %}
 		</div>
+		{% endfor %}
+		<h2 class="menu-type">Early Bird Menu</h2>
+		{% for entreesItems in entry.entreesEarlyBird %}
 		<div class="menu-item-ctn">
-			<p class="menu-item">Hickory Smoked North Atlantic Salmon</p>
-			<p class="menu-desc">Red onion relish, capers and horseradish cream (gf)</p>
-			<p class="menu-price">8</p>
+			<p class="menu-item">{{ entreesItems.entreeName }}</p>
+			{% if entreesItems.entreeDescription != '' %}
+			<p class="menu-desc">{{ entreesItems.entreeDescription }}</p>
+			{% endif %}
+			<p class="menu-price">{{ entreesItems.entreePrice }}</p>
+			{% if entreesItems.entreeWineSuggestion != '' %}
+			<p class="menu-wine">{{ entreesItems.entreeWineSuggestion }}</p>
+			{% endif %}
 		</div>
+		{% endfor %}
+		<h2 class="menu-type">Children's Menu</h2>
+		{% for entreesItems in entry.entreesChildren %}
 		<div class="menu-item-ctn">
-			<p class="menu-item">Chilled Shrimp Cocktail</p>
-			<p class="menu-desc">Four jumbo shrimp and cocktail sauce</p>
-			<p class="menu-price">12</p>
+			<p class="menu-desc">{{ entreesItems.entreeDescription }}</p>
+			<p class="menu-price">{{ entreesItems.entreePrice }}</p>
 		</div>
+		{% endfor %}
+		<h2 class="menu-type">Sides</h2>
+		{% for sidesItems in entry.entreesSides %}
 		<div class="menu-item-ctn">
-			<p class="menu-item">Sesame Seared Tuna</p>
-			<p class="menu-desc">Soy, ginger, wasabi, apricot glaze, toasted sesame seeds and pickled ginger</p>
-			<p class="menu-price">9</p>
+			<p class="menu-item">{{ sidesItems.sideName }}</p>
+			{% if sidesItems.sideDescription != '' %}
+			<p class="menu-desc">{{ sidesItems.sideDescription }}</p>
+			{% endif %}
+			<p class="menu-price">{{ sidesItems.sidePrice }}</p>
 		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Chilled Shrimp Cocktail</p>
-			<p class="menu-desc">Four jumbo shrimp and cocktail sauce</p>
-			<p class="menu-price">12</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Price Edward Island Mussels</p>
-			<p class="menu-desc">Simmered with leeks, garlic, Pernod and white wine</p>
-			<p class="menu-price">9</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Oysters Rockefeller</p>
-			<p class="menu-desc">Spinach, bacon, heavy cream and Tabasco</p>
-			<p class="menu-price">10</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Sautéed Jumbo Lump Crab Cake</p>
-			<p class="menu-desc">Spicy Dill Mustard</p>
-			<p class="menu-price">10</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Wedge Salad</p>
-			<p class="menu-desc">Tomato, Red Onion, Bacon and buttermilk bleu cheese dressing (gf)</p>
-			<p class="menu-price">6</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Baby Spinach Salad</p>
-			<p class="menu-desc">Red onion, bleu cheese, honey roasted pecans and raspberry vinaigrette (gf)</p>
-			<p class="menu-price">6</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Charleston She Crab Soup</p>
-			<p class="menu-desc">Fresh crabmeat, crab roe and sherry</p>
-			<p class="menu-price">6</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Soup du Jour</p>
+		{% endfor %}
+		<div class="entree-disclaimer">
+			<p>All of The Parson’s Table beef is USDA choice or higher and aged a minimum of three weeks for tenderness and flavor.</p>
+			<p>(gf) gluten free | (v) vegan</p>
 		</div>
 	</div>
 	<div class="menu-ctn dessert">

@@ -10,9 +10,9 @@ h1.script {
 	@extend %cf;
 	.history-txt {
 		box-sizing: border-box;
-		width: 48%;
+		width: 50%;
 		float: left;
-		padding-right: 45px;
+		padding: 0 20px;
 		p {
 			text-align: left;
 			text-indent: 30px;
@@ -20,6 +20,7 @@ h1.script {
 			&.history-letter {
 				float: left;
 				width: 6%;
+				margin-right: 1%;
 				color: $brown;
 				font-size: 50px;
 				text-indent: 0;
@@ -27,7 +28,7 @@ h1.script {
 			}
 			&.history-header {
 				float: left;
-				width: 94%;
+				width: 93%;
 				color: $brown;
 				text-transform: uppercase;
 				letter-spacing: 0.075em;

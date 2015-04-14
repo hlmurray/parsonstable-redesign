@@ -123,79 +123,15 @@
 			<h1>Desserts</h1>
 		</header>
 		<hr>
+		{% for dessertsItems in entry.desserts %}
 		<div class="menu-item-ctn">
-			<p class="menu-item">Local Fried Green Tomatoes</p>
-			<p class="menu-desc">Goat cheese, sweet red pepper coulis</p>
-			<p class="menu-price">6</p>
+			<p class="menu-item">{{ dessertsItems.dessertName }}</p>
+			{% if dessertsItems.dessertDescription != '' %}
+			<p class="menu-desc">{{ dessertsItems.dessertDescription }}</p>
+			{% endif %}
+			<p class="menu-price">{{ dessertsItems.dessertPrice }}</p>
 		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Savory Wild Mushrooms</p>
-			<p class="menu-desc">Sauteed with leeks, garlic and maitre d' butter</p>
-			<p class="menu-price">7</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Baked Brie en Brioche</p>
-			<p class="menu-desc">Melba sauce and toasted almonds</p>
-			<p class="menu-price">10</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Oysters on the Half Shell</p>
-			<p class="menu-desc">Served chilled, cocktail sauce, shallot vinaigrette and lemon (gf)</p>
-			<p class="menu-price">1/2 dozen...6 &nbsp;&nbsp; dozen...10</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Hickory Smoked North Atlantic Salmon</p>
-			<p class="menu-desc">Red onion relish, capers and horseradish cream (gf)</p>
-			<p class="menu-price">8</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Chilled Shrimp Cocktail</p>
-			<p class="menu-desc">Four jumbo shrimp and cocktail sauce</p>
-			<p class="menu-price">12</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Sesame Seared Tuna</p>
-			<p class="menu-desc">Soy, ginger, wasabi, apricot glaze, toasted sesame seeds and pickled ginger</p>
-			<p class="menu-price">9</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Chilled Shrimp Cocktail</p>
-			<p class="menu-desc">Four jumbo shrimp and cocktail sauce</p>
-			<p class="menu-price">12</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Price Edward Island Mussels</p>
-			<p class="menu-desc">Simmered with leeks, garlic, Pernod and white wine</p>
-			<p class="menu-price">9</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Oysters Rockefeller</p>
-			<p class="menu-desc">Spinach, bacon, heavy cream and Tabasco</p>
-			<p class="menu-price">10</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Sautéed Jumbo Lump Crab Cake</p>
-			<p class="menu-desc">Spicy Dill Mustard</p>
-			<p class="menu-price">10</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Wedge Salad</p>
-			<p class="menu-desc">Tomato, Red Onion, Bacon and buttermilk bleu cheese dressing (gf)</p>
-			<p class="menu-price">6</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Baby Spinach Salad</p>
-			<p class="menu-desc">Red onion, bleu cheese, honey roasted pecans and raspberry vinaigrette (gf)</p>
-			<p class="menu-price">6</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Charleston She Crab Soup</p>
-			<p class="menu-desc">Fresh crabmeat, crab roe and sherry</p>
-			<p class="menu-price">6</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Soup du Jour</p>
-		</div>
+		{% endfor %}
 	</div>
 	<div class="menu-ctn drinks">
 		<header>

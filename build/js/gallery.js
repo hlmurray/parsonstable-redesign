@@ -1,6 +1,8 @@
 var $container = $('#container');
 // initialize
-$container.masonry({
-	gutter: 15,
-	itemSelector: '.gallery-img'
+$container.imagesLoaded(function() {
+	$container.masonry({
+		itemSelector: '.gallery-img',
+		gutter: 15
+	});
 });

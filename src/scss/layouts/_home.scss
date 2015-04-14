@@ -138,3 +138,14 @@
 	width: 22em !important;
 	margin-left: 0 !important;
 }
+#OT_timeList,
+#OT_partyList {
+	width: 100% !important;
+	box-sizing: border-box;
+	left: 0 !important;
+	top: 42px !important;
+}
+#OT_timeList .OT_navListItem,
+#OT_partyList .OT_navListItem {
+	float: none !important;
+}

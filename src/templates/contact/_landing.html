@@ -1,0 +1,48 @@
+{% extends "global/_layout" %}
+{% set title = "Contact" %}
+
+
+{% block content %}
+	<section class="contact-map">
+		<div id="map-canvas"></div>
+	</section>
+	<section class="home-info">
+		<div class="philosophy">
+			<header>
+				<h1>Information</h1>
+			</header>
+			<hr>
+			<p>4305 McCorsley Ave<br>Little River, SC, 29566</p>
+			<p>Phone: <a class="alt" href="tel:8432493702">843.249.3702</a><br><a class="alt" href="mailto:tparsonstable@gmail.com">info@parsonstable.com</a></p>
+			<p>Gift cards may either be purchased in person or over the phone and will be mailed out.</p>
+
+		</div>
+		<div class="hours">
+			<header>
+				<h1>Hours</h1>
+			</header>
+			<hr>
+			<h4 class="alpha">Dinner</h4>
+			<p>Monday - Saturday</p>
+			<p>4:30pm - Close</p>
+			<h4>Early Bird</h4>
+			<p>4:30 - 5:45pm</p>
+			<h4>Happy Hour</h4>
+			<p>4:30 - 7pm</p>
+			<a href="http://www.opentable.com/the-parsons-table#reservation" target="_blank" class="btn-dark">reserve now</a>
+		</div>
+		<div class="subscribe">
+			<header>
+				<h1>News &amp; Events</h1>
+			</header>
+			<hr>
+			<p>Sign up for our newsletter</p>
+			<form action="//parsonstable.us9.list-manage.com/subscribe/post?u=d6d72b6b0eeb4035466eb1763&amp;id=c410ab85bd" method="post" class="email-form" target="_blank">
+				<input type="text" class="input1" name="FNAME" placeholder="First Name" required/>
+				<input type="text" class="input1" name="LNAME" placeholder="Last Name" required/>
+				<input type="email" class="input1" name="EMAIL" placeholder="Email Address" required/>
+				<input type="submit" class="btn-dark" value="SUBSCRIBE">
+			</form>
+		</div>
+	</section>
+{% endblock %}

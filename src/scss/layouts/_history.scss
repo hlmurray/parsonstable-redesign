@@ -89,6 +89,12 @@ h1.script {
 				text-indent: 30px;
 			}
 		}
+		h4 {
+			text-align: center;
+			&:last-child {
+				text-indent: 0;
+			}
+		}
 	}
 	.chef-img {
 		display: inline-block;

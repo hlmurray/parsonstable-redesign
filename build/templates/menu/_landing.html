@@ -123,13 +123,54 @@
 			<h1>Desserts</h1>
 		</header>
 		<hr>
-		{% for dessertsItems in entry.desserts %}
+		<h2 class="menu-type">Dessert Selections</h2>
+		{% for dessertsItem in entry.desserts %}
 		<div class="menu-item-ctn">
-			<p class="menu-item">{{ dessertsItems.dessertName }}</p>
-			{% if dessertsItems.dessertDescription != '' %}
-			<p class="menu-desc">{{ dessertsItems.dessertDescription }}</p>
+			<p class="menu-item">{{ dessertsItem.dessertName }}</p>
+			{% if dessertsItem.dessertDescription != '' %}
+			<p class="menu-desc">{{ dessertsItem.dessertDescription }}</p>
 			{% endif %}
-			<p class="menu-price">{{ dessertsItems.dessertPrice }}</p>
+			<p class="menu-price">{{ dessertsItem.dessertPrice }}</p>
+		</div>
+		{% endfor %}
+		<h2 class="menu-type">Coffee Selections &amp; After Dinner Drinks</h2>
+		{% for afterDinnerItem in entry.afterDinner %}
+		<div class="menu-item-ctn">
+			<p class="menu-item">{{ afterDinnerItem.afterDinnerName }}</p>
+			<p class="menu-desc">{{ afterDinnerItem.afterDinnerDescription }}</p>
+			<p class="menu-price">{{ afterDinnerItem.afterDinnerPrice }}</p>
+		</div>
+		{% endfor %}
+		<h2 class="menu-type">Port &amp; Sherry</h2>
+		{% for portSherryItem in entry.portSherry %}
+		<div class="menu-item-ctn">
+			<p class="menu-item">{{ portSherryItem.portSherryName }}</p>
+			<p class="menu-price">{{ portSherryItem.portSherryPrice }}</p>
+		</div>
+		{% endfor %}
+		<h2 class="menu-type">Cognac</h2>
+		{% for cognacItem in entry.cognac %}
+		<div class="menu-item-ctn">
+			<p class="menu-item">{{ cognacItem.cognacType }}</p>
+			<p class="menu-desc">{{ cognacItem.cognacDescription }}</p>
+			<p class="menu-item">{{ cognacItem.cognacName1 }}</p>
+			<p class="menu-price">{{ cognacItem.cognacPrice1 }}</p>
+			{% if cognacItem.cognacName2 != '' %}
+			<p class="menu-item">{{ cognacItem.cognacName2 }}</p>
+			{% endif %}
+			{% if cognacItem.cognacPrice2 != '' %}
+			<p class="menu-price">{{ cognacItem.cognacPrice2 }}</p>
+			{% endif %}
+		</div>
+		{% endfor %}
+		<h2 class="menu-type">Cordials</h2>
+		{% for cordialItem in entry.cordials %}
+		<div class="menu-item-ctn">
+			<p class="menu-item">{{ cordialItem.cordialName }}</p>
+			{% if cordialItem.cordialDescription != '' %}
+			<p class="menu-desc">{{ cordialItem.cordialDescription }}</p>
+			{% endif %}
+			<p class="menu-price">{{ cordialItem.cordialPrice }}</p>
 		</div>
 		{% endfor %}
 	</div>
@@ -138,158 +179,57 @@
 			<h1>Beer &amp; Cocktails</h1>
 		</header>
 		<hr>
+		<h2 class="menu-type">Beer</h2>
+		{% for beersItem in entry.beers %}
 		<div class="menu-item-ctn">
-			<p class="menu-item">Local Fried Green Tomatoes</p>
-			<p class="menu-desc">Goat cheese, sweet red pepper coulis</p>
-			<p class="menu-price">6</p>
+			<p class="menu-item">{{ beersItem.beerName }}</p>
+			<p class="menu-price">{{ beersItem.beerPrice }}</p>
 		</div>
+		{% endfor %}
+		<h2 class="menu-type">Classic Cocktails</h2>
+		{% for classicItem in entry.classicCocktails %}
 		<div class="menu-item-ctn">
-			<p class="menu-item">Savory Wild Mushrooms</p>
-			<p class="menu-desc">Sauteed with leeks, garlic and maitre d' butter</p>
-			<p class="menu-price">7</p>
+			<p class="menu-item">{{ classicItem.classicName }}</p>
+			<p class="menu-desc">{{ classicItem.classicDescription }}</p>
+			<p class="menu-price">{{ classicItem.classicPrice }}</p>
 		</div>
+		{% endfor %}
+		<h2 class="menu-type">Martinis</h2>
+		{% for martiniItem in entry.martinis %}
 		<div class="menu-item-ctn">
-			<p class="menu-item">Baked Brie en Brioche</p>
-			<p class="menu-desc">Melba sauce and toasted almonds</p>
-			<p class="menu-price">10</p>
+			<p class="menu-item">{{ martiniItem.martiniName }}</p>
+			<p class="menu-desc">{{ martiniItem.martiniDescription }}</p>
+			<p class="menu-price">{{ martiniItem.martiniPrice }}</p>
 		</div>
+		{% endfor %}
+		<h2 class="menu-type">Cosmopolitans</h2>
+		{% for cosmopolitanItem in entry.cosmopolitans %}
 		<div class="menu-item-ctn">
-			<p class="menu-item">Oysters on the Half Shell</p>
-			<p class="menu-desc">Served chilled, cocktail sauce, shallot vinaigrette and lemon (gf)</p>
-			<p class="menu-price">1/2 dozen...6 &nbsp;&nbsp; dozen...10</p>
+			<p class="menu-item">{{ cosmopolitanItem.cosmopolitanName }}</p>
+			<p class="menu-desc">{{ cosmopolitanItem.cosmopolitanDescription }}</p>
+			<p class="menu-price">{{ cosmopolitanItem.cosmopolitanPrice }}</p>
 		</div>
+		{% endfor %}
+		<h2 class="menu-type">Small Batch Bourbons &amp; Whiskeys</h2>
+		{% for smallBatchItem in entry.smallBatch %}
 		<div class="menu-item-ctn">
-			<p class="menu-item">Hickory Smoked North Atlantic Salmon</p>
-			<p class="menu-desc">Red onion relish, capers and horseradish cream (gf)</p>
-			<p class="menu-price">8</p>
+			<p class="menu-item">{{ smallBatchItem.smallBatchName }}</p>
+			<p class="menu-price">{{ smallBatchItem.smallBatchPrice }}</p>
 		</div>
+		{% endfor %}
+		<h2 class="menu-type">Single Malts</h2>
+		{% for singleMaltItem in entry.singleMalts %}
 		<div class="menu-item-ctn">
-			<p class="menu-item">Chilled Shrimp Cocktail</p>
-			<p class="menu-desc">Four jumbo shrimp and cocktail sauce</p>
-			<p class="menu-price">12</p>
+			<p class="menu-item">{{ singleMaltItem.singleMaltName }}</p>
+			<p class="menu-price">{{ singleMaltItem.singleMaltPrice }}</p>
 		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Sesame Seared Tuna</p>
-			<p class="menu-desc">Soy, ginger, wasabi, apricot glaze, toasted sesame seeds and pickled ginger</p>
-			<p class="menu-price">9</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Chilled Shrimp Cocktail</p>
-			<p class="menu-desc">Four jumbo shrimp and cocktail sauce</p>
-			<p class="menu-price">12</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Price Edward Island Mussels</p>
-			<p class="menu-desc">Simmered with leeks, garlic, Pernod and white wine</p>
-			<p class="menu-price">9</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Oysters Rockefeller</p>
-			<p class="menu-desc">Spinach, bacon, heavy cream and Tabasco</p>
-			<p class="menu-price">10</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Sautéed Jumbo Lump Crab Cake</p>
-			<p class="menu-desc">Spicy Dill Mustard</p>
-			<p class="menu-price">10</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Wedge Salad</p>
-			<p class="menu-desc">Tomato, Red Onion, Bacon and buttermilk bleu cheese dressing (gf)</p>
-			<p class="menu-price">6</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Baby Spinach Salad</p>
-			<p class="menu-desc">Red onion, bleu cheese, honey roasted pecans and raspberry vinaigrette (gf)</p>
-			<p class="menu-price">6</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Charleston She Crab Soup</p>
-			<p class="menu-desc">Fresh crabmeat, crab roe and sherry</p>
-			<p class="menu-price">6</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Soup du Jour</p>
-		</div>
+		{% endfor %}
 	</div>
 	<div class="menu-ctn wine">
 		<header>
 			<h1>Wine List</h1>
 		</header>
 		<hr>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Local Fried Green Tomatoes</p>
-			<p class="menu-desc">Goat cheese, sweet red pepper coulis</p>
-			<p class="menu-price">6</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Savory Wild Mushrooms</p>
-			<p class="menu-desc">Sauteed with leeks, garlic and maitre d' butter</p>
-			<p class="menu-price">7</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Baked Brie en Brioche</p>
-			<p class="menu-desc">Melba sauce and toasted almonds</p>
-			<p class="menu-price">10</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Oysters on the Half Shell</p>
-			<p class="menu-desc">Served chilled, cocktail sauce, shallot vinaigrette and lemon (gf)</p>
-			<p class="menu-price">1/2 dozen...6 &nbsp;&nbsp; dozen...10</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Hickory Smoked North Atlantic Salmon</p>
-			<p class="menu-desc">Red onion relish, capers and horseradish cream (gf)</p>
-			<p class="menu-price">8</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Chilled Shrimp Cocktail</p>
-			<p class="menu-desc">Four jumbo shrimp and cocktail sauce</p>
-			<p class="menu-price">12</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Sesame Seared Tuna</p>
-			<p class="menu-desc">Soy, ginger, wasabi, apricot glaze, toasted sesame seeds and pickled ginger</p>
-			<p class="menu-price">9</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Chilled Shrimp Cocktail</p>
-			<p class="menu-desc">Four jumbo shrimp and cocktail sauce</p>
-			<p class="menu-price">12</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Price Edward Island Mussels</p>
-			<p class="menu-desc">Simmered with leeks, garlic, Pernod and white wine</p>
-			<p class="menu-price">9</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Oysters Rockefeller</p>
-			<p class="menu-desc">Spinach, bacon, heavy cream and Tabasco</p>
-			<p class="menu-price">10</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Sautéed Jumbo Lump Crab Cake</p>
-			<p class="menu-desc">Spicy Dill Mustard</p>
-			<p class="menu-price">10</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Wedge Salad</p>
-			<p class="menu-desc">Tomato, Red Onion, Bacon and buttermilk bleu cheese dressing (gf)</p>
-			<p class="menu-price">6</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Baby Spinach Salad</p>
-			<p class="menu-desc">Red onion, bleu cheese, honey roasted pecans and raspberry vinaigrette (gf)</p>
-			<p class="menu-price">6</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Charleston She Crab Soup</p>
-			<p class="menu-desc">Fresh crabmeat, crab roe and sherry</p>
-			<p class="menu-price">6</p>
-		</div>
-		<div class="menu-item-ctn">
-			<p class="menu-item">Soup du Jour</p>
-		</div>
 	</div>
 </section>
 {% endblock %}

@@ -105,6 +105,8 @@
 	}
 }
 .OT_submit {
+ 	display: inline-block;
+	width: auto !important;
 	height: auto !important;
 	padding: 0 !important;
 	a {

@@ -8,10 +8,10 @@ function initialize() {
 		}
 	  ];
 	  var mapOptions = {
-	    zoom: 16,
+	    zoom: 15,
 	    center: new google.maps.LatLng(33.875283, -78.616226),
 	    scrollwheel: false,
-	    draggable: true,
+	    draggable: false,
 	    panControl: true,
 	    scaleControl: false,
 	    zoomControl: true,

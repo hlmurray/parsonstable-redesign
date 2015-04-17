@@ -35,7 +35,7 @@ a {
 		display: inline-block;
 		padding: 5px 5px 2px 8px;
  		margin: 0 20px;
-		font-size: 14px;
+		font-size: 15px;
 		letter-spacing: 0.2em;
 		font-weight: 500;
 		color: $darkgrey;
@@ -61,7 +61,7 @@ a {
 footer {
 	border-top: 2px solid $brown;
 	.footer-contact {
-		padding: 40px 0 20px 0;
+		padding: 20px 0 20px 0;
 		.contact-top {
 			text-align: center;
 			color: $black;
@@ -97,6 +97,7 @@ footer {
 			}
 		}
 		& .contact-bottom {
+			padding-top: 5px;
 			text-align: center;
 			.contact-social {
 				display: inline-block;

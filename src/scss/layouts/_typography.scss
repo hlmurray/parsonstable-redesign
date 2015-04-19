@@ -59,11 +59,11 @@ a.alt {
 	font-style: italic;
 	letter-spacing: 0.05em;
 	font-weight: 400;
-	color: $darkgrey;
+	color: $brown;
 	position: relative;
 	transition: color 0.3s ease;
 	&:hover {
-		color: $brown;
+		color: $darkgrey;
 	}
 }
 
@@ -107,9 +107,8 @@ h4 {
 	-webkit-font-smoothing: antialiased;
 	transition: all 0.3s ease;
 	&:hover {
-		border: 2px solid $brown;
-		background-color: $beige;
-		color: $brown;
+		border: 2px solid $darkgrey;
+		background-color: $darkgrey;
 	}
 }
 

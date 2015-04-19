@@ -23,6 +23,23 @@ function initialize() {
 	  var map = new google.maps.Map(document.getElementById('map-canvas'),
 	      mapOptions);
 
+  	  //var defaultMarker = '/assets/images/contact/PT_mapicon.svg';
+
+  	  var defaultMarker = new google.maps.MarkerImage(
+	    '/assets/images/contact/PT_mapicon.svg',
+	    null, /* size is determined at runtime */
+	    null, /* origin is 0,0 */
+	    null, /* anchor is bottom center of the scaled image */
+	    new google.maps.Size(40, 52)
+	);
+
+  	  var marker = new google.maps.Marker({
+      position: mapOptions.center,
+      icon: defaultMarker,
+      map: map,
+      optimized: false
+    });
+
 	  var styledMapType = new google.maps.StyledMapType(mapStyles, { name: 'Styled' });
 	  map.mapTypes.set('Styled', styledMapType);
 	}

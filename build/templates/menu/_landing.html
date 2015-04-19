@@ -230,6 +230,113 @@
 			<h1>Wine List</h1>
 		</header>
 		<hr>
+		{% for entry in craft.entries.section('wineList') %}
+			<h2 class="menu-type">Wines By The Glass</h2>
+			{% for wineItem in entry.winesByTheGlass %}
+				<div class="menu-item-ctn">
+					<p class="menu-item">{{ wineItem.wineDetails }}</p>
+					<p class="menu-price">{{ wineItem.winePrice }}</p>
+				</div>
+			{% endfor %}
+			<h2 class="menu-type">Champagne &amp; Sparkling Wine</h2>
+			{% for wineItem in entry.champagneAndSparklingWine %}
+				<div class="menu-item-ctn">
+					<p class="menu-item">{{ wineItem.wineDetails }}</p>
+					<p class="menu-price">{{ wineItem.winePrice }}</p>
+				</div>
+			{% endfor %}
+			<h2 class="menu-type">Blush &amp; Reisling</h2>
+			{% for wineItem in entry.blushAndReisling %}
+				<div class="menu-item-ctn">
+					<p class="menu-item">{{ wineItem.wineDetails }}</p>
+					<p class="menu-price">{{ wineItem.winePrice }}</p>
+				</div>
+			{% endfor %}
+			<h2 class="menu-type">Sauvignon/Fume Blanc</h2>
+			{% for wineItem in entry.sauvignonFumeBlanc %}
+				<div class="menu-item-ctn">
+					<p class="menu-item">{{ wineItem.wineDetails }}</p>
+					<p class="menu-price">{{ wineItem.winePrice }}</p>
+				</div>
+			{% endfor %}
+			<h2 class="menu-type">Pinot Grigio/Pinot Gris</h2>
+			{% for wineItem in entry.pinotGrigioPinotGris %}
+				<div class="menu-item-ctn">
+					<p class="menu-item">{{ wineItem.wineDetails }}</p>
+					<p class="menu-price">{{ wineItem.winePrice }}</p>
+				</div>
+			{% endfor %}
+			<h2 class="menu-type">Chardonnay</h2>
+			{% for wineItem in entry.chardonnay %}
+				<div class="menu-item-ctn">
+					<p class="menu-item">{{ wineItem.wineDetails }}</p>
+					<p class="menu-price">{{ wineItem.winePrice }}</p>
+				</div>
+			{% endfor %}
+			<h2 class="menu-type">Other Whites</h2>
+			{% for wineItem in entry.otherWhites %}
+				<div class="menu-item-ctn">
+					<p class="menu-item">{{ wineItem.wineDetails }}</p>
+					<p class="menu-price">{{ wineItem.winePrice }}</p>
+				</div>
+			{% endfor %}
+			<h2 class="menu-type">Pinot Noir</h2>
+			{% for wineItem in entry.pinotNoir %}
+				<div class="menu-item-ctn">
+					<p class="menu-item">{{ wineItem.wineDetails }}</p>
+					<p class="menu-price">{{ wineItem.winePrice }}</p>
+				</div>
+			{% endfor %}
+			<h2 class="menu-type">Merlot</h2>
+			{% for wineItem in entry.merlot %}
+				<div class="menu-item-ctn">
+					<p class="menu-item">{{ wineItem.wineDetails }}</p>
+					<p class="menu-price">{{ wineItem.winePrice }}</p>
+				</div>
+			{% endfor %}
+			<h2 class="menu-type">Cabernet Sauvignon</h2>
+			{% for wineItem in entry.cabernetSauvignon %}
+				<div class="menu-item-ctn">
+					<p class="menu-item">{{ wineItem.wineDetails }}</p>
+					<p class="menu-price">{{ wineItem.winePrice }}</p>
+				</div>
+			{% endfor %}
+			<h2 class="menu-type">Syrah/Shiraz</h2>
+			{% for wineItem in entry.syrahShiraz %}
+				<div class="menu-item-ctn">
+					<p class="menu-item">{{ wineItem.wineDetails }}</p>
+					<p class="menu-price">{{ wineItem.winePrice }}</p>
+				</div>
+			{% endfor %}
+			<h2 class="menu-type">Zinfandel</h2>
+			{% for wineItem in entry.zinfandel %}
+				<div class="menu-item-ctn">
+					<p class="menu-item">{{ wineItem.wineDetails }}</p>
+					<p class="menu-price">{{ wineItem.winePrice }}</p>
+				</div>
+			{% endfor %}
+			<h2 class="menu-type">Other Reds</h2>
+			{% for wineItem in entry.otherReds %}
+				<div class="menu-item-ctn">
+					<p class="menu-item">{{ wineItem.wineDetails }}</p>
+					<p class="menu-price">{{ wineItem.winePrice }}</p>
+				</div>
+			{% endfor %}
+			<h2 class="menu-type">Red Blends</h2>
+			{% for wineItem in entry.redBlends %}
+				<div class="menu-item-ctn">
+					<p class="menu-item">{{ wineItem.wineDetails }}</p>
+					<p class="menu-price">{{ wineItem.winePrice }}</p>
+				</div>
+			{% endfor %}
+			<h2 class="menu-type">Large Bottles</h2>
+			{% for wineItem in entry.largeBottles %}
+				<div class="menu-item-ctn">
+					<p class="menu-item">{{ wineItem.wineDetails }}</p>
+					<p class="menu-price">{{ wineItem.winePrice }}</p>
+				</div>
+			{% endfor %}
+		{% endfor %}
 	</div>
 </section>
 {% endblock %}

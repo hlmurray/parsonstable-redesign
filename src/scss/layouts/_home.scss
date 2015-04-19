@@ -130,9 +130,8 @@
 		-webkit-font-smoothing: antialiased;
 		transition: all 0.3s ease;
 		&:hover {
-			border: 2px solid $brown !important;
-			background-color: $beige !important;
-			color: $brown !important;
+			border: 2px solid $darkgrey !important;
+			background-color: $darkgrey !important;
 		}
 	}
 }

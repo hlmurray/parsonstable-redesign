@@ -11,8 +11,13 @@
 		<a class="drinks">beer &amp; cocktails</a>
 		<a class="wine">wine list</a>
 	</nav>
-	{% for assets in entry.menuAwards %}
-	<div class="menu-award" style="background-image: url({{ assets.url() }});"></div>
+	{% for menuAward in entry.menuAwards %}
+	<!-- <div class="menu-award" style="background-image: url({{ assets.url() }});"></div> -->
+	{% if menuAward.awardImage|length %}
+	<img src="{{ menuAward.awardImage.first.url() }}" class="menu-award">
+	{% else %}
+	{{ menuAward.awardCode }}
+	{% endif %}
 	{% endfor %}
 </section>
 <section class="menu-right">
@@ -114,6 +119,7 @@
 		</div>
 		{% endfor %}
 		<div class="entree-disclaimer">
+			<p>Consuming raw or under cooked meats, poultry, seafood, shellfish or eggs which may contain harmful bacteria may increase your risk of food borne  illness or death, especially if you have certain medical conditions.</p>
 			<p>All of The Parson’s Table beef is USDA choice or higher and aged a minimum of three weeks for tenderness and flavor.</p>
 			<p>(gf) gluten free | (v) vegan</p>
 		</div>

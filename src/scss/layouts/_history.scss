@@ -71,6 +71,18 @@ h1.script {
 			left: 485px;
 		}
 	}
+	.history-blurb {
+		width: 150px;
+		position: absolute;
+		top: 375px;
+		left: 80px;
+		z-index: 1;
+		background-color: #f3ecdf;
+		p {
+			padding: 10px 20px;
+			font-style: italic;
+		}
+	}
 }
 
 .history-chef {

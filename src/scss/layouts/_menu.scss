@@ -14,22 +14,55 @@
 	padding: 20px 50px 0 50px;
 	.menu-nav {
 		margin-bottom: 40px;
-		a {
+		> span {
 			display: block;
-			padding: 15px 0;
 			text-align: center;
 			@include font(trade-gothic);
-			color: $darkgrey;
 			font-size: 15px;
 			letter-spacing: 0.2em;
 			text-decoration: none;
 			text-transform: uppercase;
 			border-bottom: 1px solid $brown;
-			transition: color 0.3s ease;
 			cursor: pointer;
-			&.active,
-			&:hover {
-				color: $brown;
+			span {
+				display: block;
+				padding: 15px 0;
+				color: $darkgrey;
+				transition: color 0.3s ease;
+				&.active,
+				&:hover {
+					color: $brown;
+				}
+			}
+			ul {
+				list-style-type: none;
+				padding: 0;
+				font-size: 14px;
+				height: 0;
+				margin: 0;
+				opacity: 0;
+				transition: all 0.3s ease;
+				&.active {
+					opacity: 1;
+					height: 80px;
+					margin: 0 0 10px;
+				}
+
+			}
+			li {
+				padding: 5px 0;
+				a {
+					color: $darkgrey;
+					transition: color 0.3s ease;
+					&:hover {
+						color: $brown;
+					}
+				}
+			}
+			&:hover ul {
+				opacity: 1;
+				height: 80px;
+				margin: 0 0 10px;
 			}
 		}
 	}
@@ -42,8 +75,8 @@
 		// background-size: cover;
 		// background-repeat: no-repeat;
 	}
-	#CDSWIDSSP {
-		width: 100% !important;
+	#CDSWIDCOE {
+		margin: 10px auto !important;
 	}
 }
 
@@ -74,7 +107,7 @@
 		.menu-type {
 			position: relative;
 			@include font(garamond-premier);
-			font-size: 22px;
+			font-size: 26px;
 			font-style: italic;
 			text-align: center;
 			letter-spacing: 0.05em;
@@ -97,8 +130,17 @@
 				margin-left: 10px;
 			}
 		}
+		.wine-type {
+			@include font(garamond-premier);
+			font-size: 22px;
+			text-align: center;
+			letter-spacing: 0.05em;
+			font-weight: 400;
+			font-style: italic;
+			color: $darkgrey;
+		}
 		.menu-item {
-			font-weight: 700;
+			font-weight: 500;
 			text-transform: uppercase;
 			span {
 				text-transform: none;

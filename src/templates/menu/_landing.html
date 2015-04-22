@@ -11,19 +11,14 @@
 		<span class="drinks"><span>beer &amp; cocktails</span></span>
 		<span class="wine"><span>wine list</span>
 			<ul>
-				<li><a href="#wines-by-the-glass">wines by the glass</a></li>
-				<li><a href="#white-wines">white wines</a></li>
-				<li><a href="#red-wines">red wines</a></li>
+				<li><a href="#wines-by-the-glass">Wines by the Glass</a></li>
+				<li><a href="#white-wines">White Wines</a></li>
+				<li><a href="#red-wines">Red Wines</a></li>
 			</ul>
 		</span>
 	</nav>
-	{% for menuAward in entry.menuAwards %}
-	<!-- <div class="menu-award" style="background-image: url({{ assets.url() }});"></div> -->
-	{% if menuAward.awardImage|length %}
-	<img src="{{ menuAward.awardImage.first.url() }}" class="menu-award">
-	{% else %}
-	{{ menuAward.awardCode }}
-	{% endif %}
+	{% for asset in entry.menuAwards %}
+	<img src="{{ asset.url() }}" class="menu-award">
 	{% endfor %}
 </section>
 <section class="menu-right">

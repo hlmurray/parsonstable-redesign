@@ -51,7 +51,7 @@
 			{% endif %}
 			<p class="menu-price">{{ entreesItems.entreePrice }}</p>
 			{% if entreesItems.entreeWineSuggestion != '' %}
-			<p class="menu-wine">{{ entreesItems.entreeWineSuggestion }}</p>
+			<p class="menu-wine">Wine Suggestion: {{ entreesItems.entreeWineSuggestion }}</p>
 			{% endif %}
 		</div>
 		{% endfor %}
@@ -72,7 +72,7 @@
 			{% endif %}
 			<p class="menu-price">{{ entreesItems.entreePrice }}</p>
 			{% if entreesItems.entreeWineSuggestion != '' %}
-			<p class="menu-wine">{{ entreesItems.entreeWineSuggestion }}</p>
+			<p class="menu-wine">Wine Suggestion: {{ entreesItems.entreeWineSuggestion }}</p>
 			{% endif %}
 		</div>
 		{% endfor %}
@@ -85,7 +85,7 @@
 			{% endif %}
 			<p class="menu-price">{{ entreesItems.entreePrice }}</p>
 			{% if entreesItems.entreeWineSuggestion != '' %}
-			<p class="menu-wine">{{ entreesItems.entreeWineSuggestion }}</p>
+			<p class="menu-wine">Wine Suggestion: {{ entreesItems.entreeWineSuggestion }}</p>
 			{% endif %}
 		</div>
 		{% endfor %}
@@ -98,7 +98,7 @@
 			{% endif %}
 			<p class="menu-price">{{ entreesItems.entreePrice }}</p>
 			{% if entreesItems.entreeWineSuggestion != '' %}
-			<p class="menu-wine">{{ entreesItems.entreeWineSuggestion }}</p>
+			<p class="menu-wine">Wine Suggestion: {{ entreesItems.entreeWineSuggestion }}</p>
 			{% endif %}
 		</div>
 		{% endfor %}
@@ -244,6 +244,13 @@
 				<p class="menu-price">{{ wineItem.winePrice }}</p>
 			</div>
 		{% endfor %}
+		<h2 class="menu-type">Large Bottles</h2>
+		{% for wineItem in entry.largeBottles %}
+			<div class="menu-item-ctn">
+				<p class="menu-item">{{ wineItem.wineDetails }}</p>
+				<p class="menu-price">{{ wineItem.winePrice }}</p>
+			</div>
+		{% endfor %}
 		<h2 class="menu-type" id="white-wines">White Wines</h2>
 		<h3 class="wine-type" id="white-wines">Champagne &amp; Sparkling Wine</h3>
 		<hr>
@@ -345,14 +352,6 @@
 		<h3 class="wine-type">Red Blends</h3>
 		<hr>
 		{% for wineItem in entry.redBlends %}
-			<div class="menu-item-ctn">
-				<p class="menu-item">{{ wineItem.wineDetails }}</p>
-				<p class="menu-price">{{ wineItem.winePrice }}</p>
-			</div>
-		{% endfor %}
-		<h3 class="wine-type">Large Bottles</h3>
-		<hr>
-		{% for wineItem in entry.largeBottles %}
 			<div class="menu-item-ctn">
 				<p class="menu-item">{{ wineItem.wineDetails }}</p>
 				<p class="menu-price">{{ wineItem.winePrice }}</p>

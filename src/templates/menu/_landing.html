@@ -8,10 +8,9 @@
 		<span class="starters"><span class="active">starters</span></span>
 		<span class="entrees"><span>entrees</span></span>
 		<span class="dessert"><span>desserts</span></span>
-		<span class="drinks"><span>beer &amp; cocktails</span></span>
+		<span class="drinks"><span>libations</span></span>
 		<span class="wine"><span>wine list</span>
 			<ul>
-				<li><a href="#wines-by-the-glass">Wines by the Glass</a></li>
 				<li><a href="#white-wines">White Wines</a></li>
 				<li><a href="#red-wines">Red Wines</a></li>
 			</ul>
@@ -183,15 +182,17 @@
 	</div>
 	<div class="menu-ctn drinks">
 		<header>
-			<h1>Beer &amp; Cocktails</h1>
+			<h1>Libations</h1>
 		</header>
 		<hr>
-		<h2 class="menu-type">Beer</h2>
-		{% for beersItem in entry.beers %}
-		<div class="menu-item-ctn">
-			<p class="menu-item">{{ beersItem.beerName }}</p>
-			<p class="menu-price">{{ beersItem.beerPrice }}</p>
-		</div>
+		{% for wineEntry in craft.entries.section('wineList') %}
+		<h2 class="menu-type">Wines By The Glass</h2>
+		{% for wineItem in wineEntry.winesByTheGlass %}
+			<div class="menu-item-ctn">
+				<p class="menu-item">{{ wineItem.wineDetails }}</p>
+				<p class="menu-price">{{ wineItem.winePrice }}</p>
+			</div>
+		{% endfor %}
 		{% endfor %}
 		<h2 class="menu-type">Classic Cocktails</h2>
 		{% for classicItem in entry.classicCocktails %}
@@ -217,6 +218,13 @@
 			<p class="menu-price">{{ cosmopolitanItem.cosmopolitanPrice }}</p>
 		</div>
 		{% endfor %}
+		<h2 class="menu-type">Beer</h2>
+		{% for beersItem in entry.beers %}
+		<div class="menu-item-ctn">
+			<p class="menu-item">{{ beersItem.beerName }}</p>
+			<p class="menu-price">{{ beersItem.beerPrice }}</p>
+		</div>
+		{% endfor %}
 		<h2 class="menu-type">Small Batch Bourbons &amp; Whiskeys</h2>
 		{% for smallBatchItem in entry.smallBatch %}
 		<div class="menu-item-ctn">
@@ -238,20 +246,6 @@
 		</header>
 		<hr>
 		{% for wineEntry in craft.entries.section('wineList') %}
-		<h2 class="menu-type" id="wines-by-the-glass">Wines By The Glass</h2>
-		{% for wineItem in wineEntry.winesByTheGlass %}
-			<div class="menu-item-ctn">
-				<p class="menu-item">{{ wineItem.wineDetails }}</p>
-				<p class="menu-price">{{ wineItem.winePrice }}</p>
-			</div>
-		{% endfor %}
-		<h2 class="menu-type">Large Bottles</h2>
-		{% for wineItem in wineEntry.largeBottles %}
-			<div class="menu-item-ctn">
-				<p class="menu-item">{{ wineItem.wineDetails }}</p>
-				<p class="menu-price">{{ wineItem.winePrice }}</p>
-			</div>
-		{% endfor %}
 		<h2 class="menu-type" id="white-wines">White Wines</h2>
 		<h3 class="wine-type" id="white-wines">Champagne &amp; Sparkling Wine</h3>
 		<hr>
@@ -353,6 +347,13 @@
 		<h3 class="wine-type">Red Blends</h3>
 		<hr>
 		{% for wineItem in wineEntry.redBlends %}
+			<div class="menu-item-ctn">
+				<p class="menu-item">{{ wineItem.wineDetails }}</p>
+				<p class="menu-price">{{ wineItem.winePrice }}</p>
+			</div>
+		{% endfor %}
+		<h2 class="menu-type">Large Bottles</h2>
+		{% for wineItem in wineEntry.largeBottles %}
 			<div class="menu-item-ctn">
 				<p class="menu-item">{{ wineItem.wineDetails }}</p>
 				<p class="menu-price">{{ wineItem.winePrice }}</p>

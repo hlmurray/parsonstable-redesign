@@ -8,11 +8,11 @@
 		<span class="starters"><span class="active">starters</span></span>
 		<span class="entrees"><span>entrees</span></span>
 		<span class="dessert"><span>desserts</span></span>
-		<span class="drinks"><span>libations</span></span>
+		<span class="drinks"><span>cocktail list</span></span>
 		<span class="wine"><span>wine list</span>
 			<ul>
-				<li><a href="#white-wines">White Wines</a></li>
-				<li><a href="#red-wines">Red Wines</a></li>
+				<li><a href="#white-wines" class="subwine">White Wines</a></li>
+				<li><a href="#red-wines" class="subwine">Red Wines</a></li>
 			</ul>
 		</span>
 	</nav>
@@ -129,7 +129,6 @@
 			<h1>Desserts</h1>
 		</header>
 		<hr>
-		<h2 class="menu-type">Dessert Selections</h2>
 		{% for dessertsItem in entry.desserts %}
 		<div class="menu-item-ctn">
 			<p class="menu-item">{{ dessertsItem.dessertName }}</p>

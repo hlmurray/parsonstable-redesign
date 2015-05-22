@@ -104,33 +104,19 @@
 		transition: opacity 0.3s ease;
 		.menu-type {
 			position: relative;
+			padding: 25px 0 0;
 			@include font(garamond-premier);
-			font-size: 26px;
-			font-style: italic;
+			font-size: 21px;
 			text-align: center;
-			letter-spacing: 0.05em;
+			letter-spacing: 0.2em;
   			font-weight: 400;
+  			text-transform: uppercase;
 			color: $darkgrey;
-			&:before,
-			&:after {
-				display: inline-block;
-				position: relative;
-				vertical-align: middle;
-				content: '';
-				height: 1px;
-				width: 10px;
-				background-color: $darkgrey;
-			}
-			&:before {
-				margin-right: 10px;
-			}
-			&:after {
-				margin-left: 10px;
-			}
 		}
 		.wine-type {
+			padding: 25px 0 0;
 			@include font(garamond-premier);
-			font-size: 22px;
+			font-size: 20px;
 			text-align: center;
 			letter-spacing: 0.05em;
 			font-weight: 400;
@@ -139,7 +125,8 @@
 		}
 		.menu-item {
 			font-weight: 500;
-			text-transform: uppercase;
+			font-style: italic;
+			font-size: 17px;
 			span {
 				text-transform: none;
 				font-weight: 400;

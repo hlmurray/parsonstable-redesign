@@ -32,6 +32,17 @@ $(document).ready(function() {
         activeMenu.addClass('active');
         $('.menu-right').find('div.active').not(activeMenu).removeClass('active');
     });
+
+    $('.subwine').on('click', function() {
+        var wineHeight = $('.menu-right > div.wine').outerHeight();
+        $('.menu-nav').find('span.active').removeClass('active');
+        $('.menu-right').find('div.active').removeClass('active');
+        $('span.wine > span').addClass('active');
+        menuHeight.css({
+            'height': wineHeight
+        });
+        $('.menu-right > div.wine').addClass('active');
+    });
  
     $('.menu-nav span > ul ').on('click', 'a', function() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {

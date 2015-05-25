@@ -17,14 +17,12 @@
 		}
 		.pager-prev,
 		.pager-next {
-			width: 35px;
-			height: 35px;
+			width: 30px;
+			height: 30px;
 			position: absolute;
 			z-index: 100;
 			top: 50%;
 			background-color: $brown;
-			border: 2px solid $beige;
-			border-radius: 50%;
 			background-size: 9px 15px;
 			background-position: center;
 			background-repeat: no-repeat;

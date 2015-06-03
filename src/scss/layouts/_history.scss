@@ -7,38 +7,12 @@ h1.script {
 }
 
 .history-ctn {
-	@extend %cf;
-	.history-txt {
-		box-sizing: border-box;
-		width: 50%;
-		float: left;
-		padding: 0 20px;
-		p {
-			text-align: left;
-			text-indent: 30px;
-			line-height: 1.7em;
-			&.history-letter {
-				float: left;
-				width: 6%;
-				margin-right: 1%;
-				color: $brown;
-				font-size: 50px;
-				text-indent: 0;
-				line-height: 1em;
-			}
-			&.history-header {
-				float: left;
-				width: 93%;
-				color: $brown;
-				text-transform: uppercase;
-				letter-spacing: 0.075em;
-				text-indent: 0;
-				line-height: 1.5em;
-			}
-			&.history-content {
-				text-indent: -30px;
-			}
-		}
+	width: 780px;
+	margin: 20px auto 0;
+	p {
+		text-align: left;
+		line-height: 1.7em;
+		margin: 10px 0;
 	}
 }
 
@@ -46,7 +20,7 @@ h1.script {
 	position: relative;
 	width: 960px;
 	height: 515px;
-	margin: 20px auto;
+	margin: 40px auto;
 	.history-img {
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -86,8 +60,8 @@ h1.script {
 }
 
 .history-chef {
-	height: 100%;
-	margin: 40px 0;
+	width: 640px;
+	margin: 40px auto;
 	.chef-intro {
 		display: inline-block;
 		width: 305px;

@@ -71,7 +71,7 @@
 .OT_time,
 .OT_party {
 	position: relative;
-	width: 100% !important;
+	width: 80% !important;
 	height: auto !important;
 	padding: 0 !important;
 	background-image: none !important;
@@ -109,6 +109,14 @@
 		text-rendering: auto;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
+	}
+
+	@include breakpoint(tablet) {
+		.OT_day,
+		.OT_time,
+		.OT_party {
+			width: 100% !important;
+		}
 	}
 }
 .OT_submit {

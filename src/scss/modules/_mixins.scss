@@ -10,3 +10,11 @@
     font-family: "lucia-bt" !important;
   }
 }
+
+@mixin breakpoint($size){
+  @each $point in $breakpoints{
+    @if $size == map-get($point, name){
+      @media(min-width: map-get($point, size)*1px){@content;}
+    }
+  }
+}

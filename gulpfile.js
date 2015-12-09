@@ -1,6 +1,7 @@
 // Requirements
 var gulp = require('gulp'),
 	sass = require('gulp-ruby-sass'),
+	plumber = require("gulp-plumber"),
 	prefix = require('gulp-autoprefixer');
 
 // Defines paths
@@ -22,37 +23,37 @@ var paths = {
 }
 
 // Gulp tasks
-	// SCSS Compiler
-	gulp.task('compile-scss', function(){
-		return gulp.src(paths.src.scss+"/**/*.scss")
-		.pipe(sass({style: "compressed", noCache: true, 'sourcemap=none': true}))
-		.pipe(prefix("last 3 versions"))
-		.pipe(gulp.dest(paths.build.css));
+// SCSS Compiler
+gulp.task('compile-scss', function(){
+	return gulp.src(paths.src.scss+"/**/*.scss")
+	.pipe(sass({style: "compressed", noCache: true, 'sourcemap=none': true}))
+	.pipe(prefix("last 3 versions"))
+	.pipe(gulp.dest(paths.build.css));
 });
 
-	// JS Compiler
-	gulp.task("compile-js", function(){
-		return gulp.src(paths.src.js+"/**/*.js")
-		.pipe(gulp.dest(paths.build.js))
-	});
+// JS Compiler
+gulp.task("compile-js", function(){
+	return gulp.src(paths.src.js+"/**/*.js")
+	.pipe(gulp.dest(paths.build.js))
+});
 
-	// HTML Compiler
-	gulp.task("compile-html", function(){
-		return gulp.src(paths.src.html+"/**/*.html")
-		.pipe(gulp.dest(paths.build.html))
-	});
+// HTML Compiler
+gulp.task("compile-html", function(){
+	return gulp.src(paths.src.html+"/**/*.html")
+	.pipe(gulp.dest(paths.build.html))
+});
 
-	// Assets Compiler
-	gulp.task("compile-assets", function(){
-		return gulp.src(paths.src.assets+"/**/*.*")
-		.pipe(gulp.dest(paths.build.assets))
-	});
+// Assets Compiler
+gulp.task("compile-assets", function(){
+	return gulp.src(paths.src.assets+"/**/*.*")
+	.pipe(gulp.dest(paths.build.assets))
+});
 
-	// Assets Compiler
-	gulp.task("compile-templates", function(){
-		return gulp.src(paths.src.template+"/**/*.html")
-		.pipe(gulp.dest(paths.build.template))
-	});
+// Assets Compiler
+gulp.task("compile-templates", function(){
+	return gulp.src(paths.src.template+"/**/*.html")
+	.pipe(gulp.dest(paths.build.template))
+});
 
 
 gulp.task('watch', function(){

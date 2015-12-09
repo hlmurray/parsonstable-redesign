@@ -15,6 +15,15 @@
 				background-size: cover;
 			}
 		}
+		.home-pager {
+			display: none;
+		}
+	}
+
+	@include breakpoint(laptop) {
+		.home-pager {
+			display: block;
+		}
 		.pager-prev,
 		.pager-next {
 			width: 30px;

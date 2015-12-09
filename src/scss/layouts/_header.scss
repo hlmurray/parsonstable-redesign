@@ -8,50 +8,166 @@ body {
 }
 
 body {
-	width: 990px;
+	max-width: 990px;
 	margin: 0 auto;
-	padding: 0 20px;
 }
 
 a {
 	text-decoration: none;
 }
 
+.wrapper {
+	margin-top: 120px;
+
+	@include breakpoint(laptop) {
+		margin-top: 0;
+	}
+}
+
 .masthead {
 	width: 100%;
-	padding: 20px 0 0;
+	position: fixed;
+	top: 0;
+	z-index: 200;
+	overflow: hidden;
+	padding: 0;
 	text-align: center;
 	img {
-		margin: 0 0 30px;
-		vertical-align: middle;
+		width: 120px;
+	}
+
+	@include breakpoint(laptop) {
+		position: static;
+		top: auto;
+		padding: 20px 0 0;
+		img {
+			width: auto;
+			margin: 0 0 30px;
+			vertical-align: middle;
+		}
 	}
 }
 
 .header-nav {
+	&.mobile {
+		padding: 20px;
+		background-color: $beige;
+	}
+	&.desktop {
+		display: none;
+	}
+	.menu {
+		width: 30px;
+	    height: 16px;
+	    float: left;
+	    position: relative;
+    	padding: 0;
+		margin: 0;
+		border: none;
+		outline: none;
+		background-color: transparent;
+	    div {
+	    	position: relative;
+	    	width: 100%;
+	    	height: 100%;
+	    	&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 1px;
+				background-color: $black;
+				transform: rotate(0deg) translateX(0) translateY(0);
+				transition: transform 0.3s ease;
+			}
+			&:after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 1px;
+				background-color: $black;
+				transform: rotate(0deg);
+				transition: transform 0.3s ease;
+			}
+	    }
+		span {
+			display: block;
+			position: absolute;
+			top: 50%;
+			width: 100%;
+			height: 1px;
+			background-color: $black;
+			opacity: 1;
+			transition: opacity 0.3s ease;
+		}
+		&.toggled {
+			div {
+				&:before {
+					transform: rotate(45deg) translateX(2px) translateY(7.5px);
+				}
+				&:after {
+					transform: rotate(-45deg) translateX(2px) translateY(-7.5px);
+				}
+			}
+			span {
+				opacity: 0;
+			}
+			~ .subnav {
+				opacity: 1;
+				max-height: 300px;
+			}
+		}
+
+	}
+	.subnav {
+		max-height: 0;
+		opacity: 0;
+		transition: all 0.3s ease;
+	}
 	a {
 		font-family: 'trade-gothic';
 		position: relative;
-		display: inline-block;
-		padding: 5px 5px 2px 8px;
- 		margin: 0 20px;
+		display: block;
+		padding: 10px 0;
 		font-size: 15px;
 		letter-spacing: 0.2em;
 		font-weight: 500;
 		color: $darkgrey;
 		text-decoration: none;
 		text-transform: uppercase;
-		transition: all 0.3s ease;
-		&:hover {
-			background: $brown;
-			color: $beige;
+	}
+	.logo {
+		display: inline-block;
+		padding: 0;
+	}
+
+	@include breakpoint(laptop) {
+		&.mobile {
+			display: none;
 		}
-		&:first-child {
-			margin-left: 0;
+		&.desktop {
+			display: block;
 		}
-		&:nth-of-type(4) {
-			transition: none;
+		a {
+			display: inline-block;
+			margin: 0 20px;
+			padding: 5px 5px 2px 8px;
+			transition: all 0.3s ease;
+			&:first-child {
+				margin-left: 0;
+			}
+			&:nth-of-type(4) {
+				transition: none;
+				&:hover {
+					background: none;
+				}
+			}
 			&:hover {
-				background: none;
+				background: $brown;
+				color: $beige;
 			}
 		}
 	}

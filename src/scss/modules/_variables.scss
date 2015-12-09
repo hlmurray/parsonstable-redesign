@@ -3,3 +3,11 @@ $darkgrey: #413e3b;
 $black: #191917;
 $brown: #9c7c61;
 $white: #fff;
+
+
+// @include breakpoint(name) {}
+$breakpoints: (
+	(name: desktop, size:1300),
+	(name: laptop, size:1025),
+	(name: tablet, size:768)
+);

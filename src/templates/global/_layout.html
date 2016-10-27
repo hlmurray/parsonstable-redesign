@@ -25,6 +25,11 @@
 		<script type="text/javascript">DM_redirect("http://mobile.dudamobile.com/site/parsonstable_1");</script>
 	</head>
 	<body>
+		{% for entry in craft.entries.section('homePage') %}
+			<div class="notification-bar">
+				<p>{{ entry.notificationBar }}</p>
+			</div>
+		{% endfor %}
 		<header class="masthead js-subtract-fill">
 			<nav class="header-nav">
 				<a href="/menu">menu</a>

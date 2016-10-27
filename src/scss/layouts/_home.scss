@@ -3,6 +3,9 @@
 @import "./modules/_placeholders.scss";
 
 .wrapper {
+	.home-slideshow {
+		overflow: hidden;
+	}
 	.home-hero {
 		position: relative;
 		margin: 0 0 30px;

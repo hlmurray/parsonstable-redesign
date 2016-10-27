@@ -24,6 +24,18 @@ a {
 	}
 }
 
+.notification-bar {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	text-align: center;
+	background: #9c7c61;
+	p {
+		color: #FFF;
+	}
+}
+
 .masthead {
 	width: 100%;
 	position: fixed;

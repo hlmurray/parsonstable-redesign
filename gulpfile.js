@@ -2,7 +2,8 @@
 var gulp = require('gulp'),
 	sass = require('gulp-ruby-sass'),
 	plumber = require("gulp-plumber"),
-	prefix = require('gulp-autoprefixer');
+	prefix = require('gulp-autoprefixer'),
+	webserver = require('gulp-webserver');
 
 // Defines paths
 var paths = {
@@ -49,10 +50,20 @@ gulp.task("compile-assets", function(){
 	.pipe(gulp.dest(paths.build.assets))
 });
 
-// Assets Compiler
+// Templates Compiler
 gulp.task("compile-templates", function(){
 	return gulp.src(paths.src.template+"/**/*.html")
 	.pipe(gulp.dest(paths.build.template))
+});
+
+// Start webserver
+gulp.task('webserver', function() {
+  gulp.src('build')
+    .pipe(webserver({
+      livereload: true,
+      directoryListing: false,
+      open: 'html'
+    }));
 });
 
 
@@ -71,4 +82,4 @@ gulp.task("compile", ["compile-assets","compile-html","compile-js","compile-scss
 });
 
 // Compile all files, watch all source files
-gulp.task("up", ["compile","watch"], function(){});
+gulp.task("up", ["compile","watch","webserver"], function(){});

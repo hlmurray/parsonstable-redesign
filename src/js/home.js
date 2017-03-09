@@ -1,6 +1,17 @@
 $('.menu').on('click', function() {
   $(this).toggleClass('toggled');
-})
+});
+
+$('.home-hero > .home-slideshow').cycle({
+	speed: 750,
+    fx: 'scrollHorz',
+    log: false,
+    next: '.pager-next',
+    prev: '.pager-prev',
+    slides: '> div.home-slides',
+    swipe: true,
+    timeout: 0
+});
 
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {

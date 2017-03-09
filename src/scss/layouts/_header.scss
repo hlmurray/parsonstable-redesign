@@ -1,7 +1,3 @@
-@import "./modules/_variables.scss";
-@import "./modules/_mixins.scss";
-@import "./modules/_placeholders.scss";
-
 html,
 body {
 	background-color: $beige;
@@ -17,6 +13,7 @@ a {
 }
 
 .wrapper {
+	@extend %cf;
 	margin-top: 120px;
 
 	@include breakpoint(laptop) {
@@ -44,6 +41,7 @@ a {
 	overflow: hidden;
 	padding: 0;
 	text-align: center;
+	border-bottom: 2px solid $brown;
 	img {
 		width: 120px;
 	}
@@ -52,6 +50,7 @@ a {
 		position: static;
 		top: auto;
 		padding: 20px 0 0;
+		box-shadow: none;
 		img {
 			width: auto;
 			margin: 0 0 30px;
@@ -64,9 +63,17 @@ a {
 	&.mobile {
 		padding: 20px;
 		background-color: $beige;
+
+		@include breakpoint(laptop) {
+			display: none;
+		}
 	}
 	&.desktop {
 		display: none;
+
+		@include breakpoint(laptop) {
+			display: block;
+		}
 	}
 	.menu {
 		width: 30px;
@@ -150,20 +157,8 @@ a {
 		color: $darkgrey;
 		text-decoration: none;
 		text-transform: uppercase;
-	}
-	.logo {
-		display: inline-block;
-		padding: 0;
-	}
 
-	@include breakpoint(laptop) {
-		&.mobile {
-			display: none;
-		}
-		&.desktop {
-			display: block;
-		}
-		a {
+		@include breakpoint(laptop) {
 			display: inline-block;
 			margin: 0 20px;
 			padding: 5px 5px 2px 8px;
@@ -183,72 +178,79 @@ a {
 			}
 		}
 	}
+	.logo {
+		display: inline-block;
+		padding: 0;
+	}
 }
 
 footer {
 	border-top: 2px solid $brown;
-	.footer-contact {
-		padding: 20px 0 20px 0;
-		.contact-top {
-			text-align: center;
-			color: $black;
-			p {
-				@include font(garamond-premier);
-				margin: 0;
-				padding: 0 10px;
-				display: inline-block;
-				text-transform: uppercase;
-				font-size: 14px;
-				letter-spacing: 0.2em;
-				border-right: 1px solid $black;
-				&:first-child {
-					padding-left: 0;
-				}
-				&:last-child {
-					border-right: none;
-					padding: 0 0 0 2px;
-				}
-				a {
-					padding: 5px 8px;
-					@include font(garamond-premier);
-					text-decoration: none;
-					color: $black;
-					text-transform: uppercase;
-					font-size: 14px;
-					letter-spacing: 0.2em;
-					transition: all 0.3s ease;
-					&:hover {
-						color: $brown;
-					}
-				}
+}
+.footer-contact {
+	padding: 20px 0 20px 0;
+}
+.contact-top {
+	text-align: center;
+	color: $black;
+	p {
+		@include font(garamond-premier);
+		margin: 0;
+		padding: 0 10px;
+		display: inline-block;
+		text-transform: uppercase;
+		font-size: 14px;
+		letter-spacing: 0.2em;
+
+		@include breakpoint(laptop) {
+			border-right: 1px solid $black;
+			&:first-child {
+				padding-left: 0;
+			}
+			&:last-child {
+				border-right: none;
+				padding: 0 0 0 2px;
 			}
 		}
-		& .contact-bottom {
-			padding-top: 5px;
-			text-align: center;
-			.contact-social {
-				display: inline-block;
-				padding-right: 10px;
-				a {
-					color: $brown;
-					font-size: 20px;
-					transition: color 0.3s ease;
-					padding-left: 5px;
-					&:first-child {
-						padding-left: 0;
-					}
-					&:hover {
-						color: $darkgrey;
-					}
-				}
-			}
-			.contact-form {
-				display: inline-block;
-			}
-			form {
-				padding-top: 10px;
-				text-align: center;
-			}
+	}
+	a {
+		padding: 5px 8px;
+		@include font(garamond-premier);
+		text-decoration: none;
+		color: $black;
+		text-transform: uppercase;
+		font-size: 14px;
+		letter-spacing: 0.2em;
+		transition: all 0.3s ease;
+		&:hover {
+			color: $brown;
 		}
+	}
+}
+.contact-bottom {
+	padding-top: 5px;
+	text-align: center;
+}
+.contact-social {
+	display: inline-block;
+	padding-right: 10px;
+	a {
+		color: $brown;
+		font-size: 20px;
+		transition: color 0.3s ease;
+		padding-left: 5px;
+		&:first-child {
+			padding-left: 0;
+		}
+		&:hover {
+			color: $darkgrey;
+		}
+	}
+}
+.contact-form {
+	display: inline-block;
+	form {
+		padding-top: 10px;
+		text-align: center;
 	}
 }

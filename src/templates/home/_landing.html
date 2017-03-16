@@ -4,7 +4,7 @@
 
 {% block content %}
 	<section class="home-hero">
-		<div class="home-slideshow">
+		<div class="home-slideshow" style="overflow: hidden;">
 			{% for asset in entry.topSlideshow %}
 				<div class="home-slides" style="background-image:url({{ asset.url }});"></div>
 			{% endfor %}
@@ -35,9 +35,9 @@
 			<p>{{ hoursBlock.dinnerHoursDate }}</p>
 			<p>{{ hoursBlock.dinnerHoursTime }}</p>
 			<h4>Early Bird</h4>
-			<p>4:30 &ndash; 5:45pm</p>
+			<p>4:30 &ndash; 5:30pm</p>
 			<h4>Happy Hour</h4>
-			<p>4:30 &ndash; 7pm</p>
+			<p>4:30 &ndash; 6:30pm</p>
 			{% if hoursBlock.specialHoursTitle != '' %}
 			<h4>{{ hoursBlock.specialHoursTitle }}</h4>
 			<p>{{ hoursBlock.specialHoursDate }}</p>

@@ -46,9 +46,11 @@ function initialize() {
 
 	function loadScript() {
 	  var script = document.createElement('script');
+		var apiKey = $('[data-maps-key]').data('maps-key');
+
 	  script.type = 'text/javascript';
 	  script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' +
-	      '&callback=initialize';
+	      '&key='+ apiKey +'&callback=initialize';
 	  document.body.appendChild(script);
 	}
 window.onload = loadScript;

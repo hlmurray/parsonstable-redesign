@@ -9,7 +9,8 @@
 
 .home-info {
 	@extend %cf;
-	margin: 0px 0;
+	display: flex;
+	justify-content: center;
 	div.philosophy {
 		a {
 			margin: 0;

@@ -216,7 +216,6 @@ footer {
 }
 .contact-social {
 	display: inline-block;
-	padding-right: 10px;
 	a {
 		color: $brown;
 		font-size: 20px;
@@ -228,12 +227,5 @@ footer {
 		&:hover {
 			color: $darkgrey;
 		}
-	}
-}
-.contact-form {
-	display: inline-block;
-	form {
-		padding-top: 10px;
-		text-align: center;
 	}
 }

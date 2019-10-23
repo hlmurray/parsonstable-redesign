@@ -29,7 +29,13 @@
 			<p>4:30 - 5:30pm</p>
 			<h4>Happy Hour</h4>
 			<p>4:30 - 6:30pm</p>
-			<a href="/#opentable" class="btn-dark">reserve now</a>
+			<div class="reserve">
+				<a href="https://resy.com/cities/ltr/the-parsons-table" id="resyButton-CeiaYRKBkC">Book your The Parson's Table reservation on Resy</a>
+				<script src="https://widgets.resy.com/embed.js"></script>
+				<script>
+				    resyWidget.addButton(document.getElementById('resyButton-CeiaYRKBkC'), {"venueId":7969,"apiKey":"8MLXIzWwu4yrFbwrKGsphTQY3mFfiHV6","replace":true,});
+				</script>
+			</div>
 		</div>
 	</section>
 {% endblock %}

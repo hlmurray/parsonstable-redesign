@@ -45,7 +45,7 @@
 			{% endif %}
 			{% endfor %}
 		</div>
-		<div class="subscribe" id="opentable">
+		<div class="subscribe" id="reserve">
 			<header>
 				<h1>Make a Reservation</h1>
 			</header>
@@ -63,7 +63,11 @@
 				<input type="submit" class="btn-dark" value="SUBSCRIBE">
 			</form>
 			-->
-			<script type="text/javascript" src="https://secure.opentable.com/frontdoor/default.aspx?rid=44554&restref=44554&bgcolor=F6F6F3&titlecolor=0F0F0F&subtitlecolor=0F0F0F&btnbgimage=https://secure.opentable.com/frontdoor/img/ot_btn_red.png&otlink=FFFFFF&icon=dark&mode=short&hover=1"></script>
+			<a href="https://resy.com/cities/ltr/the-parsons-table" id="resyButton-CeiaYRKBkC">Book your The Parson's Table reservation on Resy</a>
+			<script src="https://widgets.resy.com/embed.js"></script>
+			<script>
+			    resyWidget.addButton(document.getElementById('resyButton-CeiaYRKBkC'), {"venueId":7969,"apiKey":"8MLXIzWwu4yrFbwrKGsphTQY3mFfiHV6","replace":true,});
+			</script>
 		</div>
 	</section>
 {% endblock %}

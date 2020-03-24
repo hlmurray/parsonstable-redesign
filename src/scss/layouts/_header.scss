@@ -11,6 +11,7 @@ body {
 
 a {
 	text-decoration: none;
+	color: #9c7c61;
 }
 
 .wrapper {
@@ -23,10 +24,15 @@ a {
 	width: 100%;
 	top: 0;
 	left: 0;
+	padding: 10px 0;
 	text-align: center;
 	background: #9c7c61;
 	p {
 		color: #FFF;
+	}
+	a {
+		color: #FFF;
+		text-decoration: underline;
 	}
 }
 
@@ -34,7 +40,7 @@ a {
 	width: 100%;
 	z-index: 200;
 	overflow: hidden;
-	padding: 50px 0 0;
+	padding: 70px 0 0;
 	text-align: center;
 	border-bottom: 2px solid $brown;
 	img {

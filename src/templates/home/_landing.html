@@ -31,12 +31,11 @@
 			<hr>
 			{% for hoursBlock in entry.middleHoursBlock %}
 				<h4 class="alpha">Dinner</h4>
-				<p>{{ hoursBlock.dinnerHoursDate }}</p>	
-				<p>{{ hoursBlock.dinnerHoursTime }}</p>	
+				<p>{{ hoursBlock.dinnerHours|nl2br }}</p>
 				<h4>Early Bird</h4>	
-				<p>4:30 &ndash; 5:30pm</p>	
+				<p>{{ hoursBlock.earlyBirdHours }}</p>
 				<h4>Happy Hour</h4>	
-				<p>4:30 &ndash; 6:30pm</p>	
+				<p>{{ hoursBlock.happyHour }}</p>
 				{% if hoursBlock.specialHoursTitle != '' %}	
 					<h4>{{ hoursBlock.specialHoursTitle }}</h4>	
 					<p>{{ hoursBlock.specialHoursDate }}</p>	

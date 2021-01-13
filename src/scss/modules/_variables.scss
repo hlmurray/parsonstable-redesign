@@ -7,7 +7,7 @@ $white: #fff;
 
 // @include breakpoint(name) {}
 $breakpoints: (
-	(name: desktop, size:1300),
-	(name: laptop, size:1025),
-	(name: tablet, size:768)
+	(name: desktop, size: 1300),
+	(name: laptop, size: 1025),
+	(name: tablet, size: 768)
 );

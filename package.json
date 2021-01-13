@@ -16,12 +16,11 @@
     "url": "https://github.com/hlmurray/parsonstable-redesign/issues"
   },
   "homepage": "https://github.com/hlmurray/parsonstable-redesign",
-  "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^2.0.0",
-    "gulp-notify": "^1.8.0",
-    "gulp-plumber": "^0.6.5",
-    "gulp-ruby-sass": "^0.7.1",
+  "devDependencies": {},
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-sass": "^4.1.0",
     "gulp-webserver": "^0.9.1"
   }
 }

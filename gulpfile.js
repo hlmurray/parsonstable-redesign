@@ -62,6 +62,9 @@ function compile() {
 		compileAssets,
 		compileTemplates,
 	);
+
+	return src('src/')
+		.pipe(dest('build/'));
 }
 
 function startServer() {
@@ -82,6 +85,7 @@ function watchFiles() {
 }
 
 exports.compile = compile;
+exports.watchFiles = watchFiles;
 
 exports.up = parallel(
 	compile,

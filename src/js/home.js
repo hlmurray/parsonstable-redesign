@@ -1,29 +1,7 @@
-$('.menu').on('click', function() {
-  $(this).toggleClass('toggled');
-});
-
-$('.home-hero > .home-slideshow').cycle({
-	speed: 750,
-    fx: 'scrollHorz',
-    log: false,
-    next: '.pager-next',
-    prev: '.pager-prev',
-    slides: '> div.home-slides',
-    swipe: true,
-    timeout: 0
-});
-
-$(function() {
-  $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
-    }
-  });
+$('.home-carousel').slick({
+  accessibility: true,
+  arrows: false,
+  centerMode: true,
+  infinite: true,
+  variableWidth: true,
 });

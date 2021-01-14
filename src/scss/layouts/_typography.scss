@@ -1,24 +1,24 @@
 @font-face {
 	font-family:'apercu-regular';
-	src: url('/assets/fonts/apercu-regular.eot');
-	src: url('/assets/fonts/apercu-regular.eot?#iefix') format('embedded-opentype'),
-				url('/assets/fonts/apercu-regular.woff2') format('woff2'),
-				url('/assets/fonts/apercu-regular.woff') format('woff'),
-				url('/assets/fonts/apercu-regular.ttf') format('truetype');
+	src: url('../assets/fonts/apercu-regular.eot');
+	src: url('../assets/fonts/apercu-regular.eot?#iefix') format('embedded-opentype'),
+				url('../assets/fonts/apercu-regular.woff2') format('woff2'),
+				url('../assets/fonts/apercu-regular.woff') format('woff'),
+				url('../assets/fonts/apercu-regular.ttf') format('truetype');
 	font-style: normal;
 	font-weight: normal;
 }
 
 @font-face {
 	font-family: 'libre-regular';
-	src: url('/assets/fonts/LibreBaskerville-Regular.ttf') format('truetype');
+	src: url('../assets/fonts/LibreBaskerville-Regular.ttf') format('truetype');
 	font-style: normal;
 	font-weight: normal;
 }
 
 @font-face {
 	font-family: 'libre-italic';
-	src: url('/assets/fonts/LibreBaskerville-Italic.ttf') format('truetype');
+	src: url('../assets/fonts/LibreBaskerville-Italic.ttf') format('truetype');
 	font-style: italic;
 	font-weight: normal;
 }

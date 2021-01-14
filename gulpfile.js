@@ -18,12 +18,12 @@ const paths = {
 		template: './src/templates',
 		assets: './src/assets'
 	},
-	dist:{
-		css: './dist/css',
-		js: './dist/js',
-		html: './dist/html',
-		template: './dist/templates',
-		assets: './dist/assets'
+	build:{
+		css: './build/css',
+		js: './build/js',
+		html: './build/html',
+		template: './build/templates',
+		assets: './build/assets'
 	}
 }
 
@@ -31,27 +31,27 @@ function compileScss() {
 	return src(paths.src.scss + '/**/*.scss')
 		.pipe(sass().on('error', sass.logError))
 		.pipe(prefix('last 3 versions'))
-		.pipe(dest(paths.dist.css));
+		.pipe(dest(paths.build.css));
 }
 
 function compileJs() {
 	return src(paths.src.js + '/**/*.js')
-		.pipe(dest(paths.dist.js))
+		.pipe(dest(paths.build.js))
 }
 
 function compileHtml() {
 	return src(paths.src.html + '/**/*.html')
-		.pipe(dest(paths.dist.html))
+		.pipe(dest(paths.build.html))
 }
 
 function compileAssets() {
   return src(paths.src.assets + '/**/*.*')
-		.pipe(dest(paths.dist.assets))
+		.pipe(dest(paths.build.assets))
 }
 
 function compileTemplates() {
   return src(paths.src.template + '/**/*.html')
-		.pipe(dest(paths.dist.template))
+		.pipe(dest(paths.build.template))
 }
 
 function compile() {
@@ -64,11 +64,11 @@ function compile() {
 	);
 
 	return src('src/')
-		.pipe(dest('dist/'));
+		.pipe(dest('build/'));
 }
 
 function startServer() {
-	src('dist')
+	src('build')
     .pipe(webserver({
       livereload: true,
       directoryListing: false,

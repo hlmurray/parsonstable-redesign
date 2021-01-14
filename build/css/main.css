@@ -2329,7 +2329,7 @@ body.mobile-menu-active {
     @media (min-width: 768px) {
       .global-footer .footer-container .footer-contact p {
         text-align: right; }
-      .global-footer .footer-container .footer-contact br {
+      .global-footer .footer-container .footer-contact .footer-gifts br {
         display: none; } }
 
 /* Home Page styles */

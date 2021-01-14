@@ -32,14 +32,25 @@
 
 	h1 {
 		@include font(libre-italic);
-		margin-bottom: 70px;
+		margin-bottom: 45px;
+		
+		@include breakpoint(tablet) {
+			margin-bottom: 70px;
+
+			br {
+				display: none;
+			}
+		}
 	}
 
 	p {
-		font-size: 21px;
+		font-size: 15px;
 		line-height: 26px;
-		letter-spacing: 0;
 		color: #000;
+		
+		@include breakpoint(tablet) {
+			font-size: 21px;
+		}
 	}
 }
 
@@ -47,10 +58,11 @@
 	display: flex;
 	flex-flow: column wrap;
 	justify-content: center;
-	padding-bottom: 40px;
+	padding-bottom: 45px;
 
 	@include breakpoint(tablet) {
 		flex-flow: row nowrap;
+		padding-bottom: 40px;
 	}
 
 	a {
@@ -64,6 +76,10 @@
 		letter-spacing: 1px;
 		text-transform: uppercase;
 		text-decoration: none;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
 
 		@include breakpoint(tablet) {
 			font-size: 18px;

@@ -15,30 +15,35 @@
 		<link rel="shortcut icon" href="http://www.parsonstable.com/favicon.ico" type="image/x-icon"/>
 		<link rel="icon" href="http://www.parsonstable.com/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-		<link rel="stylesheet" type="text/css" href="/css/vendor/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="/css/main.css">
+		<link rel="stylesheet" type="text/css" href="../css/vendor/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/main.css">
 	</head>
 	<body>
 		<header class="global-nav">
+			<div role="presentation" class="mobile-overlay"></div>
 			<div class="nav-mobile">
-				<a href="/"><img src="/assets/images/PT_Logo.svg" /></a>
-				<div class="nav-menu-icon">
-					<div></div>
-					<div></div>
-					<div></div>
-				</div>
+				<a href="/" class="nav-logo"><img src="../assets/images/PT_Logo.svg" /></a>
+				<button aria-label="open mobile menu" class="nav-menu-icon" onclick="toggleMenu();">
+					<span></span>
+				</button>
 				<div class="nav-menu">
-					<a href="#" onclick="openModal();">Reservations</a>
-					<a href="/about">The Restaurant</a>
-					<a href="/gallery">Gallery</a>
-					<a href="/press">Press</a>
-					<a href="/menus">Menus</a>
+					<div class="nav-menu-container">
+						<a href="#" onclick="openModal(e);">Reservations</a>
+						<a href="/about">The Restaurant</a>
+						<a href="/gallery">Gallery</a>
+						<a href="/press">Press</a>
+						<a href="/menus">Menus</a>
+						<div class="nav-menu-footer">
+							<p>4305 McCorsley Avenue<br>Little River, SC 29566</p>
+							<p>843.249.3702</p>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="nav-desktop">
 				<a href="#" onclick="openModal();">Reservations</a>
 				<a href="/about">The Restaurant</a>
-				<a href="/"><img src="/assets/images/PT_Logo.svg" /></a>
+				<a href="/"><img src="../assets/images/PT_Logo.svg" /></a>
 				<a href="/gallery">Gallery</a>
 				<a href="/press">Press</a>
 				<a href="/menus">Menus</a>
@@ -48,38 +53,47 @@
 			<!-- Start Home Page -->
 			<div class="home-carousel">
 				<div class="carousel-slide">
-					<img src="/assets/images/home/home-slider1.jpg" />
+					<img src="../assets/images/home/pt_carousel_1.jpg" />
 				</div>
 				<div class="carousel-slide">
-					<img src="/assets/images/home/home-slider2.jpg" />
+					<img src="../assets/images/home/pt_carousel_2.jpg" />
 				</div>
 				<div class="carousel-slide">
-					<img src="/assets/images/home/home-slider3.jpg" />
+					<img src="../assets/images/home/pt_carousel_3.jpg" />
 				</div>
 				<div class="carousel-slide">
-					<img src="/assets/images/home/home-slider4.jpg" />
+					<img src="../assets/images/home/pt_carousel_4.jpg" />
 				</div>
 				<div class="carousel-slide">
-					<img src="/assets/images/home/home-slider5.jpg" />
+					<img src="../assets/images/home/pt_carousel_5.jpg" />
 				</div>
 				<div class="carousel-slide">
-					<img src="/assets/images/home/home-slider6.jpg" />
+					<img src="../assets/images/home/pt_carousel_6.jpg" />
 				</div>
 				<div class="carousel-slide">
-					<img src="/assets/images/home/home-slider7.jpg" />
+					<img src="../assets/images/home/pt_carousel_7.jpg" />
 				</div>
 				<div class="carousel-slide">
-					<img src="/assets/images/home/home-slider8.jpg" />
+					<img src="../assets/images/home/pt_carousel_8.jpg" />
 				</div>
 				<div class="carousel-slide">
-					<img src="/assets/images/home/home-slider9.jpg" />
+					<img src="../assets/images/home/pt_carousel_9.jpg" />
 				</div>
 				<div class="carousel-slide">
-					<img src="/assets/images/home/home-slider10.jpg" />
+					<img src="../assets/images/home/pt_carousel_10.jpg" />
+				</div>
+				<div class="carousel-slide">
+					<img src="../assets/images/home/pt_carousel_11.jpg" />
+				</div>
+				<div class="carousel-slide">
+					<img src="../assets/images/home/pt_carousel_12.jpg" />
+				</div>
+				<div class="carousel-slide">
+					<img src="../assets/images/home/pt_carousel_13.jpg" />
 				</div>
 			</div>
 			<div class="home-main">
-				<h1>Award Winning Dining in Our Historic Setting</h1>
+				<h1>Award Winning Dining <br>in Our Historic Setting</h1>
 				<div class="home-menus">
 					<a href="#">Dinner</a>
 					<a href="#">Dessert</a>
@@ -111,11 +125,11 @@
 					</div>
 				</div>
 				<div class="footer-image">
-					<img src="/assets/images/PT-Illustration.png" />
+					<img src="../assets/images/PT-Illustration.png" />
 				</div>
 				<div class="footer-contact">
 					<p>
-						<a href="">4305 McCorsley Ave<br>Little River, SC 29566</a>
+						<a href="https://goo.gl/maps/cJtC9ME5brnJJVEA8" target="_blank">4305 McCorsley Ave<br>Little River, SC 29566</a>
 					</p>
 					<p>
 						<a href="tel:8432493702">843.249.3702</a>
@@ -123,7 +137,7 @@
 					<p>
 						<a href="mailto:info@parsonstable.com">info@parsonstable.com</a>
 					</p>
-					<p class="footer-gifts">Gift cards may be purchased in person or over the phone.</p>
+					<p class="footer-gifts">Gift cards may be purchased <br>in person or over the phone.</p>
 					<div class="footer-social"></div>
 				</div>
 			</div>
@@ -142,6 +156,6 @@
 				}
 			};
 			</script>
-		<script type="text/javascript" src="/js/home.js"></script>
+		<script type="text/javascript" src="../js/home.js"></script>
 	</body>
 </html>

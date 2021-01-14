@@ -4,15 +4,39 @@ body {
 }
 
 .global-nav {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	width: 100%;
 	padding: 10px 0;
 
+	.nav-mobile {
+		display: block;
+		width: 100%;
+    text-align: center;
+
+		.nav-menu {
+			position: fixed;
+			height: 100%;
+			top: 0;
+			right: 0;
+			transform: translateX(100%);
+		}
+
+		@include breakpoint(tablet) {
+			display: none;
+		}
+	}
+
+	.nav-desktop {
+		display: none;
+
+		@include breakpoint(tablet) {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
 	a {
 		@include font(apercu-regular);
-		margin: 0 20px;
 		font-size: 14px;
 		color: #000;
 		text-decoration: none;
@@ -20,6 +44,7 @@ body {
 		letter-spacing: 0.82px;
 
 		@include breakpoint(desktop) {
+			margin: 0 20px;
 			transition: color 0.3s ease;
 
 			&:hover {
@@ -46,8 +71,12 @@ body {
 	padding-top: 100px;
 
 	img {
-		width: 315px;
-		height: 177px;
+		width: 100%;
+
+		@include breakpoint(tablet) {
+			width: 315px;
+			height: 177px;
+		}
 	}
 
 	p {
@@ -56,12 +85,17 @@ body {
 
 	.footer-container {
 		display: flex;
+		flex-flow: column wrap;
 		max-width: 700px;
 		margin: 0 auto;
 
-		.footer-hours,
-		.footer-contact {
-			width: 25%;
+		@include breakpoint(tablet) {
+			flex-flow: row nowrap;
+
+			.footer-hours,
+			.footer-contact {
+				width: 25%;
+			}
 		}
 
 		.footer-hours {
@@ -75,8 +109,10 @@ body {
 		}
 
 		.footer-image {
-			width: 45%;
-			padding: 0 2.5%;
+			@include breakpoint(tablet) {
+				width: 45%;
+				padding: 0 2.5%;
+			}
 		}
 
 		.footer-contact {

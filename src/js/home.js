@@ -6,5 +6,5 @@ $('.home-carousel').slick({
   centerMode: true,
   infinite: true,
   speed: 500,
-  variableWidth: true,
+  variableWidth: true
 });

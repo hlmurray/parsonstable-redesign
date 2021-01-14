@@ -2096,15 +2096,6 @@ body {
   background-color: #F8F7F1; }
 
 .global-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 100%;
   padding: 10px 0; }
   .global-nav .nav-mobile {
@@ -2126,7 +2117,15 @@ body {
     display: none; }
     @media (min-width: 768px) {
       .global-nav .nav-desktop {
-        display: block; } }
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; } }
   .global-nav a {
     font-family: "apercu-regular", sans-serif !important;
     font-size: 14px;

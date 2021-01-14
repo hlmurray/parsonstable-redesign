@@ -1,13 +1,11 @@
 // Fonts
 @mixin font($font){
-  @if($font == engravers-gothic){
-    font-family: "engravers-gothic", sans-serif !important;
-  } @else if($font == trade-gothic) {
-    font-family: "trade-gothic", serif !important;
-  } @else if($font == garamond-premier) {
-    font-family: "garamond-premier-pro-display", serif !important;
-  } @else if($font == lucia-bt) {
-    font-family: "lucia-bt" !important;
+  @if($font == apercu-regular){
+    font-family: "apercu-regular", sans-serif !important;
+  } @else if($font == libre-regular) {
+    font-family: "libre-regular", serif !important;
+  } @else if($font == libre-italic) {
+    font-family: "libre-italic", serif !important;
   }
 }
 

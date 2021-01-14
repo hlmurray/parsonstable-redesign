@@ -1,42 +1,50 @@
-@import url('//hello.myfonts.net/count/2de0a2');
-
-@font-face {font-family: 'trade-gothic';src: url('/assets/fonts/2DE0A2_0_0.eot');src: url('/assets/fonts/2DE0A2_0_0.eot?#iefix') format('embedded-opentype'),url('/assets/fonts/2DE0A2_0_0.woff2') format('woff2'),url('/assets/fonts/2DE0A2_0_0.woff') format('woff'),url('/assets/fonts/2DE0A2_0_0.ttf') format('truetype');}
- 
-
-@font-face{
-	font-family:'engravers-gothic';
-	src:url('/assets/fonts/engravers-gothic-bt.ttf') format('truetype');
+@font-face {
+	font-family:'apercu-regular';
+	src: url('/assets/fonts/apercu-regular.eot');
+	src: url('/assets/fonts/apercu-regular.eot?#iefix') format('embedded-opentype'),
+				url('/assets/fonts/apercu-regular.woff2') format('woff2'),
+				url('/assets/fonts/apercu-regular.woff') format('woff'),
+				url('/assets/fonts/apercu-regular.ttf') format('truetype');
 	font-style: normal;
+	font-weight: normal;
 }
 
 @font-face {
-	font-family:'lucia-bt';
-	src:url('/assets/fonts/lucia-bt.ttf') format('truetype');
+	font-family: 'libre-regular';
+	src: url('/assets/fonts/LibreBaskerville-Regular.ttf') format('truetype');
 	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'libre-italic';
+	src: url('/assets/fonts/LibreBaskerville-Italic.ttf') format('truetype');
+	font-style: italic;
+	font-weight: normal;
 }
 
 h1 {
-	// @include font(garamond-premier);
-	// font-size: 18px;
-	// letter-spacing: 0.05em;
-	// font-weight: 400;
-	// text-align: center;
-	// color: $darkgrey;
-	// margin: 0;
+	@include font(libre-regular);
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 26px;
+	color: #000;
 }
 
 h3,
 h4 {
+	@include font(apercu-regular);
 	margin: 0;
-	font-size: 10px;
+	font-size: 12px;
+	letter-spacing: 0.64px;
 	text-transform: uppercase;
 }
 
 p {
-	// @include font(garamond-premier);
+	@include font(libre-regular);
 	margin: 0;
-	font-size: 14px;
-	letter-spacing: 0.58px;
+	font-size: 15px;
+	line-height: 26px;
 	color: #000;
 }
 

@@ -3,7 +3,7 @@ body {
 	background-color: $beige;
 }
 
-body.mobile-menu-active {
+body.modal-active {
 	overflow: hidden;
 
 	@include breakpoint(tablet) {
@@ -62,7 +62,7 @@ body.mobile-menu-active {
 		}
 	}
 
-	.nav-menu-overlay {
+	.nav-menu-list-overlay {
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -71,17 +71,51 @@ body.mobile-menu-active {
 		background-color: $green;
 		opacity: 0;
 		visibility: hidden;
-		z-index: -1;
+		z-index: 3;
 		transition: opacity 0.3s ease, visibility 0.3s ease;
 
 		&.active {
 			opacity: 1;
 			visibility: visible;
-			z-index: 3;
+		}
+	}
+
+	.menu-list-icon {
+		position: absolute;
+		top: 30px;
+		right: 30px;
+
+		span:before,
+		span:after {
+			background-color: #fff;
+		}
+	}
+
+	.nav-menu-list-container {
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+
+		a {
+			@include font(libre-regular);
+			margin-bottom: 55px;
+			color: #fff;
+			font-size: 30px;
+			text-decoration: none;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 
 		@include breakpoint(tablet) {
-			display: none;
+			a {
+				margin-bottom: 75px;
+				font-size: 42px;
+			}
 		}
 	}
 
@@ -99,53 +133,6 @@ body.mobile-menu-active {
 			position: absolute;
 			top: 20px;
 			right: 20px;
-			width: 18px;
-			height: 10px;
-			outline: 0;
-
-			span {
-				display: block;
-				position: relative;
-				width: 100%;
-				height: 1px;
-				background-color: #000;
-
-				&:before {
-					content: '';
-					position: absolute;
-					width: 18px;
-					height: 1px;
-					top: -5px;
-					right: 0;
-					background-color: #000;
-				}
-	
-				&:after{
-					content: '';
-					position: absolute;
-					width: 18px;
-					height: 1px;
-					top: 5px;
-					right: 0;
-					background-color: #000;
-				}
-			}
-
-
-			&.close {
-				span {
-					background-color: transparent;
-	
-					&:before {
-						transform: rotate(45deg);
-						top: 0;
-					}
-					&:after {
-						top: 0;
-						transform: rotate(-45deg);
-					}
-				}
-			}
 		}
 
 		.nav-menu {

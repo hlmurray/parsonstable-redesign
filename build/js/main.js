@@ -2,14 +2,25 @@
 const openMobileMenu = () => {
   $('.nav-menu').addClass('active');
   $('.mobile-overlay').addClass('active');
-  $('body').addClass('mobile-menu-active');
+  $('body').addClass('modal-active');
 };
 
 const closeMobileMenu = () => {
   $('.nav-menu-icon').removeClass('active');
   $('.nav-menu').removeClass('active');
   $('.mobile-overlay').removeClass('active');
-  $('body').removeClass('mobile-menu-active');
+  $('body').removeClass('modal-active');
+};
+
+// Menu list overlay
+const openMenuOverlay = () => {
+  $('.nav-menu-list-overlay').addClass('active');
+  $('body').addClass('modal-active');
+};
+
+const closeMenuOverlay = () => {
+  $('.nav-menu-list-overlay').removeClass('active');
+  $('body').removeClass('modal-active');
 };
 
 // Home Page carousel
@@ -29,14 +40,14 @@ if ($homeCarousel) {
 }
 
 // Masonry grid
-const $container = $('#container');
+// const $container = $('#container');
 
-// initialize
-if ($container) {
-  $container.imagesLoaded(() => {
-    $container.masonry({
-      itemSelector: '.gallery-img',
-      gutter: 15
-    });
-  });
-}
+// // initialize
+// if ($container) {
+//   $container.imagesLoaded(() => {
+//     $container.masonry({
+//       itemSelector: '.gallery-img',
+//       gutter: 15
+//     });
+//   });
+// }

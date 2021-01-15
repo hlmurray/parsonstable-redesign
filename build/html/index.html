@@ -24,19 +24,24 @@
 				<p>Happy New Year! Good Riddance to 2020! We are open for <a href="http://parsonstable.com/uploads/menu/2021-Restaurant-Week-Menu.pdf" target="_blank">SC Restaurant Week</a>.</p>
 			</div>
 			<div role="presentation" class="mobile-overlay"></div>
-			<div class="nav-menu-overlay">
-				<a href="">Dinner</a>
-				<a href="">Dessert</a>
-				<a href="">Wine List</a>
+			<div class="nav-menu-list-overlay">
+				<button class="menu-icon menu-list-icon close" onclick="closeMenuOverlay();">
+					<span></span>
+				</button>
+				<div class="nav-menu-list-container">
+					<a href="">Dinner</a>
+					<a href="">Dessert</a>
+					<a href="">Wine List</a>
+				</div>
 			</div>
 			<div class="nav-main-container">
 				<div class="nav-mobile">
 					<a href="/" class="nav-logo"><img src="../assets/images/PT_Logo.svg" /></a>
-					<button aria-label="open mobile menu" class="nav-menu-icon" onclick="openMobileMenu();">
+					<button aria-label="open mobile menu" class="menu-icon nav-menu-icon" onclick="openMobileMenu();">
 						<span></span>
 					</button>
 					<div class="nav-menu">
-						<button aria-label="close mobile menu" class="nav-menu-icon close" onclick="closeMobileMenu();">
+						<button aria-label="close mobile menu" class="menu-icon nav-menu-icon close" onclick="closeMobileMenu();">
 							<span></span>
 						</button>
 						<div class="nav-menu-container">
@@ -44,7 +49,7 @@
 							<a href="/about.html">The Restaurant</a>
 							<a href="/gallery.html">Gallery</a>
 							<a href="/press.html">Press</a>
-							<a href="#" onclick="toggleMenuOverlay();">Menus</a>
+							<a href="#" onclick="openMenuOverlay();">Menus</a>
 							<div class="nav-menu-footer">
 								<p>
 									<a href="https://goo.gl/maps/cJtC9ME5brnJJVEA8" target="_blank">4305 McCorsley Ave<br>Little River, SC 29566</a>
@@ -62,7 +67,7 @@
 					<a href="/"><img src="../assets/images/PT_Logo.svg" /></a>
 					<a href="/gallery.html">Gallery</a>
 					<a href="/press.html">Press</a>
-					<a href="#" onclick="toggleMenuOverlay();">Menus</a>
+					<a href="#" onclick="openMenuOverlay();">Menus</a>
 				</div>
 			</div>
 		</header>

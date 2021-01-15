@@ -2,7 +2,7 @@
 .home-carousel {
 	.carousel-slide {
 		width: auto;
-		height: 217px;
+		height: 300px;
 		margin-right: 30px;
 
 		@include breakpoint(tablet) {
@@ -12,7 +12,7 @@
 
 	img {
 		width: auto;
-		height: 217px;
+		height: 300px;
 
 		@include breakpoint(tablet) {
 			height: 480px;

@@ -1,6 +1,6 @@
 /* Preload images */
 body:after {
-  content: url(/assets/images/close.png) url(/assets/images/loading.gif) url(/assets/images/prev.png) url(/assets/images/next.png);
+  content: url(../assets/images/close.png) url(../assets/images/loading.gif) url(../assets/images/prev.png) url(../assets/images/next.png);
   display: none; }
 
 .lightboxOverlay {

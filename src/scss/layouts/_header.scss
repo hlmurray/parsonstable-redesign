@@ -173,6 +173,10 @@ body.modal-active {
 			}
 
 			a {
+				@include font(libre-regular);
+				font-size: 10px;
+				line-height: 15px;
+				text-transform: none;
 				text-decoration: none;
 			}
 		}

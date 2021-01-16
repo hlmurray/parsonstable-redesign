@@ -31,6 +31,14 @@ h1 {
 	color: #000;
 }
 
+h2 {
+	@include font(libre-regular);
+	margin: 0;
+	font-size: 21px;
+	color: #000000;
+	line-height: 28px;
+}
+
 h3,
 h4 {
 	@include font(apercu-regular);

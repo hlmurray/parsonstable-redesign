@@ -2062,27 +2062,32 @@ body.modal-active {
     body.modal-active {
       overflow: auto; } }
 
-.global-nav {
+.notification-bar {
   width: 100%;
-  padding: 0 0 10px; }
-  .global-nav .nav-notification-bar {
-    width: 100%;
-    padding: 20px 0;
-    background-color: #1A4E4A;
-    text-align: center; }
-    .global-nav .nav-notification-bar p {
-      padding: 0 10px;
-      font-size: 12px;
-      line-height: 16px;
-      color: #fff; }
-    .global-nav .nav-notification-bar a {
-      font-family: "libre-regular", serif !important;
-      display: inline-block;
-      font-size: 12px;
-      line-height: 16px;
-      color: #fff;
-      text-decoration: underline;
-      text-transform: none; }
+  padding: 20px 0;
+  background-color: #1A4E4A;
+  text-align: center; }
+  .notification-bar p {
+    padding: 0 10px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #fff; }
+  .notification-bar a {
+    font-family: "libre-regular", serif !important;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 16px;
+    color: #fff;
+    text-decoration: underline;
+    text-transform: none; }
+
+.global-nav {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  padding: 0 0 10px;
+  z-index: 1;
+  background-color: #F8F7F1; }
   .global-nav .mobile-overlay {
     position: fixed;
     top: 0;

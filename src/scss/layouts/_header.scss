@@ -11,33 +11,37 @@ body.modal-active {
 	}
 }
 
-.global-nav {
+.notification-bar {
 	width: 100%;
-	padding: 0 0 10px;
+	padding: 20px 0;
+	background-color: $green;
+	text-align: center;
 
-	.nav-notification-bar {
-		width: 100%;
-		padding: 20px 0;
-		background-color: $green;
-		text-align: center;
-
-		p {
-			padding: 0 10px;
-			font-size: 12px;
-			line-height: 16px;
-			color: #fff;
-		}
-
-		a {
-			@include font(libre-regular);
-			display: inline-block;
-			font-size: 12px;
-			line-height: 16px;
-			color: #fff;
-			text-decoration: underline;
-			text-transform: none;
-		}
+	p {
+		padding: 0 10px;
+		font-size: 12px;
+		line-height: 16px;
+		color: #fff;
 	}
+
+	a {
+		@include font(libre-regular);
+		display: inline-block;
+		font-size: 12px;
+		line-height: 16px;
+		color: #fff;
+		text-decoration: underline;
+		text-transform: none;
+	}
+}
+
+.global-nav {
+	position: sticky;
+	width: 100%;
+	top: 0;
+	padding: 0 0 10px;
+	z-index: 1;
+	background-color: $beige;
 
 	.mobile-overlay {
 		position: fixed;

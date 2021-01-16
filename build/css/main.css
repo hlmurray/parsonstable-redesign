@@ -2267,12 +2267,12 @@ body.modal-active {
 
 /* Footer Styles */
 .global-footer {
-  padding-top: 60px; }
+  padding: 60px 0 20px; }
   .global-footer p {
     font-size: 14px; }
   @media (min-width: 768px) {
     .global-footer {
-      padding-top: 100px; } }
+      padding: 100px 0 30px; } }
   .global-footer .footer-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2334,6 +2334,16 @@ body.modal-active {
         text-align: right; }
       .global-footer .footer-container .footer-contact .footer-gifts br {
         display: none; } }
+    .global-footer .footer-container .footer-social {
+      text-align: center; }
+      .global-footer .footer-container .footer-social a {
+        padding: 5px;
+        font-size: 20px; }
+      @media (min-width: 768px) {
+        .global-footer .footer-container .footer-social {
+          text-align: right; }
+          .global-footer .footer-container .footer-social a {
+            font-size: 18px; } }
 
 /* Home Page styles */
 .home-carousel .carousel-slide {

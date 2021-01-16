@@ -243,14 +243,14 @@ body.modal-active {
 /* Footer Styles */
 
 .global-footer {
-	padding-top: 60px;
+	padding: 60px 0 20px;
 
 	p {
 		font-size: 14px;
 	}
 
 	@include breakpoint(tablet) {
-		padding-top: 100px;
+		padding: 100px 0 30px;
 	}
 
 	.footer-container {
@@ -331,6 +331,23 @@ body.modal-active {
 
 				.footer-gifts br {
 					display: none;
+				}
+			}
+		}
+
+		.footer-social {
+			text-align: center;
+
+			a {
+				padding: 5px;
+				font-size: 20px;
+			}
+
+			@include breakpoint(tablet) {
+				text-align: right;
+
+				a {
+					font-size: 18px;
 				}
 			}
 		}

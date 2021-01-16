@@ -1,0 +1,31 @@
+.about-container {
+	img {
+		display: block;
+		width: 100%;
+	}
+}
+
+.about-content {
+	max-width: 722px;
+	margin: 0 auto;
+	padding: 40px 25px 0;
+
+	p {
+		margin-bottom: 30px;
+	}
+}
+
+.about-footer {
+	img {
+		margin: 0 0 30px;
+	}
+
+	@include breakpoint(tablet) {
+		display: flex;
+
+		img {
+			width: 50%;
+			margin: 0 60px 0 0;
+		}
+	}
+}

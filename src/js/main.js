@@ -32,7 +32,7 @@ const initHomeCarousel = () => {
     $('.home-carousel').slick({
       accessibility: true,
       arrows: false,
-      autoplay: true,
+      autoplay: false,
       autoplaySpeed: 3500,
       centerMode: true,
       infinite: true,

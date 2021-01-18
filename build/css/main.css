@@ -242,8 +242,8 @@ button {
  */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("/assets/fonts/fontawesome-webfont.eot?v=4.2.0");
-  src: url("/assets/fonts/fontawesome-webfont.eot?#iefix&v=4.2.0") format("embedded-opentype"), url("/assets/fonts/fontawesome-webfont.woff?v=4.2.0") format("woff"), url("/assets/fonts/fontawesome-webfont.ttf?v=4.2.0") format("truetype"), url("/assets/fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular") format("svg");
+  src: url("../assets/fonts/fontawesome-webfont.eot?v=4.2.0");
+  src: url("../assets/fonts/fontawesome-webfont.eot?#iefix&v=4.2.0") format("embedded-opentype"), url("../assets/fonts/fontawesome-webfont.woff?v=4.2.0") format("woff"), url("../assets/fonts/fontawesome-webfont.ttf?v=4.2.0") format("truetype"), url("../assets/fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -2371,7 +2371,7 @@ body.modal-active {
       text-decoration: none;
       color: #000; }
     .global-footer .footer-container .footer-contact .footer-gifts {
-      font-style: italic; }
+      font-family: "libre-italic", serif !important; }
     @media (min-width: 768px) {
       .global-footer .footer-container .footer-contact p {
         text-align: right; }
@@ -2398,7 +2398,7 @@ body.modal-active {
 /* Home Page styles */
 .home-carousel .carousel-slide {
   width: auto;
-  height: 217px;
+  height: 400px;
   margin-right: 15px; }
   @media (min-width: 768px) {
     .home-carousel .carousel-slide {
@@ -2407,13 +2407,13 @@ body.modal-active {
 
 .home-carousel img {
   width: auto;
-  height: 217px; }
+  height: 400px; }
   @media (min-width: 768px) {
     .home-carousel img {
       height: 480px; } }
 
 .home-main {
-  max-width: 760px;
+  max-width: 540px;
   margin: 0 auto;
   padding: 10px 20px 0;
   text-align: center; }
@@ -2432,9 +2432,6 @@ body.modal-active {
     font-size: 15px;
     line-height: 26px;
     color: #000; }
-    @media (min-width: 768px) {
-      .home-main p {
-        font-size: 21px; } }
 
 .home-menus {
   display: -webkit-box;
@@ -2539,7 +2536,7 @@ body.modal-active {
         padding-bottom: 25px; } }
   .press-container img {
     display: block;
-    width: 162px;
+    width: 100%;
     margin: 0 0 15px; }
     @media (min-width: 768px) {
       .press-container img {

@@ -321,7 +321,7 @@ body.modal-active {
 			}
 
 			.footer-gifts {
-				font-style: italic;
+				@include font(libre-italic);
 			}
 
 			@include breakpoint(tablet) {

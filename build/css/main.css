@@ -2311,7 +2311,7 @@ body.modal-active {
 
 /* Footer Styles */
 .global-footer {
-  padding: 60px 0 20px; }
+  padding: 60px 0 30px; }
   .global-footer p {
     font-size: 14px; }
   @media (min-width: 768px) {

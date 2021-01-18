@@ -6,9 +6,9 @@
 @import "./patterns/elements.scss";
 
 // Vendor
-@import "./vendor/_normalize.scss";
 @import "./vendor/font-awesome.min.scss";
-@import "./vendor/lightbox.scss";
+@import "./vendor/_lightbox.scss";
+@import "./vendor/_normalize.scss";
 
 //Layout
 @import "./layouts/_typography.scss";

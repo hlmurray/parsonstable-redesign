@@ -11,6 +11,7 @@
 
 @font-face {
 	font-family: 'libre-regular';
+	src: url('../assets/fonts/LibreBaskerville-Regular.ttf');
 	src: url('../assets/fonts/LibreBaskerville-Regular.ttf') format('truetype');
 	font-style: normal;
 	font-weight: normal;
@@ -18,8 +19,9 @@
 
 @font-face {
 	font-family: 'libre-italic';
+	src: url('../assets/fonts/LibreBaskerville-Italic.ttf');
 	src: url('../assets/fonts/LibreBaskerville-Italic.ttf') format('truetype');
-	font-style: italic;
+	font-style: normal;
 	font-weight: normal;
 }
 

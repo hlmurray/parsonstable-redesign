@@ -35,7 +35,7 @@ h2 {
 	@include font(libre-regular);
 	margin: 0;
 	font-size: 21px;
-	color: #000000;
+	color: #000;
 	line-height: 28px;
 }
 
@@ -54,6 +54,57 @@ p {
 	font-size: 15px;
 	line-height: 26px;
 	color: #000;
+}
+
+.underline {
+	text-decoration: none;
+	background: linear-gradient(#F8F7F1, #F8F7F1), linear-gradient(#F8F7F1, #F8F7F1), linear-gradient(#000, #000);
+	background-size: .05em 1px, .05em 1px, 1px 1px;
+	background-repeat: no-repeat, no-repeat, repeat-x;
+	text-shadow: 0.03em 0 #F8F7F1, -0.03em 0 #F8F7F1, 0 0.03em #F8F7F1, 0 -0.03em #F8F7F1, 0.06em 0 #F8F7F1, -0.06em 0 #F8F7F1, 0.09em 0 #F8F7F1, -0.09em 0 #F8F7F1, 0.12em 0 #F8F7F1, -0.12em 0 #F8F7F1, 0.15em 0 #F8F7F1, -0.15em 0 #F8F7F1;
+	background-position-y: 90%, 90%, 90%;
+	background-position-x: 0%, 100%, 0%;
+	transition: all 0.15s ease;
+
+	&.dark {
+		background: linear-gradient(#1A4E4A, #1A4E4A), linear-gradient(#1A4E4A, #1A4E4A), linear-gradient(#1A4E4A, #1A4E4A);
+    background-size: .05em 1px, .05em 1px, 1px 1px;
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    text-shadow: 0.03em 0 #1A4E4A, -0.03em 0 #1A4E4A, 0 0.03em #1A4E4A, 0 -0.03em #1A4E4A, 0.06em 0 #1A4E4A, -0.06em 0 #1A4E4A, 0.09em 0 #1A4E4A, -0.09em 0 #1A4E4A, 0.12em 0 #1A4E4A, -0.12em 0 #1A4E4A, 0.15em 0 #1A4E4A, -0.15em 0 #1A4E4A;
+    background-position-y: 90%, 90%, 90%;
+		background-position-x: 0%, 100%, 0%;
+
+		&.show {
+			background: linear-gradient(#1A4E4A, #1A4E4A), linear-gradient(#1A4E4A, #1A4E4A), linear-gradient(#fff, #fff);
+			background-size: .05em 1px, .05em 1px, 1px 1px;
+			background-repeat: no-repeat, no-repeat, repeat-x;
+			text-shadow: 0.03em 0 #1A4E4A, -0.03em 0 #1A4E4A, 0 0.03em #1A4E4A, 0 -0.03em #1A4E4A, 0.06em 0 #1A4E4A, -0.06em 0 #1A4E4A, 0.09em 0 #1A4E4A, -0.09em 0 #1A4E4A, 0.12em 0 #1A4E4A, -0.12em 0 #1A4E4A, 0.15em 0 #1A4E4A, -0.15em 0 #1A4E4A;
+			background-position-y: 90%, 90%, 90%;
+			background-position-x: 0%, 100%, 0%;
+		}
+	}
+
+	@include breakpoint(desktop) {
+		&:hover {
+			background: linear-gradient(#F8F7F1, #F8F7F1), linear-gradient(#F8F7F1, #F8F7F1), linear-gradient(#000, #000);
+			background-size: .05em 1px, .05em 1px, 1px 1px;
+			background-repeat: no-repeat, no-repeat, repeat-x;
+			text-shadow: 0.03em 0 #F8F7F1, -0.03em 0 #F8F7F1, 0 0.03em #F8F7F1, 0 -0.03em #F8F7F1, 0.06em 0 #F8F7F1, -0.06em 0 #F8F7F1, 0.09em 0 #F8F7F1, -0.09em 0 #F8F7F1, 0.12em 0 #F8F7F1, -0.12em 0 #F8F7F1, 0.15em 0 #F8F7F1, -0.15em 0 #F8F7F1;
+			background-position-y: 100%, 100%, 100%;
+			background-position-x: 0%, 100%, 0%;
+			transition: all 0.15s ease;
+		}
+
+		&.dark:hover {
+			background: linear-gradient(#1A4E4A, #1A4E4A), linear-gradient(#1A4E4A, #1A4E4A), linear-gradient(#fff, #fff);
+			background-size: .05em 1px, .05em 1px, 1px 1px;
+			background-repeat: no-repeat, no-repeat, repeat-x;
+			text-shadow: 0.03em 0 #1A4E4A, -0.03em 0 #1A4E4A, 0 0.03em #1A4E4A, 0 -0.03em #1A4E4A, 0.06em 0 #1A4E4A, -0.06em 0 #1A4E4A, 0.09em 0 #1A4E4A, -0.09em 0 #1A4E4A, 0.12em 0 #1A4E4A, -0.12em 0 #1A4E4A, 0.15em 0 #1A4E4A, -0.15em 0 #1A4E4A;
+			background-position-y: 100%, 100%, 100%;
+			background-position-x: 0%, 100%, 0%;
+		}
+	}
+
 }
 
 h1.header-404 {

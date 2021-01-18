@@ -30,7 +30,6 @@ body.modal-active {
 		font-size: 12px;
 		line-height: 16px;
 		color: #fff;
-		text-decoration: underline;
 		text-transform: none;
 	}
 }
@@ -217,10 +216,10 @@ body.modal-active {
 			}
 
 			@include breakpoint(desktop) {
-				transition: color 0.3s ease;
 
-				&:hover {
-					color: #4B4B4B;
+				&.active,
+				&:not(.nav-logo):hover {
+					border-bottom: 1px solid #000;
 				}
 			}
 
@@ -317,6 +316,7 @@ body.modal-active {
 			}
 
 			a {
+				text-decoration: none;
 				color: #000;
 			}
 
@@ -348,6 +348,16 @@ body.modal-active {
 
 				a {
 					font-size: 18px;
+				}
+			}
+
+			@include breakpoint(desktop) {
+				a {
+					transition: color 0.3s ease;
+	
+					&:hover {
+						color: #4B4B4B;
+					}
 				}
 			}
 		}

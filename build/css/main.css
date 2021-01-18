@@ -88,13 +88,6 @@ textarea {
 body {
   margin: 0; }
 
-a {
-  background: transparent; }
-  a:focus {
-    outline: none; }
-  a:hover, a:active {
-    outline: 0; }
-
 h1 {
   font-size: 2em;
   margin: 0.67em 0; }
@@ -2032,7 +2025,7 @@ h2 {
   font-family: "libre-regular", serif !important;
   margin: 0;
   font-size: 21px;
-  color: #000000;
+  color: #000;
   line-height: 28px; }
 
 h3,
@@ -2049,6 +2042,60 @@ p {
   font-size: 15px;
   line-height: 26px;
   color: #000; }
+
+.underline {
+  text-decoration: none;
+  background: -webkit-gradient(linear, left top, left bottom, from(#F8F7F1), to(#F8F7F1)), -webkit-gradient(linear, left top, left bottom, from(#F8F7F1), to(#F8F7F1)), -webkit-gradient(linear, left top, left bottom, from(#000), to(#000));
+  background: -o-linear-gradient(#F8F7F1, #F8F7F1), -o-linear-gradient(#F8F7F1, #F8F7F1), -o-linear-gradient(#000, #000);
+  background: linear-gradient(#F8F7F1, #F8F7F1), linear-gradient(#F8F7F1, #F8F7F1), linear-gradient(#000, #000);
+  background-size: .05em 1px, .05em 1px, 1px 1px;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+  text-shadow: 0.03em 0 #F8F7F1, -0.03em 0 #F8F7F1, 0 0.03em #F8F7F1, 0 -0.03em #F8F7F1, 0.06em 0 #F8F7F1, -0.06em 0 #F8F7F1, 0.09em 0 #F8F7F1, -0.09em 0 #F8F7F1, 0.12em 0 #F8F7F1, -0.12em 0 #F8F7F1, 0.15em 0 #F8F7F1, -0.15em 0 #F8F7F1;
+  background-position-y: 90%, 90%, 90%;
+  background-position-x: 0%, 100%, 0%;
+  -webkit-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
+  transition: all 0.15s ease; }
+  .underline.dark {
+    background: -webkit-gradient(linear, left top, left bottom, from(#1A4E4A), to(#1A4E4A)), -webkit-gradient(linear, left top, left bottom, from(#1A4E4A), to(#1A4E4A)), -webkit-gradient(linear, left top, left bottom, from(#1A4E4A), to(#1A4E4A));
+    background: -o-linear-gradient(#1A4E4A, #1A4E4A), -o-linear-gradient(#1A4E4A, #1A4E4A), -o-linear-gradient(#1A4E4A, #1A4E4A);
+    background: linear-gradient(#1A4E4A, #1A4E4A), linear-gradient(#1A4E4A, #1A4E4A), linear-gradient(#1A4E4A, #1A4E4A);
+    background-size: .05em 1px, .05em 1px, 1px 1px;
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    text-shadow: 0.03em 0 #1A4E4A, -0.03em 0 #1A4E4A, 0 0.03em #1A4E4A, 0 -0.03em #1A4E4A, 0.06em 0 #1A4E4A, -0.06em 0 #1A4E4A, 0.09em 0 #1A4E4A, -0.09em 0 #1A4E4A, 0.12em 0 #1A4E4A, -0.12em 0 #1A4E4A, 0.15em 0 #1A4E4A, -0.15em 0 #1A4E4A;
+    background-position-y: 90%, 90%, 90%;
+    background-position-x: 0%, 100%, 0%; }
+    .underline.dark.show {
+      background: -webkit-gradient(linear, left top, left bottom, from(#1A4E4A), to(#1A4E4A)), -webkit-gradient(linear, left top, left bottom, from(#1A4E4A), to(#1A4E4A)), -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff));
+      background: -o-linear-gradient(#1A4E4A, #1A4E4A), -o-linear-gradient(#1A4E4A, #1A4E4A), -o-linear-gradient(#fff, #fff);
+      background: linear-gradient(#1A4E4A, #1A4E4A), linear-gradient(#1A4E4A, #1A4E4A), linear-gradient(#fff, #fff);
+      background-size: .05em 1px, .05em 1px, 1px 1px;
+      background-repeat: no-repeat, no-repeat, repeat-x;
+      text-shadow: 0.03em 0 #1A4E4A, -0.03em 0 #1A4E4A, 0 0.03em #1A4E4A, 0 -0.03em #1A4E4A, 0.06em 0 #1A4E4A, -0.06em 0 #1A4E4A, 0.09em 0 #1A4E4A, -0.09em 0 #1A4E4A, 0.12em 0 #1A4E4A, -0.12em 0 #1A4E4A, 0.15em 0 #1A4E4A, -0.15em 0 #1A4E4A;
+      background-position-y: 90%, 90%, 90%;
+      background-position-x: 0%, 100%, 0%; }
+  @media (min-width: 1300px) {
+    .underline:hover {
+      background: -webkit-gradient(linear, left top, left bottom, from(#F8F7F1), to(#F8F7F1)), -webkit-gradient(linear, left top, left bottom, from(#F8F7F1), to(#F8F7F1)), -webkit-gradient(linear, left top, left bottom, from(#000), to(#000));
+      background: -o-linear-gradient(#F8F7F1, #F8F7F1), -o-linear-gradient(#F8F7F1, #F8F7F1), -o-linear-gradient(#000, #000);
+      background: linear-gradient(#F8F7F1, #F8F7F1), linear-gradient(#F8F7F1, #F8F7F1), linear-gradient(#000, #000);
+      background-size: .05em 1px, .05em 1px, 1px 1px;
+      background-repeat: no-repeat, no-repeat, repeat-x;
+      text-shadow: 0.03em 0 #F8F7F1, -0.03em 0 #F8F7F1, 0 0.03em #F8F7F1, 0 -0.03em #F8F7F1, 0.06em 0 #F8F7F1, -0.06em 0 #F8F7F1, 0.09em 0 #F8F7F1, -0.09em 0 #F8F7F1, 0.12em 0 #F8F7F1, -0.12em 0 #F8F7F1, 0.15em 0 #F8F7F1, -0.15em 0 #F8F7F1;
+      background-position-y: 100%, 100%, 100%;
+      background-position-x: 0%, 100%, 0%;
+      -webkit-transition: all 0.15s ease;
+      -o-transition: all 0.15s ease;
+      transition: all 0.15s ease; }
+    .underline.dark:hover {
+      background: -webkit-gradient(linear, left top, left bottom, from(#1A4E4A), to(#1A4E4A)), -webkit-gradient(linear, left top, left bottom, from(#1A4E4A), to(#1A4E4A)), -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff));
+      background: -o-linear-gradient(#1A4E4A, #1A4E4A), -o-linear-gradient(#1A4E4A, #1A4E4A), -o-linear-gradient(#fff, #fff);
+      background: linear-gradient(#1A4E4A, #1A4E4A), linear-gradient(#1A4E4A, #1A4E4A), linear-gradient(#fff, #fff);
+      background-size: .05em 1px, .05em 1px, 1px 1px;
+      background-repeat: no-repeat, no-repeat, repeat-x;
+      text-shadow: 0.03em 0 #1A4E4A, -0.03em 0 #1A4E4A, 0 0.03em #1A4E4A, 0 -0.03em #1A4E4A, 0.06em 0 #1A4E4A, -0.06em 0 #1A4E4A, 0.09em 0 #1A4E4A, -0.09em 0 #1A4E4A, 0.12em 0 #1A4E4A, -0.12em 0 #1A4E4A, 0.15em 0 #1A4E4A, -0.15em 0 #1A4E4A;
+      background-position-y: 100%, 100%, 100%;
+      background-position-x: 0%, 100%, 0%; } }
 
 h1.header-404 {
   position: absolute;
@@ -2085,7 +2132,6 @@ body.modal-active {
     font-size: 12px;
     line-height: 16px;
     color: #fff;
-    text-decoration: underline;
     text-transform: none; }
 
 .global-nav {
@@ -2251,12 +2297,8 @@ body.modal-active {
         .global-nav .nav-main-container a {
           margin: 0 20px; } }
       @media (min-width: 1300px) {
-        .global-nav .nav-main-container a {
-          -webkit-transition: color 0.3s ease;
-          -o-transition: color 0.3s ease;
-          transition: color 0.3s ease; }
-          .global-nav .nav-main-container a:hover {
-            color: #4B4B4B; } }
+        .global-nav .nav-main-container a.active, .global-nav .nav-main-container a:not(.nav-logo):hover {
+          border-bottom: 1px solid #000; } }
       .global-nav .nav-main-container a:first-child {
         margin-left: 0; }
       .global-nav .nav-main-container a:last-child {
@@ -2326,6 +2368,7 @@ body.modal-active {
       margin-bottom: 20px;
       text-align: center; }
     .global-footer .footer-container .footer-contact a {
+      text-decoration: none;
       color: #000; }
     .global-footer .footer-container .footer-contact .footer-gifts {
       font-style: italic; }
@@ -2344,6 +2387,13 @@ body.modal-active {
           text-align: right; }
           .global-footer .footer-container .footer-social a {
             font-size: 18px; } }
+      @media (min-width: 1300px) {
+        .global-footer .footer-container .footer-social a {
+          -webkit-transition: color 0.3s ease;
+          -o-transition: color 0.3s ease;
+          transition: color 0.3s ease; }
+          .global-footer .footer-container .footer-social a:hover {
+            color: #4B4B4B; } }
 
 /* Home Page styles */
 .home-carousel .carousel-slide {
@@ -2407,7 +2457,6 @@ body.modal-active {
       padding-bottom: 40px; } }
   .home-menus a {
     font-family: "apercu-regular", sans-serif !important;
-    position: relative;
     -ms-flex-item-align: center;
         align-self: center;
     padding-bottom: 2px;
@@ -2423,14 +2472,6 @@ body.modal-active {
       .home-menus a {
         font-size: 18px;
         margin: 0 35px; } }
-    .home-menus a:after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 1px;
-      background-color: #000; }
 
 .about-container img {
   display: block;

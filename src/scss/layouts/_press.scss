@@ -1,0 +1,80 @@
+.press-container {
+  max-width: 675px;
+  margin: 0 auto;
+  padding: 25px;
+
+  @include breakpoint(tablet) {
+    padding: 25px 0 0;
+  }
+
+  .press-item {
+    padding-bottom: 20px;
+
+    @include breakpoint(tablet) {
+      display: flex;
+      padding-bottom: 25px;
+    }
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    margin: 0 0 15px;
+
+    @include breakpoint(tablet) {
+      width: 200px;
+      margin: 0 25px 0 0;
+    }
+  }
+  
+  h2 {
+    margin-bottom: 5px;
+  }
+
+  a {
+    @include font(libre-italic);
+    display: inline-block;
+    color: #000;
+  }
+
+  .press-content {
+    > p {
+      font-size: 15px;
+      line-height: 25px;
+
+      @include breakpoint(tablet) {
+        font-size: 13px;
+        line-height: 21px;
+      }
+    }
+  }
+
+  .press-title {
+    padding-bottom: 15px;
+
+    &.mobile {
+      @include breakpoint(tablet) {
+        display: none;
+      }
+    }
+
+    &.desktop {
+      display: none;
+
+      @include breakpoint(tablet) {
+        display: block;
+        padding-bottom: 30px;
+      }
+    }
+  }
+
+  .press-date {
+    font-size: 15px;
+    line-height: 25px;
+
+    @include breakpoint(tablet) {
+      font-size: 13px;
+      line-height: 21px;
+    }
+  }
+}

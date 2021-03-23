@@ -1,12 +1,14 @@
-// Colors
-$beige: #f1e8d5;
+$beige: #F8F7F1;
+$green: #1A4E4A;
 $darkgrey: #413e3b;
 $black: #191917;
 $brown: #9c7c61;
+$white: #fff;
 
-// Sizes
+
+// @include breakpoint(name) {}
 $breakpoints: (
-	(name: laptop, size:1300),
-	(name: tablet, size:1024),
-	(name: mobile, size:760)
+	(name: desktop, size: 1300),
+	(name: laptop, size: 1025),
+	(name: tablet, size: 768)
 );

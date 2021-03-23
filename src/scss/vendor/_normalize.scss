@@ -121,34 +121,6 @@ body {
 }
 
 // =============================================================================
-// Links
-// =============================================================================
-
-// 1. Remove the gray background color from active links in IE 10.
-// 2. Addresses outline displayed oddly in Chrome
-// 3. Improves readability when focused and also mouse hovered in all browsers
-//    people.opera.com/patrickl/experiments/keyboard/test
-
-a {
-	// 1
-	
-	background: transparent;
-	
-	// 2
-	
-	&:focus {
-		outline: thin dotted;
-	}
-	
-	// 3
-	
-	&:hover,
-	&:active {
-		outline: 0;
-	}
-}
-
-// =============================================================================
 // Typography
 // =============================================================================
 
@@ -522,4 +494,10 @@ input {
 			*width: 13px; // 3
 		}
 	}
+}
+
+button {
+	padding: 0;
+	border: 0;
+	background-color: transparent;
 }

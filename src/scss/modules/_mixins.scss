@@ -1,37 +1,18 @@
-// Font smoothing
-@mixin font-smoothing($value) {
-    @if $value == yes{
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-    @elseif $value == inherit {
-        -webkit-font-smoothing: inherit;
-        -moz-osx-font-smoothing: inherit;
-    }
-    @else {
-        -webkit-font-smoothing: subpixel-antialiased;
-        -moz-osx-font-smoothing: auto;
-    }
-}
-
 // Fonts
 @mixin font($font){
-  @if($font == engravers-gothic){
-    font-family: "engravers-gothic", sans-serif;
-  } @else if($font == trade-gothic) {
-    font-family: "trade-gothic", serif;
-  } @else if($font == garamond-premier) {
-    font-family: "garamond-premier-pro-display", serif;
-  } @else if($font == lucia-bt) {
-    font-family: "lucia-bt";
+  @if($font == apercu-regular){
+    font-family: "apercu-regular", sans-serif !important;
+  } @else if($font == libre-regular) {
+    font-family: "libre-regular", serif !important;
+  } @else if($font == libre-italic) {
+    font-family: "libre-italic", serif !important;
   }
 }
-  
-// Random Breakpoints
+
 @mixin breakpoint($size){
   @each $point in $breakpoints{
     @if $size == map-get($point, name){
-      @media(max-width: rem(map-get($point, size)*1px)){@content;}
+      @media(min-width: map-get($point, size)*1px){@content;}
     }
   }
 }

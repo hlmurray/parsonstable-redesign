@@ -1,0 +1,22 @@
+{% extends "global/_layout" %}
+{% set title = "The Restaurant" %}
+
+
+{% block content %}
+  <div class="about-container">
+    {% for asset in entry.bannerImage %}
+      <img src="{{ asset.url }}" />
+    {% endfor %}
+    <div class="about-content">
+      {{ entry.historyContent }}
+      <div class="about-footer">
+        {% for asset in entry.chefImage %}
+          <img src="{{ asset.url }}" />
+        {% endfor %}
+        <div>
+          {{ entry.chefContent }}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

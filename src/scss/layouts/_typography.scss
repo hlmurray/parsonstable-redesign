@@ -1,135 +1,113 @@
-@font-face{
-	font-family:'engravers-gothic';
-	src:url('/assets/fonts/engravers-gothic-bt.ttf') format('truetype');
+@font-face {
+	font-family:'apercu-regular';
+	src: url('../assets/fonts/apercu-regular.eot');
+	src: url('../assets/fonts/apercu-regular.eot?#iefix') format('embedded-opentype'),
+				url('../assets/fonts/apercu-regular.woff2') format('woff2'),
+				url('../assets/fonts/apercu-regular.woff') format('woff'),
+				url('../assets/fonts/apercu-regular.ttf') format('truetype');
 	font-style: normal;
+	font-weight: normal;
 }
 
 @font-face {
-	font-family:'lucia-bt';
-	src:url('/assets/fonts/lucia-bt.ttf') format('truetype');
+	font-family: 'libre-regular';
+	src: url('../assets/fonts/LibreBaskerville-Regular.ttf');
+	src: url('../assets/fonts/LibreBaskerville-Regular.ttf') format('truetype');
 	font-style: normal;
+	font-weight: normal;
 }
 
 @font-face {
-	font-family:'trade-gothic';
-	src:url('/assets/fonts/Trade-Gothic.ttf') format('truetype');
+	font-family: 'libre-italic';
+	src: url('../assets/fonts/LibreBaskerville-Italic.ttf');
+	src: url('../assets/fonts/LibreBaskerville-Italic.ttf') format('truetype');
 	font-style: normal;
+	font-weight: normal;
 }
 
 h1 {
-	@include font(garamond-premier);
+	@include font(libre-regular);
+	font-weight: normal;
 	font-size: 18px;
-	letter-spacing: 0.05em;
-	font-weight: 400;
-	text-align: center;
-	color: $darkgrey;
-	margin: 0;
+	line-height: 26px;
+	color: #000;
 }
 
-h1.script {
-	@include font(lucia-bt);
-	font-size: 48px;
-	text-align: center;
-	color: $brown;
+h2 {
+	@include font(libre-regular);
 	margin: 0;
+	font-size: 21px;
+	color: #000;
+	line-height: 28px;
 }
 
-
-hr {
-	width: rem(65px);
-	background-color: $darkgrey;
-	height: rem(1px);
-	margin: rem(15px) auto;
-	border: none;
+h3,
+h4 {
+	@include font(apercu-regular);
+	margin: 0;
+	font-size: 12px;
+	letter-spacing: 0.64px;
+	text-transform: uppercase;
 }
 
 p {
-	@include font(garamond-premier);
+	@include font(libre-regular);
 	margin: 0;
-	text-align: center;
-	font-size: 16px;
-	letter-spacing: 0.05em;
-	line-height: 1.5em;
-	color: $darkgrey;
+	font-size: 15px;
+	line-height: 26px;
+	color: #000;
 }
-a.alt {
-	display: inline-block;
-	@include font(garamond-premier);
-	font-size: 18px;
-	font-style: italic;
-	letter-spacing: 0.05em;
-	font-weight: 400;
-	color: $darkgrey;
-	position: relative;
-	&:after {
-		position: absolute;
-		top: 100%;
-		left: 0;
-		width: 100%;
-		height: 2px;
-		background: #88d3b3;
-		content: '';
-		opacity: 0;
-		-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-		-moz-transition: opacity 0.3s, -moz-transform 0.3s;
-		transition: opacity 0.3s, transform 0.3s;
-		-webkit-transform: translateY(10px);
-		-moz-transform: translateY(10px);
-		transform: translateY(10px);
+
+.underline {
+	text-decoration: none;
+	background: linear-gradient(#F8F7F1, #F8F7F1), linear-gradient(#F8F7F1, #F8F7F1), linear-gradient(#000, #000);
+	background-size: .05em 1px, .05em 1px, 1px 1px;
+	background-repeat: no-repeat, no-repeat, repeat-x;
+	text-shadow: 0.03em 0 #F8F7F1, -0.03em 0 #F8F7F1, 0 0.03em #F8F7F1, 0 -0.03em #F8F7F1, 0.06em 0 #F8F7F1, -0.06em 0 #F8F7F1, 0.09em 0 #F8F7F1, -0.09em 0 #F8F7F1, 0.12em 0 #F8F7F1, -0.12em 0 #F8F7F1, 0.15em 0 #F8F7F1, -0.15em 0 #F8F7F1;
+	background-position-y: 90%, 90%, 90%;
+	background-position-x: 0%, 100%, 0%;
+	transition: all 0.15s ease;
+
+	&.dark {
+		background: linear-gradient(#1A4E4A, #1A4E4A), linear-gradient(#1A4E4A, #1A4E4A), linear-gradient(#1A4E4A, #1A4E4A);
+    background-size: .05em 1px, .05em 1px, 1px 1px;
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    text-shadow: 0.03em 0 #1A4E4A, -0.03em 0 #1A4E4A, 0 0.03em #1A4E4A, 0 -0.03em #1A4E4A, 0.06em 0 #1A4E4A, -0.06em 0 #1A4E4A, 0.09em 0 #1A4E4A, -0.09em 0 #1A4E4A, 0.12em 0 #1A4E4A, -0.12em 0 #1A4E4A, 0.15em 0 #1A4E4A, -0.15em 0 #1A4E4A;
+    background-position-y: 90%, 90%, 90%;
+		background-position-x: 0%, 100%, 0%;
+
+		&.show {
+			background: linear-gradient(#1A4E4A, #1A4E4A), linear-gradient(#1A4E4A, #1A4E4A), linear-gradient(#fff, #fff);
+			background-size: .05em 1px, .05em 1px, 1px 1px;
+			background-repeat: no-repeat, no-repeat, repeat-x;
+			text-shadow: 0.03em 0 #1A4E4A, -0.03em 0 #1A4E4A, 0 0.03em #1A4E4A, 0 -0.03em #1A4E4A, 0.06em 0 #1A4E4A, -0.06em 0 #1A4E4A, 0.09em 0 #1A4E4A, -0.09em 0 #1A4E4A, 0.12em 0 #1A4E4A, -0.12em 0 #1A4E4A, 0.15em 0 #1A4E4A, -0.15em 0 #1A4E4A;
+			background-position-y: 90%, 90%, 90%;
+			background-position-x: 0%, 100%, 0%;
+		}
 	}
-	&:hover:after {
-		opacity: 1;
-		-webkit-transform: translateY(0px);
-		-moz-transform: translateY(0px);
-		transform: translateY(0px);
+
+	@include breakpoint(desktop) {
+		&:hover {
+			background: linear-gradient(#F8F7F1, #F8F7F1), linear-gradient(#F8F7F1, #F8F7F1), linear-gradient(#000, #000);
+			background-size: .05em 1px, .05em 1px, 1px 1px;
+			background-repeat: no-repeat, no-repeat, repeat-x;
+			text-shadow: 0.03em 0 #F8F7F1, -0.03em 0 #F8F7F1, 0 0.03em #F8F7F1, 0 -0.03em #F8F7F1, 0.06em 0 #F8F7F1, -0.06em 0 #F8F7F1, 0.09em 0 #F8F7F1, -0.09em 0 #F8F7F1, 0.12em 0 #F8F7F1, -0.12em 0 #F8F7F1, 0.15em 0 #F8F7F1, -0.15em 0 #F8F7F1;
+			background-position-y: 100%, 100%, 100%;
+			background-position-x: 0%, 100%, 0%;
+			transition: all 0.15s ease;
+		}
+
+		&.dark:hover {
+			background: linear-gradient(#1A4E4A, #1A4E4A), linear-gradient(#1A4E4A, #1A4E4A), linear-gradient(#fff, #fff);
+			background-size: .05em 1px, .05em 1px, 1px 1px;
+			background-repeat: no-repeat, no-repeat, repeat-x;
+			text-shadow: 0.03em 0 #1A4E4A, -0.03em 0 #1A4E4A, 0 0.03em #1A4E4A, 0 -0.03em #1A4E4A, 0.06em 0 #1A4E4A, -0.06em 0 #1A4E4A, 0.09em 0 #1A4E4A, -0.09em 0 #1A4E4A, 0.12em 0 #1A4E4A, -0.12em 0 #1A4E4A, 0.15em 0 #1A4E4A, -0.15em 0 #1A4E4A;
+			background-position-y: 100%, 100%, 100%;
+			background-position-x: 0%, 100%, 0%;
+		}
 	}
 }
 
-h4 {
-	@extend p;
-	font-style: italic;
-}
-
-.input1 {
-	width: rem(270px);
-	box-sizing: border-box;
-	@include font(garamond-premier);
-	font-style: italic;
-	font-size: 16px;
-	text-align: center;
-	letter-spacing: 0.1em;
-	outline: none;
-	border: 1px solid $darkgrey;
-	padding: rem(10px);
-	vertical-align: top;
-	background-color: $beige;
-	&::-webkit-input-placeholder {
-	   transition: opacity 0.25s ease;
-	   color: $darkgrey;
-	   @include font(garamond-premier);
-	}
-	&:focus::-webkit-input-placeholder {
-		opacity: 0;
-	}
-}
-
-.btn-dark {
-	box-sizing: border-box;
-	display: inline-block;
-	padding: rem(9.2px) rem(15px);
-	border: 2px solid transparent;
-	background-color: $brown;
-	color: $beige;
-	font-size: 16px;
-	text-align: center;
-	letter-spacing: 0.2em;
-	text-transform: uppercase;
-	@include font(trade-gothic);
-	-webkit-font-smoothing: antialiased;
-	transition: all 0.3s ease;
-	&:hover {
-		border: 2px solid $brown;
-		background-color: $beige;
-		color: $brown;
-	}
+h1.header-404 {
+  text-align: center;
 }

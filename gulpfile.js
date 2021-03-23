@@ -1,66 +1,94 @@
-// Requirements
-var gulp = require('gulp'),
-	sass = require('gulp-ruby-sass'),
-	prefix = require('gulp-autoprefixer');
+const {
+	dest,
+	parallel,
+	series,
+	src,
+	watch,
+} = require('gulp');
+const sass = require('gulp-sass');
+const prefix = require('gulp-autoprefixer');
+const webserver = require('gulp-webserver');
 
 // Defines paths
-var paths = {
+const paths = {
 	src:{
-		scss: "./src/scss",
-		js: "./src/js",
-		html: "./src/html",
-		template: "./src/default_site",
-		assets: "./src/assets"
+		scss: './src/scss',
+		js: './src/js',
+		html: './src/html',
+		template: './src/templates',
+		assets: './src/assets'
 	},
 	build:{
-		css: "./build/css",
-		js: "./build/js",
-		html: "./build/html",
-		template: "./build/default_site",
-		assets: "./build/assets"
+		css: './build/css',
+		js: './build/js',
+		html: './build/html',
+		template: './build/templates',
+		assets: './build/assets'
 	}
 }
 
-// Gulp tasks
-	// SCSS Compiler
-	gulp.task('compile-scss', function(){
-		return gulp.src(paths.src.scss+"/**/*.scss")
-		.pipe(sass({style: "compressed", noCache: true, 'sourcemap=none': true}))
-		.pipe(prefix("last 3 versions"))
-		.pipe(gulp.dest(paths.build.css));
-});
+function compileScss() {
+	return src(paths.src.scss + '/**/*.scss')
+		.pipe(sass().on('error', sass.logError))
+		.pipe(prefix('last 3 versions'))
+		.pipe(dest(paths.build.css));
+}
 
-	// JS Compiler
-	gulp.task("compile-js", function(){
-		return gulp.src(paths.src.js+"/**/*.js")
-		.pipe(gulp.dest(paths.build.js))
-	});
+function compileJs() {
+	return src(paths.src.js + '/**/*.js')
+		.pipe(dest(paths.build.js))
+}
 
-	// HTML Compiler
-	gulp.task("compile-html", function(){
-		return gulp.src(paths.src.html+"/**/*.html")
-		.pipe(gulp.dest(paths.build.html))
-	});
+function compileHtml() {
+	return src(paths.src.html + '/**/*.html')
+		.pipe(dest(paths.build.html))
+}
 
-	// Assets Compiler
-	gulp.task("compile-assets", function(){
-		return gulp.src(paths.src.assets+"/**/*.*")
-		.pipe(gulp.dest(paths.build.assets))
-	});
+function compileAssets() {
+  return src(paths.src.assets + '/**/*.*')
+		.pipe(dest(paths.build.assets))
+}
 
+function compileTemplates() {
+  return src(paths.src.template + '/**/*.html')
+		.pipe(dest(paths.build.template))
+}
 
-gulp.task('watch', function(){
-	// What to watch
-	gulp.watch(paths.src.scss+"/**/*.scss", ["compile-scss"]);
-	gulp.watch(paths.src.js+"/**/*.js", ["compile-js"]);
-	gulp.watch(paths.src.html+"/**/*.html", ["compile-html"]);
-	gulp.watch(paths.src.assets+"/**/*.*", ["compile-assets"]);
-});
+function compile() {
+	series(
+		compileScss,
+		compileJs,
+		compileHtml,
+		compileAssets,
+		compileTemplates,
+	);
 
-gulp.task("compile", ["compile-assets","compile-html","compile-js","compile-scss",], function(){
-	return gulp.src("src/fake")
-	.pipe(gulp.dest("src/fake"))
-});
+	return src('src/')
+		.pipe(dest('build/'));
+}
 
-// Compile all files, watch all source files
-gulp.task("up", ["compile","watch"], function(){});
+function startServer() {
+	src('build')
+    .pipe(webserver({
+      livereload: true,
+      directoryListing: false,
+      open: 'html'
+    }));
+}
+
+function watchFiles() {
+ 	watch(paths.src.scss + '/**/*.scss', compileScss);
+	watch(paths.src.js + '/**/*.js', compileJs);
+	watch(paths.src.html + '/**/*.html', compileHtml);
+	watch(paths.src.assets + '/**/*.*', compileAssets);
+	watch(paths.src.template + '/**/*.html', compileTemplates);
+}
+
+exports.compile = compile;
+exports.watchFiles = watchFiles;
+
+exports.up = parallel(
+	compile,
+	watchFiles,
+	startServer,
+);

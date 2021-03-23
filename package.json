@@ -1,7 +1,7 @@
 {
   "name": "parsonstable-redesign",
   "version": "0.0.0",
-  "description": "redesign of The Parson's Table website",
+  "description": "The Parson's Table website",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,9 +16,11 @@
     "url": "https://github.com/hlmurray/parsonstable-redesign/issues"
   },
   "homepage": "https://github.com/hlmurray/parsonstable-redesign",
-  "devDependencies": {
-    "gulp": "^3.8.10",
-    "gulp-autoprefixer": "^2.0.0",
-    "gulp-ruby-sass": "^0.7.1"
+  "devDependencies": {},
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-webserver": "^0.9.1"
   }
 }

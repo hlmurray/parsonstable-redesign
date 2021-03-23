@@ -1,0 +1,19 @@
+@import "./modules/_variables.scss";
+@import "./modules/_mixins.scss";
+@import "./modules/_placeholders.scss";
+
+// Patterns
+@import "./patterns/elements.scss";
+
+// Vendor
+@import "./vendor/font-awesome.min.scss";
+@import "./vendor/_lightbox.scss";
+@import "./vendor/_normalize.scss";
+
+//Layout
+@import "./layouts/_typography.scss";
+@import "./layouts/_header.scss";
+@import "./layouts/_home.scss";
+@import "./layouts/_restaurant.scss";
+@import "./layouts/_gallery.scss";
+@import "./layouts/_press.scss";

@@ -18,6 +18,7 @@
 		<link rel="shortcut icon" href="http://www.parsonstable.com/favicon.ico" type="image/x-icon"/>
 		<link rel="icon" href="http://www.parsonstable.com/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/vendor/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
 	</head>
 	<body>
@@ -32,13 +33,13 @@
 				</button>
 				<div class="nav-menu-list-container">
 					{% for asset in menus.dinnerMenuPdf %}
-            <a href="{{ asset.url }}" class="underline">Dinner</a>
+            <a href="{{ asset.url }}" class="underline dark">Dinner</a>
           {% endfor %}
           {% for asset in menus.dessertMenuPdf %}
-            <a href="{{ asset.url }}" class="underline">Dessert</a>
+            <a href="{{ asset.url }}" class="underline dark">Dessert</a>
           {% endfor %}
           {% for asset in menus.wineListMenuPdf %}
-            <a href="{{ asset.url }}" class="underline">Wine List</a>
+            <a href="{{ asset.url }}" class="underline dark">Wine List</a>
           {% endfor %}
 				</div>
 			</div>
@@ -139,6 +140,9 @@
 		<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 		<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="/js/plugins/jquery.imagesloaded.js"></script>
+		<script type="text/javascript" src="/js/plugins/masonry.pkgd.min.js"></script>
+		<script type="text/javascript" src="/js/plugins/lightbox.min.js"></script>
 		<script src="https://widgets.resy.com/embed.js"></script>
 		<script>
 			const openModal = () => {

@@ -5,8 +5,10 @@ const {
 	src,
 	watch,
 } = require('gulp');
-const sass = require('gulp-sass');
+const changed = require('gulp-changed');
+const clean = require('gulp-clean');
 const prefix = require('gulp-autoprefixer');
+const sass = require('gulp-sass');
 const webserver = require('gulp-webserver');
 
 // Defines paths
@@ -27,8 +29,16 @@ const paths = {
 	}
 }
 
+function clear() {
+  return src('./build/*', {
+    read: false
+  })
+  .pipe(clean());
+}
+
 function compileScss() {
 	return src(paths.src.scss + '/**/*.scss')
+    .pipe(changed(paths.src.scss + '/**/*.scss'))
 		.pipe(sass().on('error', sass.logError))
 		.pipe(prefix('last 3 versions'))
 		.pipe(dest(paths.build.css));
@@ -36,35 +46,26 @@ function compileScss() {
 
 function compileJs() {
 	return src(paths.src.js + '/**/*.js')
+    .pipe(changed(paths.src.js + '/**/*.js'))
 		.pipe(dest(paths.build.js))
 }
 
 function compileHtml() {
 	return src(paths.src.html + '/**/*.html')
+    .pipe(changed(paths.src.html + '/**/*.html'))
 		.pipe(dest(paths.build.html))
 }
 
 function compileAssets() {
   return src(paths.src.assets + '/**/*.*')
+    .pipe(changed(paths.src.assets + '/**/*.*'))
 		.pipe(dest(paths.build.assets))
 }
 
 function compileTemplates() {
   return src(paths.src.template + '/**/*.html')
+    .pipe(changed(paths.src.template + '/**/*.html'))
 		.pipe(dest(paths.build.template))
-}
-
-function compile() {
-	series(
-		compileScss,
-		compileJs,
-		compileHtml,
-		compileAssets,
-		compileTemplates,
-	);
-
-	return src('src/')
-		.pipe(dest('build/'));
 }
 
 function startServer() {
@@ -84,11 +85,16 @@ function watchFiles() {
 	watch(paths.src.template + '/**/*.html', compileTemplates);
 }
 
-exports.compile = compile;
+exports.compile = series(clear, parallel(
+  compileScss,
+  compileJs,
+  compileHtml,
+  compileAssets,
+  compileTemplates,
+));
 exports.watchFiles = watchFiles;
 
 exports.up = parallel(
-	compile,
 	watchFiles,
 	startServer,
 );

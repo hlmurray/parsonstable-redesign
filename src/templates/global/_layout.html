@@ -22,9 +22,11 @@
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
 	</head>
 	<body>
-		<div class="notification-bar">
-      <p>{{ notificationBar.notificationBar }}</p>
-    </div>
+    {% if notificationBar.notificationBar != "" %}
+      <div class="notification-bar">
+        <p>{{ notificationBar.notificationBar }}</p>
+      </div>
+    {% endif %}
 		<header class="global-nav">
 			<div role="presentation" class="mobile-overlay"></div>
 			<div class="nav-menu-list-overlay">

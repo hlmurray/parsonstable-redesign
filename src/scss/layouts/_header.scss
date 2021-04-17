@@ -255,13 +255,12 @@ body.modal-active {
 	.footer-container {
 		display: flex;
 		flex-flow: column wrap;
-		max-width: 700px;
+		max-width: 1060px;
 		margin: 0 auto;
 		padding: 0 25px;
 
 		@include breakpoint(tablet) {
 			flex-flow: row nowrap;
-			padding: 0;
 
 			.footer-hours,
 			.footer-contact {
